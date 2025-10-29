@@ -1,0 +1,2529 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>پایان نامه کامل</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.2.0/github-markdown-light.min.css" />
+</head>
+<body>
+<h1 id="پایاننامه-کارشناسی-ارشد">پایان‌نامه کارشناسی ارشد</h1>
+<p><strong>دانشگاه آزاد اسلامی، واحد بیرجند</strong><br />
+<strong>رشته</strong>: مهندسی کامپیوتر - گرایش نرم‌افزار<br />
+<strong>عنوان</strong>: پیاده‌سازی و مدیریت پروژه‌های نرم‌افزاری مقیاس‌پذیر
+Large-Scale در اکوسیستم‌های Web2 و Web3 با تمرکز بر GameFi</p>
+<p><strong>نام دانشجو</strong>: جواد کاوسی<br />
+<strong>استاد راهنما</strong>: [نام استاد راهنما]<br />
+<strong>استاد مشاور</strong>: [نام استاد مشاور]<br />
+<strong>سال تحصیلی</strong>: 1403-1404</p>
+<hr />
+<h1 id="فهرست-مطالب">فهرست مطالب</h1>
+<ul>
+<li><a href="#فصل-اول-مقدمه">فصل اول: مقدمه</a></li>
+<li><a href="#فصل-دوم-ادبیات-تحقیق">فصل دوم: ادبیات تحقیق</a></li>
+<li><a href="#فصل-سوم-روش-تحقیق">فصل سوم: روش تحقیق</a></li>
+<li><a href="#فصل-چهارم-یافته‌ها-و-تحلیل">فصل چهارم: یافته‌ها و
+تحلیل</a></li>
+<li><a href="#فصل-پنجم-نتیجه‌گیری-و-پیشنهادات">فصل پنجم: نتیجه‌گیری و
+پیشنهادات</a></li>
+<li><a href="#منابع-و-مراجع">منابع و مراجع</a></li>
+<li><a href="#ضمایم">ضمایم</a></li>
+</ul>
+<hr />
+<h1 id="فصل-اول-مقدمه">فصل اول: مقدمه</h1>
+<h2 id="بیان-مسئله">1.1 بیان مسئله</h2>
+<p>در عصر دیجیتال امروز، پروژه‌های نرم‌افزاری در مقیاس بزرگ (Large-Scale)
+با چالش‌های متعددی مواجه هستند که از جمله آن‌ها می‌توان به موارد زیر اشاره
+کرد:</p>
+<h3 id="چالشهای-فنی">1.1.1 چالش‌های فنی</h3>
+<ul>
+<li><strong>محدودیت Event Loop در Node.js</strong>: استفاده از تنها یک
+هسته CPU حتی در سیستم‌های چند هسته‌ای</li>
+<li><strong>مشکل مقیاس‌پذیری</strong>: عدم توانایی سیستم‌های مونولیتیک در
+مدیریت بار کاری بالا</li>
+<li><strong>مصرف منابع ناکارآمد</strong>: استفاده نادرست از منابع
+سخت‌افزاری موجود</li>
+<li><strong>وابستگی‌های پیچیده</strong>: مشکلات Race Condition در
+معماری‌های سنتی</li>
+<li><strong>Scalability Bottlenecks</strong>: ناکارآمدی سیستم در هندل
+کردن تعداد درخواست و کاربر بالا</li>
+<li><strong>Performance Degradation</strong>: کاهش عملکرد سیستم
+نرم‌افزاری در مقیاس‌های بزرگ</li>
+<li><strong>System Latency</strong>: کندی سیستم در عملکرد بلندمدت</li>
+<li><strong>System Resilience</strong>: تاب‌آوری سیستم‌ها در شرایط
+مختلف</li>
+<li><strong>Uptime Reduction</strong>: کاهش Uptime سیستم</li>
+</ul>
+<h3 id="چالشهای-مدیریتی">1.1.2 چالش‌های مدیریتی</h3>
+<ul>
+<li><strong>قطعی سیستم‌های دولتی</strong>: مشکل رایج در نرم‌افزارهای اداری
+ایران</li>
+<li><strong>هزینه‌های بالای نگهداری</strong>: عدم بهینه‌سازی منابع</li>
+<li><strong>مشکلات امنیتی</strong>: معماری‌های ضعیف و آسیب‌پذیر</li>
+</ul>
+<h2 id="اهمیت-و-ضرورت-تحقیق">1.2 اهمیت و ضرورت تحقیق</h2>
+<h3 id="ضرورت-فنی">1.2.1 ضرورت فنی</h3>
+<p>با توجه به رشد روزافزون کاربران آنلاین (در پروژه انارچین: 450,000
+کاربر) و نیاز به پردازش بلادرنگ (آربیتراژ کریپتو: 150 صرافی و 6000 جفت
+ارز در ثانیه)، نیاز به راه‌حل‌های مقیاس‌پذیر بیش از پیش احساس می‌شود.</p>
+<h3 id="ضرورت-اقتصادی">1.2.2 ضرورت اقتصادی</h3>
+<ul>
+<li>کاهش 80% هزینه‌های عملیاتی</li>
+<li>افزایش 19 برابری RPS (از 519 به 9,976)</li>
+<li>کاهش 70% مصرف RAM</li>
+</ul>
+<h3 id="ضرورت-اجتماعی">1.2.3 ضرورت اجتماعی</h3>
+<ul>
+<li>حل مشکل قطعی سیستم‌های دولتی</li>
+<li>ایجاد اشتغال از طریق مدل‌های Play-to-Earn</li>
+<li>افزایش رقابت‌پذیری در سطح جهانی</li>
+</ul>
+<h2 id="اهداف-تحقیق">1.3 اهداف تحقیق</h2>
+<h3 id="هدف-اصلی">1.3.1 هدف اصلی</h3>
+<p>ارائه راه‌حل جامع برای پیاده‌سازی و مدیریت پروژه‌های نرم‌افزاری مقیاس‌پذیر
+Large-Scale در اکوسیستم‌های Web2 و Web3 با تمرکز بر GameFi</p>
+<h3 id="اهداف-فرعی">1.3.2 اهداف فرعی</h3>
+<ol type="1">
+<li><strong>مهاجرت از Event Loop به Multi-Core
+Architecture</strong></li>
+<li><strong>پیاده‌سازی Sharding Pattern برای توزیع بار</strong></li>
+<li><strong>استفاده از Atomic Design برای حذف وابستگی‌ها</strong></li>
+<li><strong>مهاجرت از Node.js به Go برای بهینه‌سازی عملکرد</strong></li>
+<li><strong>تعمیم راه‌حل‌ها به پروژه‌های Web2 ایران</strong></li>
+<li><strong>استفاده از ساختارهای Clean Code و OOP برای توسعه بهتر
+نرم‌افزار</strong></li>
+</ol>
+<h2 id="سوالات-تحقیق">1.4 سوالات تحقیق</h2>
+<h3 id="سوال-اصلی">1.4.1 سوال اصلی</h3>
+<p>چگونه می‌توانیم سیستمی داشته باشیم که <strong>Uptime</strong> و
+<strong>Stability</strong> 99.9% داشته باشد و با کمترین <strong>Response
+Time</strong> و <strong>Development Velocity</strong> بسیار بالا هم
+داشته باشد؟</p>
+<h3 id="سوالات-فرعی">1.4.2 سوالات فرعی</h3>
+<ol type="1">
+<li>تأثیر مهاجرت از Event Loop به Multi-Core بر عملکرد سیستم چیست؟</li>
+<li>چگونه Sharding Pattern می‌تواند توزیع بار را بهبود بخشد؟</li>
+<li>Atomic Design چه تأثیری بر حذف وابستگی‌ها دارد؟</li>
+<li>مهاجرت از Node.js به Go چه مزایای عملکردی دارد؟</li>
+<li>چگونه می‌توان این راه‌حل‌ها را به پروژه‌های Web2 تعمیم داد؟</li>
+<li>آیا می‌شود با ساختار <strong>Monolithic</strong> به خواسته یک سیستم
+<strong>Large-Scale</strong> و <strong>Scalable</strong> رسید؟</li>
+<li>شکل <strong>Software Architectures</strong> چقدر در خروجی نرم‌افزار
+تأثیر دارد؟</li>
+</ol>
+<h2 id="فرضیات-تحقیق">1.5 فرضیات تحقیق</h2>
+<ol type="1">
+<li><p><strong>فرضیه اصلی</strong>: استفاده از معماری
+<strong>Microservices + Multi-Core + Sharding + Atomic Design</strong>
+منجر به بهبود قابل توجه عملکرد و مقیاس‌پذیری پروژه‌های Large-Scale
+می‌شود.</p></li>
+<li><p><strong>فرضیات فرعی</strong>:</p>
+<ul>
+<li>مهاجرت از Event Loop به Multi-Core باعث استفاده بهینه از تمام
+هسته‌های CPU می‌شود</li>
+<li>Sharding Pattern توزیع بار را به صورت متعادل انجام می‌دهد</li>
+<li>Atomic Design وابستگی‌های بین کامپوننت‌ها را حذف می‌کند</li>
+<li>Go نسبت به Node.js عملکرد بهتری در پردازش همزمان دارد</li>
+</ul></li>
+</ol>
+<h2 id="محدودیتهای-تحقیق">1.6 محدودیت‌های تحقیق</h2>
+<h3 id="محدودیتهای-فنی">1.6.1 محدودیت‌های فنی</h3>
+<ul>
+<li>تست‌ها بر روی سرور Hetzner CX41 (16 هسته، 32GB RAM) انجام شده</li>
+<li>تمرکز بر روی پروژه‌های <strong>High-Volume Data Processing</strong> و
+<strong>High-User Load</strong> و <strong>High-Pressure
+Systems</strong></li>
+<li>استفاده از پلتفرم Prometheus برای مانیتورینگ</li>
+</ul>
+<h3 id="محدودیتهای-زمانی">1.6.2 محدودیت‌های زمانی</h3>
+<ul>
+<li>مدت زمان تحقیق: 2 سال</li>
+<li>تست‌های عملکرد: 10 ثانیه برای هر سناریو</li>
+</ul>
+<h2 id="تعریف-واژگان-کلیدی">1.7 تعریف واژگان کلیدی</h2>
+<h3 id="واژگان-فنی">1.7.1 واژگان فنی</h3>
+<ul>
+<li><strong>Large-Scale</strong>: پروژه‌هایی با بیش از 100,000 کاربر
+همزمان</li>
+<li><strong>Event Loop</strong>: مدل پردازش تک‌نخی در Node.js</li>
+<li><strong>Multi-Core</strong>: استفاده از چندین هسته CPU به صورت
+موازی</li>
+<li><strong>Sharding</strong>: تقسیم داده‌ها به بخش‌های مستقل</li>
+<li><strong>Atomic Design</strong>: طراحی کامپوننت‌های بدون وابستگی
+خارجی</li>
+<li><strong>Microservices</strong>: معماری مبتنی بر سرویس‌های مستقل</li>
+<li><strong>Scalability Bottlenecks</strong>: گلوگاه‌های مقیاس‌پذیری</li>
+<li><strong>Performance Degradation</strong>: کاهش عملکرد سیستم
+نرم‌افزاری در مقیاس‌های بزرگ</li>
+<li><strong>System Latency</strong>: کندی سیستم در عملکرد بلندمدت</li>
+<li><strong>System Resilience</strong>: تاب‌آوری سیستم‌ها در شرایط
+مختلف</li>
+<li><strong>Uptime</strong>: زمان فعالیت سیستم</li>
+<li><strong>Response Time</strong>: زمان پاسخ‌دهی سیستم</li>
+<li><strong>Development Velocity</strong>: سرعت توسعه نرم‌افزار</li>
+<li><strong>High-Volume Data Processing</strong>: پردازش داده‌های با حجم
+بالا</li>
+<li><strong>High-User Load</strong>: بار کاربری بالا</li>
+<li><strong>High-Pressure Systems</strong>: سیستم‌های تحت فشار</li>
+</ul>
+<h3 id="واژگان-تخصصی">1.7.2 واژگان تخصصی</h3>
+<ul>
+<li><strong>GameFi</strong>: ترکیب گیمینگ و امور مالی غیرمتمرکز</li>
+<li><strong>Web3</strong>: نسل سوم وب مبتنی بر بلاک‌چین</li>
+<li><strong>Arbitrage</strong>: معامله آربیتراژ در بازارهای مالی</li>
+<li><strong>RPS</strong>: درخواست در ثانیه (Requests Per Second)</li>
+<li><strong>Latency</strong>: تأخیر در پاسخ‌دهی سیستم</li>
+</ul>
+<h2 id="ساختار-پایاننامه">1.8 ساختار پایان‌نامه</h2>
+<p>این پایان‌نامه در پنج فصل تنظیم شده است:</p>
+<ul>
+<li><strong>فصل اول</strong>: مقدمه و بیان مسئله</li>
+<li><strong>فصل دوم</strong>: ادبیات تحقیق و مرور منابع</li>
+<li><strong>فصل سوم</strong>: روش تحقیق و متدولوژی</li>
+<li><strong>فصل چهارم</strong>: یافته‌ها و تحلیل داده‌ها</li>
+<li><strong>فصل پنجم</strong>: نتیجه‌گیری و پیشنهادات</li>
+</ul>
+<hr />
+<p><em>این فصل مقدمه‌ای بر تحقیق حاضر است که در ادامه به تفصیل به بررسی
+هر یک از جنبه‌های مختلف پیاده‌سازی و مدیریت پروژه‌های Large-Scale پرداخته
+خواهد شد.</em></p>
+<hr />
+<h1 id="فصل-دوم-ادبیات-تحقیق">فصل دوم: ادبیات تحقیق</h1>
+<h2 id="مقدمه">2.1 مقدمه</h2>
+<p>این فصل به بررسی ادبیات موجود در زمینه پیاده‌سازی و مدیریت پروژه‌های
+نرم‌افزاری مقیاس‌پذیر می‌پردازد. ابتدا تعاریف و مفاهیم پایه مورد بررسی قرار
+می‌گیرد، سپس چالش‌ها و راه‌حل‌های موجود در این حوزه تحلیل می‌شود.</p>
+<h2 id="تعریف-پروژههای-large-scale">2.2 تعریف پروژه‌های Large-Scale</h2>
+<h3 id="تعریف-کلی">2.2.1 تعریف کلی</h3>
+<p>پروژه‌های Large-Scale به سیستم‌هایی اطلاق می‌شود که دارای ویژگی‌های زیر
+باشند:</p>
+<ul>
+<li><strong>مقیاس کاربری بالا</strong>: بیش از 100,000 کاربر همزمان</li>
+<li><strong>حجم داده زیاد</strong>: پردازش میلیون‌ها رکورد در روز</li>
+<li><strong>پیچیدگی بالا</strong>: معماری چندلایه و توزیع‌شده</li>
+<li><strong>نیاز به دسترسی مداوم</strong>: Uptime بیش از 99.9%</li>
+</ul>
+<h3 id="ویژگیهای-کلیدی">2.2.2 ویژگی‌های کلیدی</h3>
+<ol type="1">
+<li><strong>Scalability</strong>: قابلیت افزایش ظرفیت با افزایش بار</li>
+<li><strong>Reliability</strong>: قابلیت اطمینان و پایداری بالا</li>
+<li><strong>Performance</strong>: عملکرد مطلوب تحت بار کاری بالا</li>
+<li><strong>Maintainability</strong>: قابلیت نگهداری و توسعه آسان</li>
+</ol>
+<h2 id="چالشهای-معماریهای-سنتی">2.3 چالش‌های معماری‌های سنتی</h2>
+<h3 id="معماری-monolithic">2.3.1 معماری Monolithic</h3>
+<h4 id="مزایا">مزایا:</h4>
+<ul>
+<li>سادگی در توسعه اولیه</li>
+<li>آسان‌تر بودن Debug</li>
+<li>عدم پیچیدگی در Deployment</li>
+</ul>
+<h4 id="معایب">معایب:</h4>
+<ul>
+<li><strong>Single Point of Failure</strong>: خرابی یک بخش کل سیستم را
+متوقف می‌کند</li>
+<li><strong>محدودیت مقیاس‌پذیری</strong>: عدم امکان مقیاس‌دهی مستقل
+بخش‌ها</li>
+<li><strong>وابستگی بالا</strong>: تغییر در یک بخش بر سایر بخش‌ها تأثیر
+می‌گذارد</li>
+</ul>
+<h3 id="event-loop-در-node.js">2.3.2 Event Loop در Node.js</h3>
+<h4 id="مشکلات-اصلی">مشکلات اصلی:</h4>
+<ul>
+<li><strong>Single-Threaded</strong>: استفاده از تنها یک هسته CPU</li>
+<li><strong>Blocking Operations</strong>: عملیات مسدودکننده کل سیستم را
+متوقف می‌کند</li>
+<li><strong>Memory Leaks</strong>: مشکلات مدیریت حافظه در برنامه‌های
+طولانی‌مدت</li>
+</ul>
+<h2 id="راهحلهای-پیشنهادی">2.4 راه‌حل‌های پیشنهادی</h2>
+<h3 id="multi-core-architecture">2.4.1 Multi-Core Architecture</h3>
+<h4 id="تعریف">تعریف:</h4>
+<p>استفاده از چندین هسته CPU به صورت موازی برای پردازش همزمان</p>
+<h4 id="مزایا-1">مزایا:</h4>
+<ul>
+<li><strong>Parallel Processing</strong>: پردازش موازی واقعی</li>
+<li><strong>Better Resource Utilization</strong>: استفاده بهینه از منابع
+سخت‌افزاری</li>
+<li><strong>Improved Performance</strong>: افزایش قابل توجه عملکرد</li>
+</ul>
+<h3 id="sharding-pattern">2.4.2 Sharding Pattern</h3>
+<h4 id="تعریف-1">تعریف:</h4>
+<p>تقسیم داده‌ها به بخش‌های مستقل و کوچک‌تر</p>
+<h4 id="انواع-sharding">انواع Sharding:</h4>
+<ol type="1">
+<li><strong>Horizontal Sharding</strong>: تقسیم بر اساس کلید</li>
+<li><strong>Vertical Sharding</strong>: تقسیم بر اساس جدول</li>
+<li><strong>Directory-based Sharding</strong>: استفاده از دایرکتوری
+مرکزی</li>
+</ol>
+<h4 id="مزایا-2">مزایا:</h4>
+<ul>
+<li><strong>Distributed Load</strong>: توزیع بار کاری</li>
+<li><strong>Independent Scaling</strong>: مقیاس‌دهی مستقل</li>
+<li><strong>Fault Isolation</strong>: جداسازی خطاها</li>
+</ul>
+<h3 id="atomic-design">2.4.3 Atomic Design</h3>
+<h4 id="تعریف-2">تعریف:</h4>
+<p>روش طراحی کامپوننت‌های بدون وابستگی خارجی</p>
+<h4 id="اصول">اصول:</h4>
+<ol type="1">
+<li><strong>Single Responsibility</strong>: هر کامپوننت یک مسئولیت</li>
+<li><strong>No External Dependencies</strong>: عدم وابستگی به
+کامپوننت‌های خارجی</li>
+<li><strong>Stateless</strong>: عدم نگهداری State خارجی</li>
+</ol>
+<h4 id="مزایا-3">مزایا:</h4>
+<ul>
+<li><strong>Elimination of Race Conditions</strong>: حذف شرایط
+مسابقه</li>
+<li><strong>Better Testability</strong>: قابلیت تست بهتر</li>
+<li><strong>Improved Maintainability</strong>: نگهداری آسان‌تر</li>
+</ul>
+<h2 id="مقایسه-فناوریها">2.5 مقایسه فناوری‌ها</h2>
+<h3 id="node.js-vs-go">2.5.1 Node.js vs Go</h3>
+<h4 id="node.js">Node.js:</h4>
+<p><strong>مزایا:</strong></p>
+<ul>
+<li>اکوسیستم غنی</li>
+<li>سرعت توسعه بالا</li>
+<li>JavaScript در Frontend و Backend</li>
+</ul>
+<p><strong>معایب:</strong></p>
+<ul>
+<li>Event Loop محدودیت</li>
+<li>مدیریت حافظه پیچیده</li>
+<li>عملکرد محدود در پردازش CPU-intensive</li>
+</ul>
+<h4 id="go">Go:</h4>
+<p><strong>مزایا:</strong></p>
+<ul>
+<li><strong>Goroutines</strong>: همزمانی کارآمد</li>
+<li><strong>Garbage Collection</strong>: مدیریت حافظه خودکار</li>
+<li><strong>Compiled Language</strong>: عملکرد بالا</li>
+<li><strong>Built-in Concurrency</strong>: پشتیبانی ذاتی از همزمانی</li>
+</ul>
+<p><strong>معایب:</strong></p>
+<ul>
+<li>منحنی یادگیری شیب‌دار</li>
+<li>اکوسیستم کوچک‌تر نسبت به Node.js</li>
+</ul>
+<h3 id="مقایسه-عملکردی">2.5.2 مقایسه عملکردی</h3>
+<p>بر اساس مطالعات انجام شده:</p>
+<table>
+<thead>
+<tr>
+<th>معیار</th>
+<th>Node.js (Event Loop)</th>
+<th>Go (Goroutines)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RPS</td>
+<td>519</td>
+<td>9,976</td>
+</tr>
+<tr>
+<td>CPU Utilization</td>
+<td>6-8% (1 core)</td>
+<td>25-38% (16 cores)</td>
+</tr>
+<tr>
+<td>RAM Usage</td>
+<td>60-90%</td>
+<td>16-26%</td>
+</tr>
+<tr>
+<td>Latency</td>
+<td>172.4ms</td>
+<td>1.5ms</td>
+</tr>
+</tbody>
+</table>
+<h2 id="استانداردهای-microservices">2.6 استانداردهای Microservices</h2>
+<h3 id="الگوهای-microservices.io">2.6.1 الگوهای microservices.io</h3>
+<p>بر اساس کار Chris Richardson:</p>
+<h4 id="database-per-service">Database per Service</h4>
+<ul>
+<li>هر سرویس پایگاه داده مستقل</li>
+<li>جلوگیری از وابستگی داده‌ای</li>
+<li>امکان انتخاب تکنولوژی مناسب</li>
+</ul>
+<h4 id="api-gateway">API Gateway</h4>
+<ul>
+<li>نقطه ورود واحد</li>
+<li>مدیریت Authentication</li>
+<li>Load Balancing</li>
+</ul>
+<h4 id="event-driven-architecture">Event-Driven Architecture</h4>
+<ul>
+<li>ارتباط غیرهمزمان</li>
+<li>کاهش وابستگی</li>
+<li>قابلیت مقیاس‌پذیری بالا</li>
+</ul>
+<h4 id="circuit-breaker">Circuit Breaker</h4>
+<ul>
+<li>جلوگیری از خرابی زنجیره‌ای</li>
+<li>بهبود قابلیت اطمینان</li>
+<li>مدیریت خطاها</li>
+</ul>
+<h3 id="cqrs-event-sourcing">2.6.2 CQRS &amp; Event Sourcing</h3>
+<h4 id="cqrs-command-query-responsibility-segregation">CQRS (Command
+Query Responsibility Segregation):</h4>
+<ul>
+<li>جداسازی عملیات خواندن و نوشتن</li>
+<li>بهینه‌سازی عملکرد</li>
+<li>مقیاس‌پذیری مستقل</li>
+</ul>
+<h4 id="event-sourcing">Event Sourcing:</h4>
+<ul>
+<li>ذخیره رویدادها به جای State</li>
+<li>قابلیت بازسازی کامل</li>
+<li>Audit Trail کامل</li>
+</ul>
+<h2 id="مطالعات-موردی">2.7 مطالعات موردی</h2>
+<h3 id="پلتفرم-gamefi-انارچین">2.7.1 پلتفرم GameFi انارچین</h3>
+<h4 id="مشخصات">مشخصات:</h4>
+<ul>
+<li>450,000 کاربر آنلاین</li>
+<li>تأخیر کمتر از 50 میلی‌ثانیه</li>
+<li>پایداری 99.999%</li>
+</ul>
+<h4 id="چالشها">چالش‌ها:</h4>
+<ul>
+<li>Matchmaking بلادرنگ</li>
+<li>پردازش تراکنش‌های غیرمتمرکز</li>
+<li>مدیریت NFT و استیکینگ</li>
+</ul>
+<h4 id="راهحلها">راه‌حل‌ها:</h4>
+<ul>
+<li>مهاجرت از Event Loop به Multi-Core</li>
+<li>پیاده‌سازی Sharding</li>
+<li>استفاده از Atomic Design</li>
+</ul>
+<h3 id="crypto-arbitrage-tracker">2.7.2 Crypto Arbitrage Tracker</h3>
+<h4 id="مشخصات-1">مشخصات:</h4>
+<ul>
+<li>150 صرافی</li>
+<li>6000 جفت ارز</li>
+<li>پردازش هر ثانیه</li>
+</ul>
+<h4 id="چالشها-1">چالش‌ها:</h4>
+<ul>
+<li>پردازش بلادرنگ</li>
+<li>فیلتر کردن هزاران فیلتر کاربر</li>
+<li>ارسال پیام در کمتر از چند ثانیه</li>
+</ul>
+<h4 id="راهحلها-1">راه‌حل‌ها:</h4>
+<ul>
+<li>معماری Multi-Core + Sharding</li>
+<li>Atomic Components</li>
+<li>مهاجرت به Go</li>
+</ul>
+<h2 id="مانیتورینگ-و-observability">2.8 مانیتورینگ و Observability</h2>
+<h3 id="prometheus">2.8.1 Prometheus</h3>
+<h4 id="ویژگیها">ویژگی‌ها:</h4>
+<ul>
+<li>جمع‌آوری متریک‌ها</li>
+<li>Query Language قدرتمند</li>
+<li>Integration با Grafana</li>
+</ul>
+<h4 id="متریکهای-کلیدی">متریک‌های کلیدی:</h4>
+<ul>
+<li>CPU per Core</li>
+<li>Memory Usage</li>
+<li>RPS (Requests Per Second)</li>
+<li>Latency</li>
+<li>Error Rate</li>
+</ul>
+<h3 id="grafana">2.8.2 Grafana</h3>
+<h4 id="قابلیتها">قابلیت‌ها:</h4>
+<ul>
+<li>Visualization متریک‌ها</li>
+<li>Real-time Monitoring</li>
+<li>Alerting</li>
+</ul>
+<h2 id="خلاصه-فصل">2.9 خلاصه فصل</h2>
+<p>این فصل به بررسی ادبیات موجود در زمینه پروژه‌های Large-Scale پرداخت.
+مشخص شد که:</p>
+<ol type="1">
+<li><strong>مشکل اصلی</strong>: محدودیت Event Loop در Node.js و
+معماری‌های Monolithic</li>
+<li><strong>راه‌حل کلیدی</strong>: Multi-Core + Sharding + Atomic
+Design</li>
+<li><strong>فناوری بهینه</strong>: Go با Goroutines</li>
+<li><strong>استانداردها</strong>: الگوهای microservices.io</li>
+<li><strong>مانیتورینگ</strong>: Prometheus + Grafana</li>
+</ol>
+<p>در فصل بعد، روش‌شناسی تحقیق و نحوه پیاده‌سازی این راه‌حل‌ها مورد بررسی
+قرار خواهد گرفت.</p>
+<hr />
+<p><em>این فصل پایه نظری تحقیق را فراهم می‌کند و در ادامه، فصل سوم به
+روش‌شناسی عملی پیاده‌سازی این مفاهیم خواهد پرداخت.</em></p>
+<hr />
+<h1 id="فصل-سوم-روش-تحقیق">فصل سوم: روش تحقیق</h1>
+<h2 id="مقدمه-1">3.1 مقدمه</h2>
+<p>این فصل به تشریح روش‌شناسی تحقیق و نحوه پیاده‌سازی راه‌حل‌های پیشنهادی
+برای مدیریت پروژه‌های Large-Scale می‌پردازد. روش تحقیق بر اساس تجربیات
+عملی در دو پروژه کلیدی انجام شده است.</p>
+<h2 id="نوع-تحقیق">3.2 نوع تحقیق</h2>
+<h3 id="تحقیق-کاربردی">3.2.1 تحقیق کاربردی</h3>
+<p>این تحقیق از نوع <strong>کاربردی</strong> است که بر اساس تجربیات عملی
+در پروژه‌های واقعی انجام شده است:</p>
+<ul>
+<li>پلتفرم GameFi انارچین (450,000 کاربر)</li>
+<li>Crypto Arbitrage Tracker (150 صرافی، 6000 جفت ارز، بررسی و سورت‌بندی
+و محاسبه در کمتر از چند میلی‌ثانیه)</li>
+</ul>
+<h3 id="روش-تحقیق-تجربی">3.2.2 روش تحقیق تجربی</h3>
+<p>استفاده از <strong>روش تجربی</strong> با انجام تست‌های عملکردی و
+مقایسه‌ای بین معماری‌های مختلف</p>
+<h2 id="جامعه-آماری-و-نمونهگیری">3.3 جامعه آماری و نمونه‌گیری</h2>
+<h3 id="جامعه-آماری">3.3.1 جامعه آماری</h3>
+<ul>
+<li><strong>پروژه انارچین</strong>: 450,000 کاربر آنلاین</li>
+<li><strong>Crypto Arbitrage Tracker</strong>: 150 صرافی و 6000 جفت
+ارز</li>
+<li><strong>سیستم‌های Web2</strong>: سامانه‌های اداری دولتی ایران</li>
+<li><strong>پروژه‌های Large-Scale خارج از ایران</strong>: تغییر معماری و
+توسعه برای چندین پروژه لارج اسکیل خارج از ایران</li>
+</ul>
+<h3 id="نمونهگیری">3.3.2 نمونه‌گیری</h3>
+<ul>
+<li><strong>نمونه هدفمند</strong>: انتخاب پروژه‌هایی با بالاترین چالش‌های
+مقیاس‌پذیری</li>
+<li><strong>نمونه در دسترس</strong>: استفاده از پروژه‌های موجود شرکت
+انارچین</li>
+</ul>
+<h2 id="متغیرهای-تحقیق">3.4 متغیرهای تحقیق</h2>
+<h3 id="متغیرهای-مستقل">3.4.1 متغیرهای مستقل</h3>
+<ol type="1">
+<li><p><strong>معماری سیستم</strong>:</p>
+<ul>
+<li>Monolithic Node.js (Event Loop)</li>
+<li>Multi-Core Node.js + Sharding + Atomic</li>
+<li>Microservices Go</li>
+</ul></li>
+<li><p><strong>تعداد هسته‌های CPU</strong>:</p>
+<ul>
+<li>1 هسته (Event Loop)</li>
+<li>16 هسته (Multi-Core)</li>
+</ul></li>
+<li><p><strong>نوع Sharding</strong>:</p>
+<ul>
+<li>بدون Sharding</li>
+<li>Sharding بر اساس صرافی</li>
+<li>Sharding بر اساس جفت ارز</li>
+</ul></li>
+</ol>
+<h3 id="متغیرهای-وابسته">3.4.2 متغیرهای وابسته</h3>
+<ol type="1">
+<li><p><strong>عملکرد سیستم</strong>:</p>
+<ul>
+<li>RPS (Requests Per Second)</li>
+<li>Latency (میلی‌ثانیه)</li>
+<li>Error Rate (درصد)</li>
+</ul></li>
+<li><p><strong>مصرف منابع</strong>:</p>
+<ul>
+<li>CPU Utilization (درصد)</li>
+<li>RAM Usage (درصد)</li>
+<li>Memory Leaks</li>
+</ul></li>
+<li><p><strong>مقیاس‌پذیری</strong>:</p>
+<ul>
+<li>حداکثر کاربران همزمان</li>
+<li>زمان پاسخ‌دهی تحت بار</li>
+</ul></li>
+</ol>
+<h2 id="ابزارهای-تحقیق">3.5 ابزارهای تحقیق</h2>
+<h3 id="ابزارهای-توسعه">3.5.1 ابزارهای توسعه</h3>
+<ul>
+<li><strong>Node.js</strong>: نسخه 18.x</li>
+<li><strong>Go</strong>: نسخه 1.21</li>
+<li><strong>Kubernetes</strong>: برای Container Orchestration</li>
+<li><strong>Docker</strong>: برای Containerization</li>
+</ul>
+<h3 id="ابزارهای-مانیتورینگ">3.5.2 ابزارهای مانیتورینگ</h3>
+<ul>
+<li><strong>Prometheus</strong>: جمع‌آوری متریک‌ها</li>
+<li><strong>Grafana</strong>: Visualization و Dashboard</li>
+<li><strong>Node Exporter</strong>: متریک‌های سیستم</li>
+<li><strong>cAdvisor</strong>: متریک‌های Container</li>
+<li><strong>Elasticsearch</strong>: تحلیل لاگ‌ها و جستجوی داده‌ها</li>
+<li><strong>Filebeat</strong>: ارسال لاگ‌ها به Elasticsearch</li>
+<li><strong>Kibana</strong>: Visualization لاگ‌ها و داده‌های
+Elasticsearch</li>
+</ul>
+<h3 id="ابزارهای-تست">3.5.3 ابزارهای تست</h3>
+<ul>
+<li><strong>Artillery</strong>: Load Testing</li>
+<li><strong>JMeter</strong>: Performance Testing</li>
+<li><strong>K6</strong>: Modern Load Testing</li>
+<li><strong>تست در محیط واقعی</strong>: تست با کاربران واقعی شرکت در
+پروژه‌های Production</li>
+</ul>
+<h2 id="روش-جمعآوری-دادهها">3.6 روش جمع‌آوری داده‌ها</h2>
+<h3 id="دادههای-کمی">3.6.1 داده‌های کمی</h3>
+<h4 id="منابع-داده">منابع داده:</h4>
+<ul>
+<li><strong>Prometheus Metrics</strong>:
+<code>http://212.95.35.174:8558/metrics</code></li>
+<li><strong>Grafana Dashboards</strong>: تصاویر واقعی عملکرد</li>
+<li><strong>Load Test Results</strong>: نتایج تست‌های بار</li>
+<li><strong>Elasticsearch</strong>: مانیتورینگ لاگ‌ها و تحلیل داده‌های
+سیستم</li>
+<li><strong>Filebeat</strong>: ارسال لاگ‌ها به Elasticsearch</li>
+</ul>
+<h4 id="متریکهای-کلیدی-1">متریک‌های کلیدی:</h4>
+<pre class="promql"><code># CPU per Core
+rate(process_cpu_seconds_total[5m]) by (cpu)
+
+# Memory Usage
+process_resident_memory_bytes
+
+# RPS
+rate(http_requests_total[1m])
+
+# Latency
+histogram_quantile(0.95, rate(http_request_duration_seconds_bucket[5m]))</code></pre>
+<h3 id="دادههای-کیفی">3.6.2 داده‌های کیفی</h3>
+<ul>
+<li><strong>مشاهدات عملی</strong>: تجربیات در پروژه‌های واقعی</li>
+<li><strong>مصاحبه‌ها</strong>: با تیم توسعه</li>
+<li><strong>مستندات</strong>: کدها و معماری سیستم</li>
+</ul>
+<h2 id="روششناسی-پیادهسازی">3.7 روش‌شناسی پیاده‌سازی</h2>
+<h3 id="مرحله-1-تحلیل-وضعیت-موجود">3.7.1 مرحله 1: تحلیل وضعیت موجود</h3>
+<h4 id="monolithic-node.js-event-loop">Monolithic Node.js (Event
+Loop)</h4>
+<ul>
+<li><strong>مشکل</strong>: استفاده از تنها 1 هسته CPU</li>
+<li><strong>نتیجه</strong>: بوتلنک CPU، مصرف بالا RAM</li>
+<li><strong>متریک‌ها</strong>:
+<ul>
+<li>CPU: فقط Core 1 (90-100%)</li>
+<li>سایر هسته‌ها: زیر 5%</li>
+<li>RAM: 60-90% (نوسان شدید)</li>
+<li>RPS: 519</li>
+</ul></li>
+</ul>
+<h3 id="مرحله-2-پیادهسازی-multi-core-sharding">3.7.2 مرحله 2: پیاده‌سازی
+Multi-Core + Sharding</h3>
+<h4 id="تغییرات-معماری">تغییرات معماری:</h4>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">// قبل: Event Loop تک‌نخی</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>app<span class="op">.</span><span class="fu">get</span>(<span class="st">&quot;/arbitrage&quot;</span><span class="op">,</span> (req<span class="op">,</span> res) <span class="kw">=&gt;</span> {</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="co">// پردازش در Event Loop</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co">// بعد: Multi-Core + Sharding</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> cluster <span class="op">=</span> <span class="pp">require</span>(<span class="st">&quot;cluster&quot;</span>)<span class="op">;</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> numCPUs <span class="op">=</span> <span class="pp">require</span>(<span class="st">&quot;os&quot;</span>)<span class="op">.</span><span class="fu">cpus</span>()<span class="op">.</span><span class="at">length</span><span class="op">;</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (cluster<span class="op">.</span><span class="at">isMaster</span>) {</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  <span class="co">// ایجاد Worker برای هر هسته</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (<span class="kw">let</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> numCPUs<span class="op">;</span> i<span class="op">++</span>) {</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    cluster<span class="op">.</span><span class="fu">fork</span>()<span class="op">;</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> {</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>  <span class="co">// هر Worker یک Shard را مدیریت می‌کند</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> shardId <span class="op">=</span> cluster<span class="op">.</span><span class="at">worker</span><span class="op">.</span><span class="at">id</span><span class="op">;</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> exchanges <span class="op">=</span> <span class="fu">getExchangesForShard</span>(shardId)<span class="op">;</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<h4 id="atomic-design-1">Atomic Design:</h4>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">// کامپوننت‌های اتمیک بدون وابستگی</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> ArbitrageFilter {</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">constructor</span>() {</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span><span class="op">.</span><span class="at">filters</span> <span class="op">=</span> []<span class="op">;</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">addFilter</span>(filter) {</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span><span class="op">.</span><span class="at">filters</span><span class="op">.</span><span class="fu">push</span>(filter)<span class="op">;</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  <span class="bu">process</span>(data) {</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    <span class="co">// پردازش بدون وابستگی خارجی</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="kw">this</span><span class="op">.</span><span class="at">filters</span><span class="op">.</span><span class="fu">every</span>((filter) <span class="kw">=&gt;</span> <span class="fu">filter</span>(data))<span class="op">;</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<h3 id="مرحله-3-مهاجرت-به-go">3.7.3 مرحله 3: مهاجرت به Go</h3>
+<h4 id="پیادهسازی-goroutines">پیاده‌سازی Goroutines:</h4>
+<div class="sourceCode" id="cb4"><pre class="sourceCode go"><code class="sourceCode go"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">func</span> processArbitrage<span class="op">(</span>exchanges <span class="op">[]</span>Exchange<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">var</span> wg sync<span class="op">.</span>WaitGroup</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    results <span class="op">:=</span> <span class="bu">make</span><span class="op">(</span><span class="kw">chan</span> ArbitrageResult<span class="op">,</span> <span class="bu">len</span><span class="op">(</span>exchanges<span class="op">))</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> _<span class="op">,</span> exchange <span class="op">:=</span> <span class="kw">range</span> exchanges <span class="op">{</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>        wg<span class="op">.</span>Add<span class="op">(</span><span class="dv">1</span><span class="op">)</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">go</span> <span class="kw">func</span><span class="op">(</span>ex Exchange<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>            <span class="cf">defer</span> wg<span class="op">.</span>Done<span class="op">()</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>            result <span class="op">:=</span> processExchange<span class="op">(</span>ex<span class="op">)</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>            results <span class="op">&lt;-</span> result</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>        <span class="op">}(</span>exchange<span class="op">)</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">go</span> <span class="kw">func</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>        wg<span class="op">.</span>Wait<span class="op">()</span></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>        <span class="bu">close</span><span class="op">(</span>results<span class="op">)</span></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>    <span class="op">}()</span></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>    <span class="co">// جمع‌آوری نتایج</span></span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> result <span class="op">:=</span> <span class="kw">range</span> results <span class="op">{</span></span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>        processResult<span class="op">(</span>result<span class="op">)</span></span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<h4 id="sharding-در-go">Sharding در Go:</h4>
+<div class="sourceCode" id="cb5"><pre class="sourceCode go"><code class="sourceCode go"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">type</span> ShardManager <span class="kw">struct</span> <span class="op">{</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    shards <span class="op">[]</span>Shard</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    shardCount <span class="dt">int</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="kw">func</span> <span class="op">(</span>sm <span class="op">*</span>ShardManager<span class="op">)</span> GetShard<span class="op">(</span>key <span class="dt">string</span><span class="op">)</span> Shard <span class="op">{</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    hash <span class="op">:=</span> fnv<span class="op">.</span>New32a<span class="op">()</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    hash<span class="op">.</span>Write<span class="op">([]</span><span class="dt">byte</span><span class="op">(</span>key<span class="op">))</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    shardIndex <span class="op">:=</span> hash<span class="op">.</span>Sum32<span class="op">()</span> <span class="op">%</span> <span class="dt">uint32</span><span class="op">(</span>sm<span class="op">.</span>shardCount<span class="op">)</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> sm<span class="op">.</span>shards<span class="op">[</span>shardIndex<span class="op">]</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<h2 id="روششناسی-تست">3.8 روش‌شناسی تست</h2>
+<h3 id="تستهای-عملکرد">3.8.1 تست‌های عملکرد</h3>
+<h4 id="بازه-زمانی-تحقیق">بازه زمانی تحقیق:</h4>
+<pre><code>مدت زمان تحقیق: 2 سال (1402-1404)
+- مرحله 1: تحلیل و طراحی (6 ماه)
+- مرحله 2: پیاده‌سازی Multi-Core (8 ماه)
+- مرحله 3: مهاجرت به Go (10 ماه)
+- تست‌های مداوم: در طول 2 سال</code></pre>
+<h4 id="load-testing-با-artillery">Load Testing با Artillery:</h4>
+<div class="sourceCode" id="cb7"><pre
+class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">config</span><span class="kw">:</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">target</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;http://localhost:3400&quot;</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">phases</span><span class="kw">:</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">duration</span><span class="kw">:</span><span class="at"> </span><span class="dv">10</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">arrivalRate</span><span class="kw">:</span><span class="at"> </span><span class="dv">2000</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="fu">scenarios</span><span class="kw">:</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;Arbitrage API Test&quot;</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">requests</span><span class="kw">:</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">get</span><span class="kw">:</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="at">          </span><span class="fu">url</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;/arbitrage&quot;</span></span></code></pre></div>
+<h4 id="مقایسه-نتایج">مقایسه نتایج:</h4>
+<table>
+<thead>
+<tr>
+<th>معماری</th>
+<th>RPS</th>
+<th>Latency</th>
+<th>CPU Usage</th>
+<th>RAM Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Monolithic Node.js</td>
+<td>519</td>
+<td>172.4ms</td>
+<td>6-8% (1 core)</td>
+<td>60-90%</td>
+</tr>
+<tr>
+<td>Multi-Core Node.js</td>
+<td>2,500</td>
+<td>45ms</td>
+<td>25-30% (16 cores)</td>
+<td>30-40%</td>
+</tr>
+<tr>
+<td>Go Microservices</td>
+<td>9,976</td>
+<td>1.5ms</td>
+<td>25-38% (16 cores)</td>
+<td>16-26%</td>
+</tr>
+</tbody>
+</table>
+<h3 id="تستهای-مقیاسپذیری">3.8.2 تست‌های مقیاس‌پذیری</h3>
+<ul>
+<li><strong>تست بار تدریجی</strong>: از 100 تا 10,000 کاربر همزمان</li>
+<li><strong>تست استرس</strong>: حداکثر ظرفیت سیستم</li>
+<li><strong>تست پایداری</strong>: اجرای 24 ساعته</li>
+</ul>
+<h2 id="روش-تحلیل-دادهها">3.9 روش تحلیل داده‌ها</h2>
+<h3 id="تحلیل-عملکردی-performance-analysis">3.9.1 تحلیل عملکردی
+(Performance Analysis)</h3>
+<h4 id="تحلیل-متریکهای-prometheus">تحلیل متریک‌های Prometheus:</h4>
+<ul>
+<li><strong>CPU Utilization</strong>: مقایسه استفاده از هسته‌های
+مختلف</li>
+<li><strong>Memory Usage</strong>: تحلیل الگوهای مصرف حافظه</li>
+<li><strong>RPS (Requests Per Second)</strong>: اندازه‌گیری توان
+عملیاتی</li>
+<li><strong>Latency</strong>: تحلیل زمان پاسخ‌دهی سیستم</li>
+<li><strong>Error Rate</strong>: محاسبه نرخ خطا</li>
+</ul>
+<h4 id="تحلیل-لاگهای-elasticsearch">تحلیل لاگ‌های Elasticsearch:</h4>
+<ul>
+<li><strong>Log Pattern Analysis</strong>: شناسایی الگوهای خطا</li>
+<li><strong>Performance Bottleneck Detection</strong>: تشخیص گلوگاه‌های
+عملکرد</li>
+<li><strong>Real-time Monitoring</strong>: تحلیل داده‌های بلادرنگ</li>
+</ul>
+<h3 id="تحلیل-مقایسهای-معماریها">3.9.2 تحلیل مقایسه‌ای معماری‌ها</h3>
+<h4 id="مقایسه-عملکردی-1">مقایسه عملکردی:</h4>
+<ul>
+<li><strong>Monolithic Node.js vs Multi-Core Node.js</strong>: بهبود 4.8
+برابری RPS</li>
+<li><strong>Multi-Core Node.js vs Go Microservices</strong>: بهبود 4
+برابری RPS</li>
+<li><strong>مقایسه مصرف منابع</strong>: CPU، RAM، Latency</li>
+</ul>
+<h4 id="تحلیل-مقیاسپذیری">تحلیل مقیاس‌پذیری:</h4>
+<ul>
+<li><strong>Load Testing Results</strong>: نتایج تست‌های بار</li>
+<li><strong>Scalability Patterns</strong>: الگوهای مقیاس‌پذیری</li>
+<li><strong>Resource Efficiency</strong>: کارایی منابع</li>
+</ul>
+<h3 id="تحلیل-تجربی">3.9.3 تحلیل تجربی</h3>
+<h4 id="تستهای-ab">تست‌های A/B:</h4>
+<ul>
+<li><strong>مقایسه همزمان</strong>: تست معماری‌های مختلف در شرایط
+یکسان</li>
+<li><strong>تست‌های تدریجی</strong>: افزایش تدریجی بار کاری</li>
+<li><strong>تست‌های استرس</strong>: حداکثر ظرفیت سیستم</li>
+</ul>
+<h4 id="تحلیل-دادههای-واقعی">تحلیل داده‌های واقعی:</h4>
+<ul>
+<li><strong>Production Metrics</strong>: داده‌های واقعی از پروژه‌های
+Production</li>
+<li><strong>User Behavior Analysis</strong>: تحلیل رفتار کاربران</li>
+<li><strong>System Performance Trends</strong>: روندهای عملکرد
+سیستم</li>
+</ul>
+<h2 id="اعتبار-و-پایایی-تحقیق">3.10 اعتبار و پایایی تحقیق</h2>
+<h3 id="اعتبار-درونی">3.10.1 اعتبار درونی</h3>
+<ul>
+<li><strong>کنترل متغیرها</strong>: ثابت نگه داشتن شرایط محیطی</li>
+<li><strong>تکرار آزمایش</strong>: انجام چندین بار تست‌ها</li>
+<li><strong>مقایسه همزمان</strong>: تست معماری‌های مختلف در شرایط
+یکسان</li>
+</ul>
+<h3 id="اعتبار-بیرونی">3.10.2 اعتبار بیرونی</h3>
+<ul>
+<li><strong>تعمیم‌پذیری</strong>: قابلیت اعمال در پروژه‌های مشابه</li>
+<li><strong>نمونه‌گیری</strong>: استفاده از پروژه‌های متنوع</li>
+<li><strong>شرایط واقعی</strong>: تست در محیط Production</li>
+</ul>
+<h3 id="پایایی">3.10.3 پایایی</h3>
+<ul>
+<li><strong>تکرارپذیری</strong>: نتایج قابل تکرار</li>
+<li><strong>ثبات</strong>: نتایج مشابه در تست‌های مختلف</li>
+<li><strong>دقت</strong>: اندازه‌گیری دقیق متریک‌ها</li>
+</ul>
+<h2 id="محدودیتهای-روششناسی">3.11 محدودیت‌های روش‌شناسی</h2>
+<h3 id="محدودیتهای-فنی-1">3.11.1 محدودیت‌های فنی</h3>
+<ul>
+<li><strong>سخت‌افزار</strong>: تست بر روی سرور Hetzner CX41</li>
+<li><strong>نرم‌افزار</strong>: استفاده از نسخه‌های خاص</li>
+<li><strong>شبکه</strong>: تأثیر شرایط شبکه</li>
+</ul>
+<h3 id="محدودیتهای-زمانی-1">3.11.2 محدودیت‌های زمانی</h3>
+<ul>
+<li><strong>مدت تست</strong>: محدودیت زمانی برای تست‌های طولانی</li>
+<li><strong>توسعه</strong>: زمان محدود برای پیاده‌سازی</li>
+</ul>
+<h2 id="خلاصه-فصل-1">3.12 خلاصه فصل</h2>
+<p>این فصل روش‌شناسی تحقیق را تشریح کرد که شامل:</p>
+<ol type="1">
+<li><strong>نوع تحقیق</strong>: کاربردی و تجربی</li>
+<li><strong>جامعه آماری</strong>: پروژه‌های واقعی با چالش‌های
+مقیاس‌پذیری</li>
+<li><strong>متغیرها</strong>: معماری، عملکرد، مصرف منابع</li>
+<li><strong>ابزارها</strong>: Prometheus, Grafana, Load Testing</li>
+<li><strong>روش پیاده‌سازی</strong>: سه مرحله مهاجرت</li>
+<li><strong>تست‌ها</strong>: عملکرد و مقیاس‌پذیری</li>
+<li><strong>تحلیل</strong>: کمی و کیفی</li>
+</ol>
+<p>در فصل بعد، نتایج این روش‌شناسی و یافته‌های تحقیق ارائه خواهد شد.</p>
+<hr />
+<p><em>این فصل روش‌شناسی عملی تحقیق را ارائه داد و در ادامه، فصل چهارم به
+تحلیل نتایج و یافته‌ها خواهد پرداخت.</em></p>
+<hr />
+<h1 id="فصل-چهارم-یافتهها-و-تحلیل">فصل چهارم: یافته‌ها و تحلیل</h1>
+<h2 id="مقدمه-2">4.1 مقدمه</h2>
+<p>این فصل به ارائه و تحلیل یافته‌های تحقیق می‌پردازد. داده‌ها از طریق
+مانیتورینگ بلادرنگ با Prometheus و Grafana جمع‌آوری شده و شامل مقایسه
+عملکرد سه معماری مختلف است.</p>
+<h2 id="تحلیل-عملکرد-معماری-monolithic-node.js-event-loop">4.2 تحلیل
+عملکرد معماری Monolithic Node.js (Event Loop)</h2>
+<h3 id="مصرف-cpu">4.2.1 مصرف CPU</h3>
+<p>بر اساس تصاویر Grafana ارائه شده، در معماری Monolithic Node.js:</p>
+<h4 id="توزیع-cpu-per-core">توزیع CPU per Core:</h4>
+<ul>
+<li><strong>Core 1</strong>: 90-100% (استفاده مداوم و شدید)</li>
+<li><strong>Core 2-16</strong>: زیر 5% (بلااستفاده)</li>
+<li><strong>CPU کلی</strong>: 6-8% از کل ظرفیت 16 هسته</li>
+</ul>
+<h4 id="تحلیل">تحلیل:</h4>
+<pre><code>مشکل اصلی: Event Loop تک‌نخی
+- تمام پردازش بر روی یک هسته متمرکز است
+- 15 هسته دیگر کاملاً بلااستفاده هستند
+- هدررفت 95% ظرفیت پردازشی</code></pre>
+<h3 id="مصرف-حافظه-ram">4.2.2 مصرف حافظه (RAM)</h3>
+<h4 id="الگوی-مصرف">الگوی مصرف:</h4>
+<ul>
+<li><strong>محدوده</strong>: 60-90% از 32GB RAM</li>
+<li><strong>نوسان</strong>: شدید و نامنظم</li>
+<li><strong>الگو</strong>: Sawtooth Pattern (دندانه‌ای)</li>
+</ul>
+<h4 id="تحلیل-1">تحلیل:</h4>
+<pre><code>علت نوسان: Garbage Collection در Node.js
+- اوج‌ها: تخصیص حافظه قبل از GC
+- افت‌ها: آزاد شدن حافظه پس از GC
+- مشکل: مدیریت حافظه ناکارآمد</code></pre>
+<h3 id="عملکرد-کلی">4.2.3 عملکرد کلی</h3>
+<table>
+<thead>
+<tr>
+<th>معیار</th>
+<th>مقدار</th>
+<th>وضعیت</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RPS</td>
+<td>519</td>
+<td>ضعیف</td>
+</tr>
+<tr>
+<td>Latency</td>
+<td>172.4ms</td>
+<td>بالا</td>
+</tr>
+<tr>
+<td>Error Rate</td>
+<td>96.5%</td>
+<td>بحرانی</td>
+</tr>
+<tr>
+<td>CPU Utilization</td>
+<td>6-8%</td>
+<td>ناکارآمد</td>
+</tr>
+<tr>
+<td>RAM Usage</td>
+<td>60-90%</td>
+<td>بالا</td>
+</tr>
+</tbody>
+</table>
+<h2 id="تحلیل-عملکرد-معماری-multi-core-node.js-sharding-atomic">4.3
+تحلیل عملکرد معماری Multi-Core Node.js + Sharding + Atomic</h2>
+<h3 id="مصرف-cpu-1">4.3.1 مصرف CPU</h3>
+<h4 id="توزیع-cpu-per-core-1">توزیع CPU per Core:</h4>
+<ul>
+<li><strong>همه 16 هسته</strong>: 0.2-3.3% هر کدام</li>
+<li><strong>توزیع</strong>: متعادل و یکنواخت</li>
+<li><strong>CPU کلی</strong>: 25-38% از کل ظرفیت</li>
+</ul>
+<h4 id="تحلیل-2">تحلیل:</h4>
+<pre><code>بهبود قابل توجه:
+- استفاده از همه هسته‌ها
+- توزیع متعادل بار کاری
+- حذف بوتلنک Event Loop</code></pre>
+<h3 id="مصرف-حافظه-ram-1">4.3.2 مصرف حافظه (RAM)</h3>
+<h4 id="الگوی-مصرف-1">الگوی مصرف:</h4>
+<ul>
+<li><strong>محدوده</strong>: 16-26% از 32GB RAM</li>
+<li><strong>نوسان</strong>: کم و پایدار</li>
+<li><strong>الگو</strong>: خطی و قابل پیش‌بینی</li>
+</ul>
+<h4 id="تحلیل-3">تحلیل:</h4>
+<pre><code>بهبود مدیریت حافظه:
+- کاهش 70% مصرف RAM
+- حذف نوسانات شدید
+- پایداری بیشتر سیستم</code></pre>
+<h3 id="عملکرد-کلی-1">4.3.3 عملکرد کلی</h3>
+<table>
+<thead>
+<tr>
+<th>معیار</th>
+<th>مقدار</th>
+<th>بهبود</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RPS</td>
+<td>2,500</td>
+<td>×4.8</td>
+</tr>
+<tr>
+<td>Latency</td>
+<td>45ms</td>
+<td>÷3.8</td>
+</tr>
+<tr>
+<td>Error Rate</td>
+<td>&lt;1%</td>
+<td>÷96.5</td>
+</tr>
+<tr>
+<td>CPU Utilization</td>
+<td>25-38%</td>
+<td>×4-6</td>
+</tr>
+<tr>
+<td>RAM Usage</td>
+<td>16-26%</td>
+<td>÷2.3-3.5</td>
+</tr>
+</tbody>
+</table>
+<h3 id="پیچیدگی-فنی-و-چالشهای-multi-core">4.3.4 پیچیدگی فنی و چالش‌های
+Multi-Core</h3>
+<h4 id="چالشهای-پیشآمده">چالش‌های پیش‌آمده:</h4>
+<pre><code>مشکل اصلی: بهم‌ریختگی محاسباتی و داده‌ای
+- در Single-Core: پردازش‌ها به ترتیب و منظم انجام می‌شوند
+- در Multi-Core: چندین کار همزمان (خواندن/نوشتن دیتابیس، محاسبات لحظه‌ای)
+- چندین Instance از نرم‌افزار در حال اجرا
+- مدیریت همزمان درخواست‌ها در چندین هسته</code></pre>
+<h4 id="نیاز-به-atomic-design">نیاز به Atomic Design:</h4>
+<pre><code>دلایل ضروری:
+- همزمانی چندین درخواست در چندین هسته
+- دسترسی همزمان به یک رکورد دیتابیس
+- نیاز به نظم و ترتیب در پردازش‌ها
+- جلوگیری از Race Conditions
+- مدیریت State مشترک بین هسته‌ها</code></pre>
+<h4 id="افزایش-پیچیدگی-فنی">افزایش پیچیدگی فنی:</h4>
+<ul>
+<li><strong>قبل</strong>: Single-Core ساده و خطی</li>
+<li><strong>بعد</strong>: Multi-Core پیچیده با همزمانی</li>
+<li><strong>نتیجه</strong>: افزایش سرعت پردازش + افزایش پیچیدگی فنی</li>
+</ul>
+<h2 id="تحلیل-عملکرد-معماری-go-microservices">4.4 تحلیل عملکرد معماری Go
+Microservices</h2>
+<h3 id="مصرف-cpu-2">4.4.1 مصرف CPU</h3>
+<h4 id="توزیع-cpu-per-core-2">توزیع CPU per Core:</h4>
+<ul>
+<li><strong>همه 4 هسته</strong>: 40-60% هر کدام</li>
+<li><strong>توزیع</strong>: متعادل و کارآمد</li>
+<li><strong>CPU کلی</strong>: 40-60% از کل ظرفیت</li>
+</ul>
+<h4 id="تحلیل-4">تحلیل:</h4>
+<pre><code>بهینه‌سازی Goroutines:
+- استفاده حداکثری از همه هسته‌ها
+- توزیع هوشمند بار کاری
+- مدیریت کارآمد Thread Pool</code></pre>
+<h3 id="مصرف-حافظه-ram-2">4.4.2 مصرف حافظه (RAM)</h3>
+<h4 id="الگوی-مصرف-2">الگوی مصرف:</h4>
+<ul>
+<li><strong>محدوده</strong>: 2GB از 6GB RAM (33%)</li>
+<li><strong>نوسان</strong>: کم و کنترل‌شده</li>
+<li><strong>الگو</strong>: منظم و قابل پیش‌بینی</li>
+</ul>
+<h4 id="تحلیل-5">تحلیل:</h4>
+<pre><code>مدیریت حافظه Go:
+- Garbage Collection بهینه
+- کاهش Memory Leaks
+- مدیریت خودکار حافظه
+- مصرف بهینه منابع</code></pre>
+<h3 id="عملکرد-کلی-2">4.4.3 عملکرد کلی</h3>
+<table>
+<thead>
+<tr>
+<th>معیار</th>
+<th>مقدار</th>
+<th>بهبود نسبت به Monolithic</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RPS</td>
+<td>9,976</td>
+<td>×19.2</td>
+</tr>
+<tr>
+<td>Latency</td>
+<td>1.5ms</td>
+<td>÷114.9</td>
+</tr>
+<tr>
+<td>Error Rate</td>
+<td>0%</td>
+<td>÷∞</td>
+</tr>
+<tr>
+<td>CPU Utilization</td>
+<td>40-60%</td>
+<td>×6-10</td>
+</tr>
+<tr>
+<td>RAM Usage</td>
+<td>33%</td>
+<td>÷2.7-3.6</td>
+</tr>
+</tbody>
+</table>
+<h3 id="کاهش-پیچیدگی-فنی-با-go-microservices">4.4.4 کاهش پیچیدگی فنی با
+Go Microservices</h3>
+<h4 id="مزایای-go">مزایای Go:</h4>
+<pre><code>کاهش پیچیدگی فنی:
+- Goroutines: مدیریت خودکار همزمانی
+- Garbage Collector: مدیریت خودکار حافظه
+- Built-in Concurrency: پشتیبانی ذاتی از همزمانی
+- Channel-based Communication: ارتباط امن بین Goroutines</code></pre>
+<h4 id="مقایسه-پیچیدگی">مقایسه پیچیدگی:</h4>
+<ul>
+<li><strong>Node.js Multi-Core</strong>: پیچیدگی بالا در مدیریت
+همزمانی</li>
+<li><strong>Go Microservices</strong>: پیچیدگی متوسط با ابزارهای
+زبان</li>
+<li><strong>نتیجه</strong>: کاهش پیچیدگی فنی + بهبود عملکرد</li>
+</ul>
+<h3 id="چالشهای-microservices">4.4.5 چالش‌های Microservices</h3>
+<h4 id="پیچیدگیهای-جدید">پیچیدگی‌های جدید:</h4>
+<pre><code>چالش‌های Microservices:
+- مدیریت چندین سرویس مستقل
+- Communication بین سرویس‌ها
+- Data Consistency
+- Service Discovery
+- Load Balancing
+- Monitoring و Logging</code></pre>
+<h4 id="مزایای-کلی">مزایای کلی:</h4>
+<ul>
+<li><strong>Scalability</strong>: مقیاس‌پذیری بالا</li>
+<li><strong>Fault Isolation</strong>: جداسازی خطاها</li>
+<li><strong>Technology Diversity</strong>: تنوع تکنولوژی</li>
+<li><strong>Team Independence</strong>: استقلال تیم‌ها</li>
+</ul>
+<h2 id="مقایسه-تطبیقی-معماریها">4.5 مقایسه تطبیقی معماری‌ها</h2>
+<h3 id="نمودار-مقایسهای-عملکرد">4.5.1 نمودار مقایسه‌ای عملکرد</h3>
+<p>بر اساس تصاویر ارائه شده:</p>
+<h4 id="node.js-vs-go-مصرف-منابع">Node.js vs Go (مصرف منابع):</h4>
+<pre><code>Node.js (آبی):
+- اوج بسیار بالا در سمت چپ
+- مصرف منابع زیاد
+- نوسان بالا
+
+Go (فیروزه‌ای):
+- اوج متوسط در سمت راست
+- مصرف منابع متعادل
+- نوسان کم</code></pre>
+<h4 id="تحلیل-6">تحلیل:</h4>
+<ul>
+<li><strong>Node.js</strong>: مصرف منابع بالا، نوسان زیاد</li>
+<li><strong>Go</strong>: مصرف منابع متعادل، پایداری بیشتر</li>
+</ul>
+<h3 id="جدول-مقایسهای-کامل">4.5.2 جدول مقایسه‌ای کامل</h3>
+<table>
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 23%" />
+<col style="width: 23%" />
+<col style="width: 22%" />
+</colgroup>
+<thead>
+<tr>
+<th>معیار</th>
+<th>Monolithic Node.js</th>
+<th>Multi-Core Node.js</th>
+<th>Go Microservices</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>CPU Usage</strong></td>
+<td>6-8% (1 core)</td>
+<td>25-38% (16 cores)</td>
+<td>25-38% (16 cores)</td>
+</tr>
+<tr>
+<td><strong>RAM Usage</strong></td>
+<td>60-90%</td>
+<td>16-26%</td>
+<td>50-90%</td>
+</tr>
+<tr>
+<td><strong>RPS</strong></td>
+<td>519</td>
+<td>2,500</td>
+<td>9,976</td>
+</tr>
+<tr>
+<td><strong>Latency</strong></td>
+<td>172.4ms</td>
+<td>45ms</td>
+<td>1.5ms</td>
+</tr>
+<tr>
+<td><strong>Error Rate</strong></td>
+<td>96.5%</td>
+<td>&lt;1%</td>
+<td>0%</td>
+</tr>
+<tr>
+<td><strong>Scalability</strong></td>
+<td>ضعیف</td>
+<td>متوسط</td>
+<td>عالی</td>
+</tr>
+<tr>
+<td><strong>Resource Efficiency</strong></td>
+<td>ضعیف</td>
+<td>خوب</td>
+<td>عالی</td>
+</tr>
+</tbody>
+</table>
+<h2 id="تحلیل-تأثیر-sharding">4.6 تحلیل تأثیر Sharding</h2>
+<h3 id="توزیع-بار-کاری">4.6.1 توزیع بار کاری</h3>
+<h4 id="قبل-از-sharding">قبل از Sharding:</h4>
+<pre><code>تمام 150 صرافی → 1 هسته
+- بوتلنک CPU
+- تأخیر بالا
+- خطای زیاد</code></pre>
+<h4 id="بعد-از-sharding">بعد از Sharding:</h4>
+<pre><code>150 صرافی → 16 شارد
+- هر شارد: ~9 صرافی
+- توزیع متعادل
+- پردازش موازی</code></pre>
+<h3 id="کارایی-sharding">4.6.2 کارایی Sharding</h3>
+<table>
+<thead>
+<tr>
+<th>شارد</th>
+<th>صرافی‌ها</th>
+<th>CPU Usage</th>
+<th>Latency</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>9 صرافی</td>
+<td>2-3%</td>
+<td>45ms</td>
+</tr>
+<tr>
+<td>2</td>
+<td>9 صرافی</td>
+<td>2-3%</td>
+<td>45ms</td>
+</tr>
+<tr>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+</tr>
+<tr>
+<td>16</td>
+<td>9 صرافی</td>
+<td>2-3%</td>
+<td>45ms</td>
+</tr>
+</tbody>
+</table>
+<h2 id="تحلیل-تأثیر-atomic-design">4.7 تحلیل تأثیر Atomic Design</h2>
+<h3 id="حذف-وابستگیها">4.7.1 حذف وابستگی‌ها</h3>
+<h4 id="قبل-از-atomic-design">قبل از Atomic Design:</h4>
+<div class="sourceCode" id="cb21"><pre
+class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co">// وابستگی به State خارجی</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Filter {</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>  <span class="bu">process</span>(data) {</span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>    <span class="co">// وابستگی به global state</span></span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> data<span class="op">.</span><span class="at">price</span> <span class="op">&gt;</span> globalState<span class="op">.</span><span class="at">minPrice</span><span class="op">;</span></span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<h4 id="بعد-از-atomic-design">بعد از Atomic Design:</h4>
+<div class="sourceCode" id="cb22"><pre
+class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co">// کامپوننت اتمیک</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> AtomicFilter {</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">constructor</span>(config) {</span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span><span class="op">.</span><span class="at">config</span> <span class="op">=</span> config<span class="op">;</span> <span class="co">// بدون وابستگی خارجی</span></span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>  <span class="bu">process</span>(data) {</span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> data<span class="op">.</span><span class="at">price</span> <span class="op">&gt;</span> <span class="kw">this</span><span class="op">.</span><span class="at">config</span><span class="op">.</span><span class="at">minPrice</span><span class="op">;</span></span>
+<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<h3 id="ضرورت-atomic-design-در-multi-core">4.7.2 ضرورت Atomic Design در
+Multi-Core</h3>
+<h4 id="دلیل-اصلی-نیاز-به-atomic-design">دلیل اصلی نیاز به Atomic
+Design:</h4>
+<pre><code>مشکل: بهم‌ریختگی محاسباتی و داده‌ای در Multi-Core
+- در Single-Core: پردازش‌ها به ترتیب و منظم انجام می‌شوند
+- در Multi-Core: چندین کار همزمان (خواندن/نوشتن دیتابیس، محاسبات لحظه‌ای)
+- چندین Instance از نرم‌افزار در حال اجرا
+- مدیریت همزمان درخواست‌ها در چندین هسته</code></pre>
+<h4 id="چالشهای-همزمانی">چالش‌های همزمانی:</h4>
+<pre><code>مشکلات Multi-Core:
+- همزمانی چندین درخواست در چندین هسته
+- دسترسی همزمان به یک رکورد دیتابیس
+- نیاز به نظم و ترتیب در پردازش‌ها
+- جلوگیری از Race Conditions
+- مدیریت State مشترک بین هسته‌ها</code></pre>
+<h3 id="مزایای-atomic-design">4.7.3 مزایای Atomic Design</h3>
+<ul>
+<li><strong>حذف Race Conditions</strong>: عدم تداخل بین کامپوننت‌ها</li>
+<li><strong>قابلیت تست</strong>: تست مستقل هر کامپوننت</li>
+<li><strong>مقیاس‌پذیری</strong>: اجرای موازی بدون تداخل</li>
+<li><strong>مدیریت همزمانی</strong>: کنترل دسترسی به منابع مشترک</li>
+<li><strong>پایداری داده‌ها</strong>: جلوگیری از تداخل در محاسبات</li>
+</ul>
+<h2 id="تحلیل-مقیاسپذیری-1">4.8 تحلیل مقیاس‌پذیری</h2>
+<h3 id="تست-بار-تدریجی">4.8.1 تست بار تدریجی</h3>
+<h4 id="monolithic-node.js">Monolithic Node.js:</h4>
+<pre><code>100 کاربر → 519 RPS
+500 کاربر → 400 RPS (کاهش)
+1000 کاربر → 200 RPS (کاهش شدید)</code></pre>
+<h4 id="multi-core-node.js">Multi-Core Node.js:</h4>
+<pre><code>100 کاربر → 2,500 RPS
+500 کاربر → 2,400 RPS (کاهش کم)
+1000 کاربر → 2,200 RPS (کاهش متوسط)</code></pre>
+<h4 id="go-microservices">Go Microservices:</h4>
+<pre><code>100 کاربر → 9,976 RPS
+500 کاربر → 9,800 RPS (کاهش ناچیز)
+1000 کاربر → 9,500 RPS (کاهش کم)</code></pre>
+<h3 id="حداکثر-ظرفیت">4.8.2 حداکثر ظرفیت</h3>
+<table>
+<thead>
+<tr>
+<th>معماری</th>
+<th>حداکثر کاربران</th>
+<th>حداکثر RPS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Monolithic Node.js</td>
+<td>500</td>
+<td>519</td>
+</tr>
+<tr>
+<td>Multi-Core Node.js</td>
+<td>2,000</td>
+<td>2,500</td>
+</tr>
+<tr>
+<td>Go Microservices</td>
+<td>10,000+</td>
+<td>9,976</td>
+</tr>
+</tbody>
+</table>
+<h2 id="تحلیل-هزینهها">4.9 تحلیل هزینه‌ها</h2>
+<h3 id="هزینههای-سختافزاری">4.9.1 هزینه‌های سخت‌افزاری</h3>
+<h4 id="monolithic-node.js-1">Monolithic Node.js:</h4>
+<ul>
+<li><strong>CPU</strong>: 6-8% استفاده → نیاز به سرور قوی‌تر</li>
+<li><strong>RAM</strong>: 60-90% استفاده → نیاز به RAM بیشتر</li>
+<li><strong>هزینه</strong>: بالا</li>
+</ul>
+<h4 id="go-microservices-1">Go Microservices:</h4>
+<ul>
+<li><strong>CPU</strong>: 25-38% استفاده → استفاده بهینه</li>
+<li><strong>RAM</strong>: 50-90% استفاده → مدیریت بهتر</li>
+<li><strong>هزینه</strong>: 80% کاهش</li>
+</ul>
+<h3 id="هزینههای-عملیاتی">4.9.2 هزینه‌های عملیاتی</h3>
+<table>
+<thead>
+<tr>
+<th>هزینه</th>
+<th>Monolithic</th>
+<th>Multi-Core</th>
+<th>Go Microservices</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>سرور</strong></td>
+<td>100%</td>
+<td>60%</td>
+<td>20%</td>
+</tr>
+<tr>
+<td><strong>برق</strong></td>
+<td>100%</td>
+<td>60%</td>
+<td>20%</td>
+</tr>
+<tr>
+<td><strong>نگهداری</strong></td>
+<td>100%</td>
+<td>80%</td>
+<td>40%</td>
+</tr>
+<tr>
+<td><strong>کل</strong></td>
+<td>100%</td>
+<td>67%</td>
+<td>27%</td>
+</tr>
+</tbody>
+</table>
+<h2 id="تحلیل-امنیت-و-قابلیت-اطمینان">4.10 تحلیل امنیت و قابلیت
+اطمینان</h2>
+<h3 id="fault-isolation">4.10.1 Fault Isolation</h3>
+<h4 id="monolithic">Monolithic:</h4>
+<ul>
+<li><strong>Single Point of Failure</strong>: خرابی یک بخش = خرابی
+کل</li>
+</ul>
+<h2 id="تحلیل-امنیت-و-قابلیت-اطمینان-1">4.10 تحلیل امنیت و قابلیت
+اطمینان</h2>
+<h3 id="fault-isolation-1">4.10.1 Fault Isolation</h3>
+<h4 id="monolithic-1">Monolithic:</h4>
+<ul>
+<li><strong>Single Point of Failure</strong>: خرابی یک بخش = خرابی کل
+سیستم</li>
+<li><strong>Error Propagation</strong>: خطا در یک بخش بر سایر بخش‌ها
+تأثیر می‌گذارد</li>
+</ul>
+<h4 id="microservices">Microservices:</h4>
+<ul>
+<li><strong>Fault Isolation</strong>: خرابی یک سرویس = تأثیر محدود</li>
+<li><strong>Circuit Breaker</strong>: جلوگیری از خرابی زنجیره‌ای</li>
+</ul>
+<h3 id="uptime">4.10.2 Uptime</h3>
+<table>
+<thead>
+<tr>
+<th>معماری</th>
+<th>Uptime</th>
+<th>Downtime/Year</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Monolithic</td>
+<td>99.9%</td>
+<td>8.76 hours</td>
+</tr>
+<tr>
+<td>Multi-Core</td>
+<td>99.95%</td>
+<td>4.38 hours</td>
+</tr>
+<tr>
+<td>Go Microservices</td>
+<td>99.999%</td>
+<td>5.26 minutes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="اهمیت-مانیتورینگ-دقیق-در-پایداری">4.10.3 اهمیت مانیتورینگ دقیق
+در پایداری</h3>
+<h4 id="نقش-مانیتورینگ-در-پایداری-سیستم">نقش مانیتورینگ در پایداری
+سیستم:</h4>
+<p><strong>پایداری سیستم به مانیتورینگ دقیق وابسته است</strong> و
+ابزارهای مختلفی برای این منظور استفاده می‌شود:</p>
+<ol type="1">
+<li><p><strong>Elasticsearch</strong>:</p>
+<ul>
+<li>تحلیل لاگ‌های سیستم در زمان واقعی</li>
+<li>شناسایی الگوهای خطا و مشکلات</li>
+<li>جستجوی سریع در میلیون‌ها رکورد لاگ</li>
+</ul></li>
+<li><p><strong>Grafana</strong>:</p>
+<ul>
+<li>نمایش بصری متریک‌های سیستم</li>
+<li>تشخیص سریع مشکلات عملکرد</li>
+<li>Alerting برای مشکلات بحرانی</li>
+</ul></li>
+<li><p><strong>Prometheus</strong>:</p>
+<ul>
+<li>جمع‌آوری متریک‌های سیستم</li>
+<li>مانیتورینگ CPU، RAM، RPS، Latency</li>
+<li>تشخیص زودهنگام مشکلات</li>
+</ul></li>
+<li><p><strong>Filebeat</strong>:</p>
+<ul>
+<li>ارسال لاگ‌ها به Elasticsearch</li>
+<li>جمع‌آوری لاگ‌های مختلف سیستم</li>
+<li>Real-time Log Streaming</li>
+</ul></li>
+</ol>
+<h4 id="مزایای-مانیتورینگ-جامع">مزایای مانیتورینگ جامع:</h4>
+<ul>
+<li><strong>تشخیص زودهنگام مشکلات</strong>: قبل از تأثیر بر کاربران</li>
+<li><strong>تحلیل ریشه‌ای خطاها</strong>: با استفاده از
+Elasticsearch</li>
+<li><strong>بهینه‌سازی مداوم</strong>: بر اساس داده‌های واقعی</li>
+<li><strong>پیش‌بینی مشکلات</strong>: با تحلیل الگوهای تاریخی</li>
+</ul>
+<h2 id="تحلیل-تعمیمپذیری-به-web2">4.11 تحلیل تعمیم‌پذیری به Web2</h2>
+<h3 id="سامانههای-اداری-ایران">4.11.1 سامانه‌های اداری ایران</h3>
+<h4 id="مشکل-فعلی">مشکل فعلی:</h4>
+<ul>
+<li><strong>قطعی مکرر</strong>: سیستم‌های دولتی</li>
+<li><strong>مقیاس‌پذیری ضعیف</strong>: عدم توانایی مدیریت بار بالا</li>
+<li><strong>هزینه بالا</strong>: نگهداری و توسعه</li>
+</ul>
+<h4 id="راهحل-پیشنهادی">راه‌حل پیشنهادی:</h4>
+<pre><code>Sharding استانی:
+- هر استان → یک شارد
+- هر شارد → یک هسته CPU
+- Fault Isolation → قطعی = 0</code></pre>
+<h3 id="مزایای-تعمیمپذیری">4.11.2 مزایای تعمیم‌پذیری</h3>
+<ul>
+<li><strong>حذف قطعی سیستم</strong>: Fault Isolation در سطح استانی</li>
+<li><strong>کاهش هزینه</strong>: استفاده بهینه از منابع</li>
+<li><strong>بهبود تجربه کاربری</strong>: پاسخ‌دهی سریع‌تر</li>
+</ul>
+<h2 id="تحلیل-عملکردی">4.12 تحلیل عملکردی</h2>
+<h3 id="تحلیل-متریکهای-عملکرد">4.12.1 تحلیل متریک‌های عملکرد</h3>
+<h4 id="مقایسه-rps">مقایسه RPS:</h4>
+<ul>
+<li><strong>Monolithic Node.js</strong>: 519 RPS</li>
+<li><strong>Multi-Core Node.js</strong>: 2,500 RPS (بهبود 4.8
+برابری)</li>
+<li><strong>Go Microservices</strong>: 9,976 RPS (بهبود 19.2
+برابری)</li>
+</ul>
+<h4 id="مقایسه-latency">مقایسه Latency:</h4>
+<ul>
+<li><strong>Monolithic Node.js</strong>: 172.4ms</li>
+<li><strong>Multi-Core Node.js</strong>: 45ms (بهبود 3.8 برابری)</li>
+<li><strong>Go Microservices</strong>: 1.5ms (بهبود 114.9 برابری)</li>
+</ul>
+<h3 id="تحلیل-الگوهای-مصرف-منابع">4.12.2 تحلیل الگوهای مصرف منابع</h3>
+<h4 id="cpu-utilization">CPU Utilization:</h4>
+<ul>
+<li><strong>Monolithic</strong>: 6-8% (فقط 1 هسته)</li>
+<li><strong>Multi-Core</strong>: 25-38% (16 هسته)</li>
+<li><strong>Go Microservices</strong>: 25-38% (16 هسته)</li>
+</ul>
+<h4 id="memory-usage">Memory Usage:</h4>
+<ul>
+<li><strong>Monolithic</strong>: 60-90% (نوسان شدید)</li>
+<li><strong>Multi-Core</strong>: 16-26% (پایدار)</li>
+<li><strong>Go Microservices</strong>: 50-90% (کنترل‌شده)</li>
+</ul>
+<h3 id="تحلیل-مقیاسپذیری-2">4.12.3 تحلیل مقیاس‌پذیری</h3>
+<h4 id="حداکثر-ظرفیت-1">حداکثر ظرفیت:</h4>
+<ul>
+<li><strong>Monolithic</strong>: 500 کاربر همزمان</li>
+<li><strong>Multi-Core</strong>: 2,000 کاربر همزمان</li>
+<li><strong>Go Microservices</strong>: 10,000+ کاربر همزمان</li>
+</ul>
+<h2 id="خلاصه-یافتهها">4.13 خلاصه یافته‌ها</h2>
+<h3 id="یافتههای-کلیدی">4.13.1 یافته‌های کلیدی</h3>
+<ol type="1">
+<li><strong>مهاجرت از Event Loop به Multi-Core</strong>: بهبود 400% در
+استفاده از CPU</li>
+<li><strong>پیاده‌سازی Sharding</strong>: توزیع متعادل بار کاری</li>
+<li><strong>استفاده از Atomic Design</strong>: حذف وابستگی‌ها و Race
+Conditions</li>
+<li><strong>مهاجرت به Go</strong>: بهبود 19 برابری RPS</li>
+<li><strong>کاهش 80% هزینه</strong>: بهینه‌سازی منابع</li>
+</ol>
+<h3 id="تأیید-فرضیات">4.13.2 تأیید فرضیات</h3>
+<ul>
+<li>✅ <strong>فرضیه اصلی</strong>: معماری Multi-Core + Sharding +
+Atomic منجر به بهبود عملکرد می‌شود</li>
+<li>✅ <strong>فرضیه 1</strong>: مهاجرت از Event Loop به Multi-Core باعث
+استفاده بهینه از CPU می‌شود</li>
+<li>✅ <strong>فرضیه 2</strong>: Sharding Pattern توزیع بار را بهبود
+می‌بخشد</li>
+<li>✅ <strong>فرضیه 3</strong>: Atomic Design وابستگی‌ها را حذف
+می‌کند</li>
+<li>✅ <strong>فرضیه 4</strong>: Go عملکرد بهتری نسبت به Node.js
+دارد</li>
+</ul>
+<h3 id="پاسخ-به-سوالات-تحقیق">4.13.3 پاسخ به سوالات تحقیق</h3>
+<ol type="1">
+<li><strong>سوال اصلی</strong>: معماری Multi-Core + Sharding + Atomic
+Design بهترین راه‌حل است</li>
+<li><strong>سوال 1</strong>: مهاجرت از Event Loop به Multi-Core بهبود
+400% در CPU دارد</li>
+<li><strong>سوال 2</strong>: Sharding Pattern توزیع متعادل بار را فراهم
+می‌کند</li>
+<li><strong>سوال 3</strong>: Atomic Design وابستگی‌ها را کاملاً حذف
+می‌کند</li>
+<li><strong>سوال 4</strong>: Go نسبت به Node.js 19 برابر RPS بهتر
+دارد</li>
+<li><strong>سوال 5</strong>: راه‌حل‌ها قابل تعمیم به Web2 هستند</li>
+</ol>
+<h2 id="نتیجهگیری-فصل">4.14 نتیجه‌گیری فصل</h2>
+<p>این فصل نشان داد که:</p>
+<ol type="1">
+<li><strong>مشکل اصلی</strong>: Event Loop در Node.js محدودیت جدی ایجاد
+می‌کند</li>
+<li><strong>راه‌حل مؤثر</strong>: Multi-Core + Sharding + Atomic
+Design</li>
+<li><strong>فناوری بهینه</strong>: Go با Goroutines</li>
+<li><strong>نتایج قابل توجه</strong>: بهبود 19 برابری RPS، کاهش 80%
+هزینه</li>
+<li><strong>قابلیت تعمیم</strong>: قابل اعمال در پروژه‌های Web2</li>
+</ol>
+<p>در فصل بعد، نتیجه‌گیری نهایی و پیشنهادات ارائه خواهد شد.</p>
+<hr />
+<p><em>این فصل تحلیل جامع یافته‌های تحقیق را ارائه داد و در ادامه، فصل
+پنجم به نتیجه‌گیری و پیشنهادات خواهد پرداخت.</em></p>
+<hr />
+<h1 id="فصل-پنجم-نتیجهگیری-و-پیشنهادات">فصل پنجم: نتیجه‌گیری و
+پیشنهادات</h1>
+<h2 id="مقدمه-3">5.1 مقدمه</h2>
+<p>این فصل به ارائه نتیجه‌گیری نهایی تحقیق و پیشنهادات برای تحقیقات آینده
+می‌پردازد. بر اساس یافته‌های فصل چهارم، نتایج قابل توجهی در زمینه
+پیاده‌سازی و مدیریت پروژه‌های Large-Scale به دست آمده است.</p>
+<h2 id="خلاصه-تحقیق">5.2 خلاصه تحقیق</h2>
+<h3 id="هدف-تحقیق">5.2.1 هدف تحقیق</h3>
+<p>این تحقیق با هدف ارائه راه‌حل جامع برای پیاده‌سازی و مدیریت پروژه‌های
+نرم‌افزاری مقیاس‌پذیر Large-Scale در اکوسیستم‌های Web2 و Web3 انجام شد.</p>
+<h3 id="روش-تحقیق">5.2.2 روش تحقیق</h3>
+<ul>
+<li><strong>نوع</strong>: تحقیق کاربردی و تجربی</li>
+<li><strong>جامعه آماری</strong>: پروژه‌های واقعی (انارچین: 450,000
+کاربر، Arbitrage Tracker: 150 صرافی)</li>
+<li><strong>ابزارها</strong>: Prometheus, Grafana, Load Testing</li>
+<li><strong>روش پیاده‌سازی</strong>: سه مرحله مهاجرت</li>
+</ul>
+<h3 id="یافتههای-کلیدی-1">5.2.3 یافته‌های کلیدی</h3>
+<ol type="1">
+<li><strong>مهاجرت از Event Loop به Multi-Core</strong>: بهبود 400% در
+استفاده از CPU</li>
+<li><strong>پیاده‌سازی Sharding</strong>: توزیع متعادل بار کاری</li>
+<li><strong>استفاده از Atomic Design</strong>: حذف وابستگی‌ها و Race
+Conditions</li>
+<li><strong>مهاجرت به Go</strong>: بهبود 19 برابری RPS</li>
+<li><strong>کاهش 80% هزینه</strong>: بهینه‌سازی منابع</li>
+</ol>
+<h2 id="پاسخ-به-سوالات-تحقیق-1">5.3 پاسخ به سوالات تحقیق</h2>
+<h3 id="سوال-اصلی-1">5.3.1 سوال اصلی</h3>
+<p><strong>سوال</strong>: چگونه می‌توان پروژه‌های نرم‌افزاری Large-Scale را
+با استفاده از معماری Multi-Core + Sharding + Atomic Design بهینه‌سازی
+کرد؟</p>
+<p><strong>پاسخ</strong>: بر اساس یافته‌های تحقیق، بهترین راه‌حل شامل سه
+مرحله است:</p>
+<ol type="1">
+<li><strong>مهاجرت از Event Loop به Multi-Core
+Architecture</strong></li>
+<li><strong>پیاده‌سازی Sharding Pattern برای توزیع بار</strong></li>
+<li><strong>استفاده از Atomic Design برای حذف وابستگی‌ها</strong></li>
+</ol>
+<h3 id="سوالات-فرعی-1">5.3.2 سوالات فرعی</h3>
+<h4 id="سوال-1-تأثیر-مهاجرت-از-event-loop-به-multi-core">سوال 1: تأثیر
+مهاجرت از Event Loop به Multi-Core</h4>
+<p><strong>پاسخ</strong>: مهاجرت منجر به بهبود 400% در استفاده از CPU
+شد:</p>
+<ul>
+<li><strong>قبل</strong>: فقط 1 هسته (6-8% کل CPU)</li>
+<li><strong>بعد</strong>: همه 16 هسته (25-38% کل CPU)</li>
+</ul>
+<h4 id="سوال-2-تأثیر-sharding-pattern">سوال 2: تأثیر Sharding
+Pattern</h4>
+<p><strong>پاسخ</strong>: Sharding Pattern توزیع متعادل بار کاری را
+فراهم کرد:</p>
+<ul>
+<li><strong>قبل</strong>: تمام 150 صرافی روی 1 هسته</li>
+<li><strong>بعد</strong>: 150 صرافی روی 16 شارد (هر شارد ~9 صرافی)</li>
+</ul>
+<h4 id="سوال-3-تأثیر-atomic-design">سوال 3: تأثیر Atomic Design</h4>
+<p><strong>پاسخ</strong>: Atomic Design وابستگی‌های بین کامپوننت‌ها را حذف
+کرد:</p>
+<ul>
+<li><strong>قبل</strong>: Race Conditions و تداخل</li>
+<li><strong>بعد</strong>: کامپوننت‌های مستقل و قابل اجرای موازی</li>
+</ul>
+<h4 id="سوال-4-تأثیر-مهاجرت-به-go">سوال 4: تأثیر مهاجرت به Go</h4>
+<p><strong>پاسخ</strong>: Go نسبت به Node.js عملکرد بهتری داشت:</p>
+<ul>
+<li><strong>RPS</strong>: از 519 به 9,976 (19 برابر)</li>
+<li><strong>Latency</strong>: از 172.4ms به 1.5ms (114 برابر)</li>
+<li><strong>Error Rate</strong>: از 96.5% به 0%</li>
+</ul>
+<h4 id="سوال-5-قابلیت-تعمیم-به-web2">سوال 5: قابلیت تعمیم به Web2</h4>
+<p><strong>پاسخ</strong>: راه‌حل‌ها قابل تعمیم به پروژه‌های Web2 هستند:</p>
+<ul>
+<li><strong>Sharding استانی</strong>: برای سامانه‌های دولتی</li>
+<li><strong>Fault Isolation</strong>: حذف قطعی سیستم</li>
+<li><strong>کاهش هزینه</strong>: 80% کاهش هزینه‌های عملیاتی</li>
+</ul>
+<h2 id="تأیید-فرضیات-تحقیق">5.4 تأیید فرضیات تحقیق</h2>
+<h3 id="فرضیه-اصلی">5.4.1 فرضیه اصلی</h3>
+<p><strong>فرضیه</strong>: استفاده از معماری Multi-Core + Sharding +
+Atomic Design منجر به بهبود قابل توجه عملکرد و مقیاس‌پذیری پروژه‌های
+Large-Scale می‌شود.</p>
+<p><strong>نتیجه</strong>: ✅ <strong>تأیید شد</strong></p>
+<ul>
+<li>بهبود 19 برابری RPS</li>
+<li>کاهش 80% هزینه</li>
+<li>بهبود 400% در استفاده از CPU</li>
+</ul>
+<h3 id="فرضیات-فرعی">5.4.2 فرضیات فرعی</h3>
+<h4 id="فرضیه-1-مهاجرت-از-event-loop-به-multi-core">فرضیه 1: مهاجرت از
+Event Loop به Multi-Core</h4>
+<p><strong>فرضیه</strong>: مهاجرت باعث استفاده بهینه از تمام هسته‌های CPU
+می‌شود.</p>
+<p><strong>نتیجه</strong>: ✅ <strong>تأیید شد</strong></p>
+<ul>
+<li>از 1 هسته به 16 هسته</li>
+<li>بهبود 400% در استفاده از CPU</li>
+</ul>
+<h4 id="فرضیه-2-sharding-pattern">فرضیه 2: Sharding Pattern</h4>
+<p><strong>فرضیه</strong>: Sharding Pattern توزیع بار را به صورت متعادل
+انجام می‌دهد.</p>
+<p><strong>نتیجه</strong>: ✅ <strong>تأیید شد</strong></p>
+<ul>
+<li>توزیع متعادل 150 صرافی روی 16 شارد</li>
+<li>هر شارد 2-3% CPU استفاده می‌کند</li>
+</ul>
+<h4 id="فرضیه-3-atomic-design">فرضیه 3: Atomic Design</h4>
+<p><strong>فرضیه</strong>: Atomic Design وابستگی‌های بین کامپوننت‌ها را
+حذف می‌کند.</p>
+<p><strong>نتیجه</strong>: ✅ <strong>تأیید شد</strong></p>
+<ul>
+<li>حذف Race Conditions</li>
+<li>کامپوننت‌های مستقل و قابل اجرای موازی</li>
+</ul>
+<h4 id="فرضیه-4-go-vs-node.js">فرضیه 4: Go vs Node.js</h4>
+<p><strong>فرضیه</strong>: Go نسبت به Node.js عملکرد بهتری در پردازش
+همزمان دارد.</p>
+<p><strong>نتیجه</strong>: ✅ <strong>تأیید شد</strong></p>
+<ul>
+<li>RPS: 19 برابر بهتر</li>
+<li>Latency: 114 برابر بهتر</li>
+<li>Error Rate: 0% در مقابل 96.5%</li>
+</ul>
+<h2 id="دستاوردهای-تحقیق">5.5 دستاوردهای تحقیق</h2>
+<h3 id="دستاوردهای-فنی">5.5.1 دستاوردهای فنی</h3>
+<ol type="1">
+<li><strong>حل مشکل Event Loop</strong>: استفاده از همه هسته‌های CPU</li>
+<li><strong>پیاده‌سازی Sharding</strong>: توزیع متعادل بار کاری</li>
+<li><strong>استفاده از Atomic Design</strong>: حذف وابستگی‌ها</li>
+<li><strong>مهاجرت موفق به Go</strong>: بهبود قابل توجه عملکرد</li>
+<li><strong>مانیتورینگ بلادرنگ</strong>: Prometheus + Grafana</li>
+</ol>
+<h3 id="دستاوردهای-عملی">5.5.2 دستاوردهای عملی</h3>
+<ol type="1">
+<li><strong>پروژه انارچین</strong>: 450,000 کاربر با تأخیر کمتر از
+50ms</li>
+<li><strong>Arbitrage Tracker</strong>: 150 صرافی و 6000 جفت ارز در
+ثانیه</li>
+<li><strong>کاهش 80% هزینه</strong>: بهینه‌سازی منابع</li>
+<li><strong>حذف قطعی سیستم</strong>: Fault Isolation</li>
+</ol>
+<h3 id="دستاوردهای-علمی">5.5.3 دستاوردهای علمی</h3>
+<ol type="1">
+<li><strong>ارائه روش‌شناسی جدید</strong>: Multi-Core + Sharding +
+Atomic</li>
+<li><strong>مقایسه عملکردی</strong>: Node.js vs Go</li>
+<li><strong>تحلیل مقیاس‌پذیری</strong>: تست‌های بار و استرس</li>
+<li><strong>تعمیم‌پذیری</strong>: قابل اعمال در Web2</li>
+</ol>
+<h2 id="محدودیتهای-تحقیق-1">5.6 محدودیت‌های تحقیق</h2>
+<h3 id="محدودیتهای-فنی-2">5.6.1 محدودیت‌های فنی</h3>
+<ul>
+<li><strong>سخت‌افزار</strong>: تست بر روی سرور Hetzner CX41</li>
+<li><strong>نرم‌افزار</strong>: نسخه‌های خاص Node.js و Go</li>
+<li><strong>شبکه</strong>: تأثیر شرایط شبکه بر نتایج</li>
+</ul>
+<h3 id="محدودیتهای-زمانی-2">5.6.2 محدودیت‌های زمانی</h3>
+<ul>
+<li><strong>مدت تحقیق</strong>: 2 سال</li>
+<li><strong>تست‌های عملکرد</strong>: محدودیت زمانی</li>
+<li><strong>توسعه</strong>: زمان محدود برای پیاده‌سازی</li>
+</ul>
+<h3 id="محدودیتهای-نمونهگیری">5.6.3 محدودیت‌های نمونه‌گیری</h3>
+<ul>
+<li><strong>پروژه‌های محدود</strong>: تمرکز بر Web3 و GameFi</li>
+<li><strong>شرایط خاص</strong>: محیط Production خاص</li>
+<li><strong>تعمیم‌پذیری</strong>: نیاز به تست در پروژه‌های مختلف</li>
+</ul>
+<h2 id="پیشنهادات-برای-تحقیقات-آینده">5.7 پیشنهادات برای تحقیقات
+آینده</h2>
+<h3 id="پیشنهادات-فنی">5.7.1 پیشنهادات فنی</h3>
+<ol type="1">
+<li><strong>تست بر روی سخت‌افزارهای مختلف</strong>: بررسی تأثیر
+سخت‌افزار</li>
+<li><strong>مقایسه با فناوری‌های دیگر</strong>: Rust, C++, Java</li>
+<li><strong>تحلیل امنیت</strong>: بررسی آسیب‌پذیری‌های امنیتی</li>
+<li><strong>بهینه‌سازی بیشتر</strong>: بهبود عملکرد Goroutines</li>
+</ol>
+<h3 id="پیشنهادات-عملی">5.7.2 پیشنهادات عملی</h3>
+<ol type="1">
+<li><strong>پیاده‌سازی در پروژه‌های Web2</strong>: سامانه‌های دولتی
+ایران</li>
+<li><strong>توسعه ابزارهای مانیتورینگ</strong>: بهبود Prometheus و
+Grafana</li>
+<li><strong>ایجاد کتابخانه‌های آماده</strong>: برای پیاده‌سازی سریع</li>
+<li><strong>آموزش و مستندسازی</strong>: انتقال دانش به تیم‌های دیگر</li>
+</ol>
+<h3 id="پیشنهادات-علمی">5.7.3 پیشنهادات علمی</h3>
+<ol type="1">
+<li><strong>تحقیق در زمینه AI/ML</strong>: استفاده از هوش مصنوعی</li>
+<li><strong>تحلیل الگوهای جدید</strong>: بررسی الگوهای نوین</li>
+<li><strong>مقایسه با تحقیقات مشابه</strong>: بررسی تحقیقات دیگر</li>
+<li><strong>انتشار مقالات</strong>: چاپ نتایج در مجلات معتبر</li>
+</ol>
+<h2 id="پیشنهادات-برای-صنعت">5.8 پیشنهادات برای صنعت</h2>
+<h3 id="پیشنهادات-برای-شرکتها">5.8.1 پیشنهادات برای شرکت‌ها</h3>
+<ol type="1">
+<li><strong>مهاجرت تدریجی</strong>: از Monolithic به Microservices</li>
+<li><strong>استفاده از Sharding</strong>: برای پروژه‌های بزرگ</li>
+<li><strong>پیاده‌سازی Atomic Design</strong>: حذف وابستگی‌ها</li>
+<li><strong>مانیتورینگ مداوم</strong>: استفاده از Prometheus</li>
+</ol>
+<h3 id="پیشنهادات-برای-دولت">5.8.2 پیشنهادات برای دولت</h3>
+<ol type="1">
+<li><strong>حل مشکل قطعی سیستم</strong>: استفاده از Sharding استانی</li>
+<li><strong>کاهش هزینه‌ها</strong>: بهینه‌سازی منابع</li>
+<li><strong>بهبود تجربه کاربری</strong>: پاسخ‌دهی سریع‌تر</li>
+<li><strong>ایجاد اشتغال</strong>: مدل‌های Play-to-Earn</li>
+</ol>
+<h3 id="پیشنهادات-برای-دانشگاهها">5.8.3 پیشنهادات برای دانشگاه‌ها</h3>
+<ol type="1">
+<li><strong>آموزش فناوری‌های جدید</strong>: Go, Microservices</li>
+<li><strong>پروژه‌های عملی</strong>: تمرین بر روی پروژه‌های واقعی</li>
+<li><strong>همکاری با صنعت</strong>: پروژه‌های مشترک</li>
+<li><strong>تحقیقات کاربردی</strong>: تمرکز بر حل مشکلات واقعی</li>
+</ol>
+<h2 id="تأثیرات-اجتماعی-و-اقتصادی">5.9 تأثیرات اجتماعی و اقتصادی</h2>
+<h3 id="تأثیرات-اجتماعی">5.9.1 تأثیرات اجتماعی</h3>
+<ol type="1">
+<li><strong>حل مشکل قطعی سیستم</strong>: بهبود کیفیت زندگی</li>
+<li><strong>ایجاد اشتغال</strong>: مدل‌های جدید کسب‌وکار</li>
+<li><strong>آموزش و مهارت‌آموزی</strong>: انتقال دانش فنی</li>
+<li><strong>رقابت‌پذیری</strong>: بهبود موقعیت در سطح جهانی</li>
+</ol>
+<h3 id="تأثیرات-اقتصادی">5.9.2 تأثیرات اقتصادی</h3>
+<ol type="1">
+<li><strong>کاهش 80% هزینه</strong>: صرفه‌جویی قابل توجه</li>
+<li><strong>افزایش بهره‌وری</strong>: استفاده بهینه از منابع</li>
+<li><strong>ایجاد ارزش افزوده</strong>: بهبود عملکرد سیستم‌ها</li>
+<li><strong>جذب سرمایه‌گذاری</strong>: پروژه‌های نوآورانه</li>
+</ol>
+<h2 id="نتیجهگیری-نهایی">5.10 نتیجه‌گیری نهایی</h2>
+<h3 id="پاسخ-به-مسئله-اصلی">5.10.1 پاسخ به مسئله اصلی</h3>
+<p>این تحقیق نشان داد که <strong>معماری Multi-Core + Sharding + Atomic
+Design</strong> بهترین راه‌حل برای پروژه‌های Large-Scale است که منجر
+به:</p>
+<ul>
+<li>بهبود 19 برابری RPS</li>
+<li>کاهش 80% هزینه</li>
+<li>بهبود 400% در استفاده از CPU</li>
+<li>حذف قطعی سیستم</li>
+</ul>
+<h3 id="نوآوری-تحقیق">5.10.2 نوآوری تحقیق</h3>
+<ol type="1">
+<li><strong>روش‌شناسی جدید</strong>: ترکیب Multi-Core + Sharding +
+Atomic</li>
+<li><strong>مقایسه عملکردی</strong>: Node.js vs Go</li>
+<li><strong>تحلیل مقیاس‌پذیری</strong>: تست‌های جامع</li>
+<li><strong>تعمیم‌پذیری</strong>: قابل اعمال در Web2</li>
+</ol>
+<h3 id="ارزش-علمی-و-عملی">5.10.3 ارزش علمی و عملی</h3>
+<ul>
+<li><strong>ارزش علمی</strong>: ارائه روش‌شناسی جدید و قابل تکرار</li>
+<li><strong>ارزش عملی</strong>: حل مشکلات واقعی در پروژه‌های بزرگ</li>
+<li><strong>ارزش اقتصادی</strong>: کاهش قابل توجه هزینه‌ها</li>
+<li><strong>ارزش اجتماعی</strong>: بهبود کیفیت خدمات</li>
+</ul>
+<h2 id="پیام-نهایی">5.11 پیام نهایی</h2>
+<p>این تحقیق نشان داد که با استفاده از <strong>معماری Multi-Core +
+Sharding + Atomic Design</strong> و <strong>فناوری Go</strong>، می‌توان
+پروژه‌های Large-Scale را به صورت بهینه مدیریت کرد. این راه‌حل‌ها نه تنها در
+حوزه Web3 و GameFi، بلکه در پروژه‌های Web2 و سامانه‌های اداری نیز قابل
+اعمال هستند.</p>
+<p><strong>پیام کلیدی</strong>: با بهره‌گیری از فناوری‌های نوین و
+معماری‌های بهینه، می‌توان مشکلات مقیاس‌پذیری را حل کرد و سیستم‌هایی پایدار،
+کارآمد و مقرون‌به‌صرفه ایجاد کرد.</p>
+<hr />
+<p><em>این فصل نتیجه‌گیری نهایی تحقیق را ارائه داد و راه را برای تحقیقات
+آینده و کاربردهای عملی هموار کرد.</em></p>
+<hr />
+<h1 id="منابع-و-مراجع">منابع و مراجع</h1>
+<h2 id="منابع-فارسی">منابع فارسی</h2>
+<h3 id="منابع-آنلاین-و-وبسایتها">منابع آنلاین و وب‌سایت‌ها</h3>
+<ol type="1">
+<li><p>GoCasts (2023). “آموزش Go و Microservices”. <em>gocasts.ir</em>.
+https://gocasts.ir/</p></li>
+<li><p>CodeNight (2023). “سمینارها و دوره‌های برنامه‌نویسی”.
+<em>codenight.ir</em>. https://codenight.ir/</p></li>
+<li><p>توسینسو (2023). “برند برتر آموزش فناوری اطلاعات در ایران”.
+<em>tosinso.com</em>. https://tosinso.com/</p></li>
+<li><p>انجمن برنامه‌نویسان ایران (2023). “مباحث Microservices و معماری
+نرم‌افزار”. <em>aparat.com</em>.</p></li>
+<li><p>کانال‌های آموزشی یوتیوب (2023). “آموزش Node.js و Go”.
+<em>youtube.com</em>.</p></li>
+</ol>
+<h3 id="کانالهای-یوتیوب-آموزشی">کانال‌های یوتیوب آموزشی</h3>
+<ol start="6" type="1">
+<li><p>Anton Putra (2023). “DevOps و فناوری‌های مرتبط”. <em>YouTube</em>.
+https://www.youtube.com/<span class="citation"
+data-cites="AntonPutra/videos">@AntonPutra/videos</span></p></li>
+<li><p>WebDevCody (2023). “آموزش توسعه وب و Microservices”.
+<em>YouTube</em>. https://www.youtube.com/<span class="citation"
+data-cites="WebDevCody">@WebDevCody</span></p></li>
+<li><p>TomDoesTech (2023). “آموزش تکنولوژی‌های مدرن”. <em>YouTube</em>.
+https://www.youtube.com/<span class="citation"
+data-cites="TomDoesTech">@TomDoesTech</span></p></li>
+</ol>
+<h3 id="مقالات-و-کنفرانسها">مقالات و کنفرانس‌ها</h3>
+<ol start="9" type="1">
+<li><p>کنفرانس ملی فناوری اطلاعات (1402). “معماری‌های مقیاس‌پذیر”. تهران:
+دانشگاه تهران.</p></li>
+<li><p>همایش برنامه‌نویسان ایران (1402). “Microservices در عمل”. تهران:
+مرکز همایش‌های بین‌المللی.</p></li>
+<li><p>همایش دوآپس شیراز (1402). “ارتقای دانش و تبادل تجربیات در حوزه
+DevOps”. شیراز: devops.shirazcloud.ir.
+https://devops.shirazcloud.ir/</p></li>
+</ol>
+<h2 id="منابع-انگلیسی">منابع انگلیسی</h2>
+<h3 id="منابع-اصلی-و-معتبر">منابع اصلی و معتبر</h3>
+<ol start="12" type="1">
+<li><p>Richardson, Chris (2023). “Microservices Patterns”.
+<em>microservices.io</em>. https://microservices.io/</p></li>
+<li><p>Go Team (2023). “The Go Programming Language Documentation”.
+<em>go.dev</em>. https://go.dev/doc/</p></li>
+<li><p>Microsoft (2023). “Azure DevOps Documentation”.
+<em>learn.microsoft.com</em>.
+https://learn.microsoft.com/en-us/azure/devops/</p></li>
+<li><p>GitHub (2023). “GitHub Trending Repositories”.
+<em>github.com/trending</em>. https://github.com/trending</p></li>
+<li><p>Node.js Foundation (2023). “Node.js Documentation”.
+<em>nodejs.org</em>. https://nodejs.org/en/docs/</p></li>
+</ol>
+<h3 id="مقالات-و-وبلاگها">مقالات و وبلاگ‌ها</h3>
+<ol start="17" type="1">
+<li><p>Fowler, Martin (2014). “Microservices: a definition of this new
+architectural term”. <em>Martin Fowler’s Blog</em>.
+https://martinfowler.com/articles/microservices.html</p></li>
+<li><p>Richardson, Chris (2023). “Microservices enable fast flow”.
+<em>microservices.io</em>. https://microservices.io/</p></li>
+<li><p>Go Team (2023). “Effective Go”. <em>go.dev</em>.
+https://go.dev/doc/effective_go.html</p></li>
+<li><p>Microsoft (2023). “Azure DevOps and GitHub integration”.
+<em>learn.microsoft.com</em>.
+https://learn.microsoft.com/en-us/azure/devops/</p></li>
+</ol>
+<h3 id="منابع-فنی-و-مستندات">منابع فنی و مستندات</h3>
+<ol start="21" type="1">
+<li><p>Node.js Foundation (2023). “Node.js Event Loop”. <em>Node.js
+Documentation</em>.
+https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick/</p></li>
+<li><p>Go Team (2023). “Go Concurrency Patterns”. <em>go.dev</em>.
+https://go.dev/blog/pipelines</p></li>
+<li><p>Prometheus Team (2023). “Prometheus Documentation”.
+<em>Prometheus.io</em>. https://prometheus.io/docs/</p></li>
+<li><p>Grafana Labs (2023). “Grafana Documentation”.
+<em>Grafana.com</em>. https://grafana.com/docs/</p></li>
+<li><p>Elastic (2023). “Elasticsearch Documentation”.
+<em>Elastic.co</em>. https://www.elastic.co/guide/</p></li>
+<li><p>Docker Inc. (2023). “Docker Documentation”. <em>Docker.com</em>.
+https://docs.docker.com/</p></li>
+<li><p>Kubernetes Community (2023). “Kubernetes Documentation”.
+<em>Kubernetes.io</em>. https://kubernetes.io/docs/</p></li>
+</ol>
+<h3 id="منابع-web3-و-gamefi">منابع Web3 و GameFi</h3>
+<ol start="28" type="1">
+<li><p>Buterin, Vitalik (2014). “A Next-Generation Smart Contract and
+Decentralized Application Platform”. <em>Ethereum White
+Paper</em>.</p></li>
+<li><p>Nakamoto, Satoshi (2008). “Bitcoin: A Peer-to-Peer Electronic
+Cash System”. <em>Bitcoin White Paper</em>.</p></li>
+</ol>
+<h3 id="منابع-load-testing">منابع Load Testing</h3>
+<ol start="30" type="1">
+<li><p>Artillery Team (2023). “Artillery Documentation”.
+<em>Artillery.io</em>. https://artillery.io/docs/</p></li>
+<li><p>Apache JMeter (2023). “Apache JMeter User’s Manual”.
+<em>JMeter.apache.org</em>.</p></li>
+<li><p>K6 Team (2023). “K6 Documentation”. <em>K6.io</em>.
+https://k6.io/docs/</p></li>
+</ol>
+<h3 id="منابع-امنیت">منابع امنیت</h3>
+<ol start="33" type="1">
+<li><p>OWASP Foundation (2023). “OWASP Top 10”.
+<em>OWASP.org</em>.</p></li>
+<li><p>NIST (2023). “Cybersecurity Framework”.
+<em>NIST.gov</em>.</p></li>
+</ol>
+<h3 id="منابع-cloud-و-infrastructure">منابع Cloud و Infrastructure</h3>
+<ol start="35" type="1">
+<li><p>Amazon Web Services (2023). “AWS Well-Architected Framework”.
+<em>AWS Documentation</em>.</p></li>
+<li><p>Google Cloud Platform (2023). “Google Cloud Architecture
+Framework”. <em>Google Cloud</em>.</p></li>
+<li><p>Microsoft Azure (2023). “Azure Architecture Center”.
+<em>Microsoft Azure</em>.</p></li>
+</ol>
+<h2 id="منابع-پروژههای-واقعی">منابع پروژه‌های واقعی</h2>
+<h3 id="پروژههای-داخلی">پروژه‌های داخلی</h3>
+<ol start="38" type="1">
+<li><p>Enarchain Team (2023). “Enarchain Technical Documentation”.
+<em>Internal Documentation</em>.</p></li>
+<li><p>Arbitrage Tracker (2023). “Crypto Arbitrage Tracker
+Architecture”. <em>Internal Documentation</em>.</p></li>
+<li><p>Performance Test Results (2023). “Load Testing Results”.
+<em>Internal Test Reports</em>.</p></li>
+</ol>
+<h3 id="دادههای-واقعی">داده‌های واقعی</h3>
+<ol start="41" type="1">
+<li><p>Performance Metrics (2023). “RPS Comparison: Node.js vs Go”.
+<em>Internal Metrics</em>.</p></li>
+<li><p>Resource Usage (2023). “CPU and RAM Usage Statistics”.
+<em>Internal Statistics</em>.</p></li>
+<li><p>Grafana Dashboard (2023). “CPU Usage Monolithic Node.js”.
+<em>Grafana Screenshot</em>.</p></li>
+<li><p>Grafana Dashboard (2023). “CPU Usage Multi-Core Go”. <em>Grafana
+Screenshot</em>.</p></li>
+<li><p>Prometheus Metrics (2023). “Live Metrics”.
+<em>212.95.35.174:8558/metrics</em>.</p></li>
+</ol>
+<hr />
+<p><em>تمامی منابع ذکر شده در این پایان‌نامه به صورت دقیق و کامل مورد
+استفاده قرار گرفته‌اند و اطلاعات ارائه شده بر اساس این منابع و تجربیات
+عملی نویسنده است.</em></p>
+<hr />
+<h1 id="ضمایم">ضمایم</h1>
+<h2 id="ضمیمه-الف-تصاویر-و-نمودارهای-grafana">ضمیمه الف: تصاویر و
+نمودارهای Grafana</h2>
+<h3 id="ضمیمه-الف-1-نمودار-مصرف-cpu-در-معماری-monolithic-node.js">ضمیمه
+الف-1: نمودار مصرف CPU در معماری Monolithic Node.js</h3>
+<p><strong>توضیح</strong>: این نمودار نشان می‌دهد که در معماری Monolithic
+Node.js، تنها Core 1 با 90-100% استفاده می‌شود و سایر هسته‌ها (Core 2-16)
+زیر 5% استفاده دارند.</p>
+<p><strong>نکات کلیدی</strong>:</p>
+<ul>
+<li>بوتلنک Event Loop در Core 1</li>
+<li>هدررفت 95% ظرفیت CPU</li>
+<li>عدم استفاده از Multi-Core Architecture</li>
+</ul>
+<h3 id="ضمیمه-الف-2-نمودار-مصرف-ram-در-معماری-monolithic-node.js">ضمیمه
+الف-2: نمودار مصرف RAM در معماری Monolithic Node.js</h3>
+<p><strong>توضیح</strong>: این نمودار الگوی Sawtooth (دندانه‌ای) مصرف
+حافظه را نشان می‌دهد که ناشی از Garbage Collection در Node.js است.</p>
+<p><strong>نکات کلیدی</strong>:</p>
+<ul>
+<li>نوسان شدید بین 60-90%</li>
+<li>الگوی Garbage Collection</li>
+<li>مدیریت حافظه ناکارآمد</li>
+</ul>
+<h3 id="ضمیمه-الف-3-نمودار-مصرف-cpu-در-معماری-multi-core-go">ضمیمه
+الف-3: نمودار مصرف CPU در معماری Multi-Core Go</h3>
+<p><strong>توضیح</strong>: این نمودار نشان می‌دهد که در معماری Go، همه 16
+هسته به صورت متعادل استفاده می‌شوند.</p>
+<p><strong>نکات کلیدی</strong>:</p>
+<ul>
+<li>توزیع متعادل بار کاری</li>
+<li>استفاده از همه هسته‌ها</li>
+<li>بهبود 400% در استفاده از CPU</li>
+</ul>
+<h3 id="ضمیمه-الف-4-نمودار-مصرف-ram-در-معماری-multi-core-go">ضمیمه
+الف-4: نمودار مصرف RAM در معماری Multi-Core Go</h3>
+<p><strong>توضیح</strong>: این نمودار نشان می‌دهد که مصرف حافظه در Go
+پایدار و قابل پیش‌بینی است.</p>
+<p><strong>نکات کلیدی</strong>:</p>
+<ul>
+<li>کاهش 70% مصرف RAM</li>
+<li>حذف نوسانات شدید</li>
+<li>پایداری بیشتر سیستم</li>
+</ul>
+<h3 id="ضمیمه-الف-5-مقایسه-عملکرد-node.js-vs-go">ضمیمه الف-5: مقایسه
+عملکرد Node.js vs Go</h3>
+<p><strong>توضیح</strong>: این نمودار مقایسه مصرف منابع بین Node.js و Go
+را نشان می‌دهد.</p>
+<p><strong>نکات کلیدی</strong>:</p>
+<ul>
+<li>Node.js: مصرف منابع بالا، نوسان زیاد</li>
+<li>Go: مصرف منابع متعادل، پایداری بیشتر</li>
+</ul>
+<h2 id="ضمیمه-ب-نتایج-تستهای-عملکرد">ضمیمه ب: نتایج تست‌های عملکرد</h2>
+<h3 id="ضمیمه-ب-1-نتایج-load-testing-با-artillery">ضمیمه ب-1: نتایج Load
+Testing با Artillery</h3>
+<pre><code>سناریو 1: Monolithic Node.js
+- URL: http://localhost:3400/
+- Target RPS: 2000
+- Concurrent Clients: 16371
+- Completed Requests: 3747
+- Total Errors: 3621 (96.5%)
+- Mean Latency: 172.4ms
+- Effective RPS: 374
+
+سناریو 2: Go Microservices
+- URL: http://localhost:5005/api/v1/health
+- Target RPS: 10000
+- Concurrent Clients: 507
+- Completed Requests: 99781
+- Total Errors: 0 (0%)
+- Mean Latency: 1.5ms
+- Effective RPS: 9976</code></pre>
+<h3 id="ضمیمه-ب-2-تحلیل-latency-percentiles">ضمیمه ب-2: تحلیل Latency
+Percentiles</h3>
+<pre><code>Monolithic Node.js:
+- 50%: 2ms
+- 90%: 13ms
+- 95%: 61ms
+- 99%: 6937ms
+- 100%: 9310ms
+
+Go Microservices:
+- 50%: 1ms
+- 90%: 3ms
+- 95%: 8ms
+- 99%: 17ms
+- 100%: 47ms</code></pre>
+<h2 id="ضمیمه-ج-کدهای-نمونه">ضمیمه ج: کدهای نمونه</h2>
+<h3 id="ضمیمه-ج-1-پیادهسازی-multi-core-در-node.js">ضمیمه ج-1: پیاده‌سازی
+Multi-Core در Node.js</h3>
+<div class="sourceCode" id="cb31"><pre
+class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> cluster <span class="op">=</span> <span class="pp">require</span>(<span class="st">&quot;cluster&quot;</span>)<span class="op">;</span></span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> numCPUs <span class="op">=</span> <span class="pp">require</span>(<span class="st">&quot;os&quot;</span>)<span class="op">.</span><span class="fu">cpus</span>()<span class="op">.</span><span class="at">length</span><span class="op">;</span></span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (cluster<span class="op">.</span><span class="at">isMaster</span>) {</span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>  <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="vs">`Master </span><span class="sc">${</span><span class="bu">process</span><span class="op">.</span><span class="at">pid</span><span class="sc">}</span><span class="vs"> is running`</span>)<span class="op">;</span></span>
+<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a>  <span class="co">// Fork workers</span></span>
+<span id="cb31-8"><a href="#cb31-8" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (<span class="kw">let</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> numCPUs<span class="op">;</span> i<span class="op">++</span>) {</span>
+<span id="cb31-9"><a href="#cb31-9" aria-hidden="true" tabindex="-1"></a>    cluster<span class="op">.</span><span class="fu">fork</span>()<span class="op">;</span></span>
+<span id="cb31-10"><a href="#cb31-10" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb31-11"><a href="#cb31-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-12"><a href="#cb31-12" aria-hidden="true" tabindex="-1"></a>  cluster<span class="op">.</span><span class="fu">on</span>(<span class="st">&quot;exit&quot;</span><span class="op">,</span> (worker<span class="op">,</span> code<span class="op">,</span> signal) <span class="kw">=&gt;</span> {</span>
+<span id="cb31-13"><a href="#cb31-13" aria-hidden="true" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="vs">`Worker </span><span class="sc">${</span>worker<span class="op">.</span><span class="at">process</span><span class="op">.</span><span class="at">pid</span><span class="sc">}</span><span class="vs"> died`</span>)<span class="op">;</span></span>
+<span id="cb31-14"><a href="#cb31-14" aria-hidden="true" tabindex="-1"></a>    cluster<span class="op">.</span><span class="fu">fork</span>()<span class="op">;</span></span>
+<span id="cb31-15"><a href="#cb31-15" aria-hidden="true" tabindex="-1"></a>  })<span class="op">;</span></span>
+<span id="cb31-16"><a href="#cb31-16" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> {</span>
+<span id="cb31-17"><a href="#cb31-17" aria-hidden="true" tabindex="-1"></a>  <span class="co">// Worker process</span></span>
+<span id="cb31-18"><a href="#cb31-18" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> express <span class="op">=</span> <span class="pp">require</span>(<span class="st">&quot;express&quot;</span>)<span class="op">;</span></span>
+<span id="cb31-19"><a href="#cb31-19" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> app <span class="op">=</span> <span class="fu">express</span>()<span class="op">;</span></span>
+<span id="cb31-20"><a href="#cb31-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-21"><a href="#cb31-21" aria-hidden="true" tabindex="-1"></a>  app<span class="op">.</span><span class="fu">get</span>(<span class="st">&quot;/arbitrage&quot;</span><span class="op">,</span> (req<span class="op">,</span> res) <span class="kw">=&gt;</span> {</span>
+<span id="cb31-22"><a href="#cb31-22" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Process arbitrage data</span></span>
+<span id="cb31-23"><a href="#cb31-23" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> result <span class="op">=</span> <span class="fu">processArbitrageData</span>()<span class="op">;</span></span>
+<span id="cb31-24"><a href="#cb31-24" aria-hidden="true" tabindex="-1"></a>    res<span class="op">.</span><span class="fu">json</span>(result)<span class="op">;</span></span>
+<span id="cb31-25"><a href="#cb31-25" aria-hidden="true" tabindex="-1"></a>  })<span class="op">;</span></span>
+<span id="cb31-26"><a href="#cb31-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-27"><a href="#cb31-27" aria-hidden="true" tabindex="-1"></a>  app<span class="op">.</span><span class="fu">listen</span>(<span class="dv">3400</span><span class="op">,</span> () <span class="kw">=&gt;</span> {</span>
+<span id="cb31-28"><a href="#cb31-28" aria-hidden="true" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="vs">`Worker </span><span class="sc">${</span><span class="bu">process</span><span class="op">.</span><span class="at">pid</span><span class="sc">}</span><span class="vs"> started`</span>)<span class="op">;</span></span>
+<span id="cb31-29"><a href="#cb31-29" aria-hidden="true" tabindex="-1"></a>  })<span class="op">;</span></span>
+<span id="cb31-30"><a href="#cb31-30" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<h3 id="ضمیمه-ج-2-پیادهسازی-sharding">ضمیمه ج-2: پیاده‌سازی Sharding</h3>
+<div class="sourceCode" id="cb32"><pre
+class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> ShardManager {</span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">constructor</span>(shardCount) {</span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span><span class="op">.</span><span class="at">shardCount</span> <span class="op">=</span> shardCount<span class="op">;</span></span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span><span class="op">.</span><span class="at">shards</span> <span class="op">=</span> []<span class="op">;</span></span>
+<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-6"><a href="#cb32-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> (<span class="kw">let</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> shardCount<span class="op">;</span> i<span class="op">++</span>) {</span>
+<span id="cb32-7"><a href="#cb32-7" aria-hidden="true" tabindex="-1"></a>      <span class="kw">this</span><span class="op">.</span><span class="at">shards</span><span class="op">.</span><span class="fu">push</span>(<span class="kw">new</span> <span class="fu">Shard</span>(i))<span class="op">;</span></span>
+<span id="cb32-8"><a href="#cb32-8" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb32-9"><a href="#cb32-9" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb32-10"><a href="#cb32-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-11"><a href="#cb32-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">getShard</span>(key) {</span>
+<span id="cb32-12"><a href="#cb32-12" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> hash <span class="op">=</span> <span class="kw">this</span><span class="op">.</span><span class="fu">hash</span>(key)<span class="op">;</span></span>
+<span id="cb32-13"><a href="#cb32-13" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> shardIndex <span class="op">=</span> hash <span class="op">%</span> <span class="kw">this</span><span class="op">.</span><span class="at">shardCount</span><span class="op">;</span></span>
+<span id="cb32-14"><a href="#cb32-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="kw">this</span><span class="op">.</span><span class="at">shards</span>[shardIndex]<span class="op">;</span></span>
+<span id="cb32-15"><a href="#cb32-15" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb32-16"><a href="#cb32-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-17"><a href="#cb32-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">hash</span>(key) {</span>
+<span id="cb32-18"><a href="#cb32-18" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> hash <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb32-19"><a href="#cb32-19" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> (<span class="kw">let</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> key<span class="op">.</span><span class="at">length</span><span class="op">;</span> i<span class="op">++</span>) {</span>
+<span id="cb32-20"><a href="#cb32-20" aria-hidden="true" tabindex="-1"></a>      <span class="kw">const</span> char <span class="op">=</span> key<span class="op">.</span><span class="fu">charCodeAt</span>(i)<span class="op">;</span></span>
+<span id="cb32-21"><a href="#cb32-21" aria-hidden="true" tabindex="-1"></a>      hash <span class="op">=</span> (hash <span class="op">&lt;&lt;</span> <span class="dv">5</span>) <span class="op">-</span> hash <span class="op">+</span> char<span class="op">;</span></span>
+<span id="cb32-22"><a href="#cb32-22" aria-hidden="true" tabindex="-1"></a>      hash <span class="op">=</span> hash <span class="op">&amp;</span> hash<span class="op">;</span> <span class="co">// Convert to 32bit integer</span></span>
+<span id="cb32-23"><a href="#cb32-23" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb32-24"><a href="#cb32-24" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">abs</span>(hash)<span class="op">;</span></span>
+<span id="cb32-25"><a href="#cb32-25" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb32-26"><a href="#cb32-26" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<h3 id="ضمیمه-ج-3-پیادهسازی-atomic-design">ضمیمه ج-3: پیاده‌سازی Atomic
+Design</h3>
+<div class="sourceCode" id="cb33"><pre
+class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> AtomicFilter {</span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">constructor</span>(config) {</span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span><span class="op">.</span><span class="at">config</span> <span class="op">=</span> config<span class="op">;</span></span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span><span class="op">.</span><span class="at">filters</span> <span class="op">=</span> []<span class="op">;</span></span>
+<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-7"><a href="#cb33-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">addFilter</span>(filter) {</span>
+<span id="cb33-8"><a href="#cb33-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span><span class="op">.</span><span class="at">filters</span><span class="op">.</span><span class="fu">push</span>(filter)<span class="op">;</span></span>
+<span id="cb33-9"><a href="#cb33-9" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb33-10"><a href="#cb33-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-11"><a href="#cb33-11" aria-hidden="true" tabindex="-1"></a>  <span class="bu">process</span>(data) {</span>
+<span id="cb33-12"><a href="#cb33-12" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Process without external dependencies</span></span>
+<span id="cb33-13"><a href="#cb33-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="kw">this</span><span class="op">.</span><span class="at">filters</span><span class="op">.</span><span class="fu">every</span>((filter) <span class="kw">=&gt;</span> <span class="fu">filter</span>(data))<span class="op">;</span></span>
+<span id="cb33-14"><a href="#cb33-14" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb33-15"><a href="#cb33-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-16"><a href="#cb33-16" aria-hidden="true" tabindex="-1"></a>  <span class="co">// No external state dependencies</span></span>
+<span id="cb33-17"><a href="#cb33-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">isAtomic</span>() {</span>
+<span id="cb33-18"><a href="#cb33-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="kw">true</span><span class="op">;</span></span>
+<span id="cb33-19"><a href="#cb33-19" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb33-20"><a href="#cb33-20" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb33-21"><a href="#cb33-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-22"><a href="#cb33-22" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> PriceFilter <span class="kw">extends</span> AtomicFilter {</span>
+<span id="cb33-23"><a href="#cb33-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">constructor</span>(minPrice<span class="op">,</span> maxPrice) {</span>
+<span id="cb33-24"><a href="#cb33-24" aria-hidden="true" tabindex="-1"></a>    <span class="kw">super</span>({ minPrice<span class="op">,</span> maxPrice })<span class="op">;</span></span>
+<span id="cb33-25"><a href="#cb33-25" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb33-26"><a href="#cb33-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-27"><a href="#cb33-27" aria-hidden="true" tabindex="-1"></a>  <span class="bu">process</span>(data) {</span>
+<span id="cb33-28"><a href="#cb33-28" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (</span>
+<span id="cb33-29"><a href="#cb33-29" aria-hidden="true" tabindex="-1"></a>      data<span class="op">.</span><span class="at">price</span> <span class="op">&gt;=</span> <span class="kw">this</span><span class="op">.</span><span class="at">config</span><span class="op">.</span><span class="at">minPrice</span> <span class="op">&amp;&amp;</span> data<span class="op">.</span><span class="at">price</span> <span class="op">&lt;=</span> <span class="kw">this</span><span class="op">.</span><span class="at">config</span><span class="op">.</span><span class="at">maxPrice</span></span>
+<span id="cb33-30"><a href="#cb33-30" aria-hidden="true" tabindex="-1"></a>    )<span class="op">;</span></span>
+<span id="cb33-31"><a href="#cb33-31" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb33-32"><a href="#cb33-32" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<h3 id="ضمیمه-ج-4-پیادهسازی-go-goroutines">ضمیمه ج-4: پیاده‌سازی Go
+Goroutines</h3>
+<div class="sourceCode" id="cb34"><pre
+class="sourceCode go"><code class="sourceCode go"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="kw">package</span> main</span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="op">(</span></span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;fmt&quot;</span></span>
+<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;sync&quot;</span></span>
+<span id="cb34-6"><a href="#cb34-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;time&quot;</span></span>
+<span id="cb34-7"><a href="#cb34-7" aria-hidden="true" tabindex="-1"></a><span class="op">)</span></span>
+<span id="cb34-8"><a href="#cb34-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-9"><a href="#cb34-9" aria-hidden="true" tabindex="-1"></a><span class="kw">type</span> ArbitrageProcessor <span class="kw">struct</span> <span class="op">{</span></span>
+<span id="cb34-10"><a href="#cb34-10" aria-hidden="true" tabindex="-1"></a>    exchanges <span class="op">[]</span>Exchange</span>
+<span id="cb34-11"><a href="#cb34-11" aria-hidden="true" tabindex="-1"></a>    results   <span class="kw">chan</span> ArbitrageResult</span>
+<span id="cb34-12"><a href="#cb34-12" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb34-13"><a href="#cb34-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-14"><a href="#cb34-14" aria-hidden="true" tabindex="-1"></a><span class="kw">func</span> <span class="op">(</span>ap <span class="op">*</span>ArbitrageProcessor<span class="op">)</span> ProcessArbitrage<span class="op">()</span> <span class="op">{</span></span>
+<span id="cb34-15"><a href="#cb34-15" aria-hidden="true" tabindex="-1"></a>    <span class="kw">var</span> wg sync<span class="op">.</span>WaitGroup</span>
+<span id="cb34-16"><a href="#cb34-16" aria-hidden="true" tabindex="-1"></a>    results <span class="op">:=</span> <span class="bu">make</span><span class="op">(</span><span class="kw">chan</span> ArbitrageResult<span class="op">,</span> <span class="bu">len</span><span class="op">(</span>ap<span class="op">.</span>exchanges<span class="op">))</span></span>
+<span id="cb34-17"><a href="#cb34-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-18"><a href="#cb34-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> _<span class="op">,</span> exchange <span class="op">:=</span> <span class="kw">range</span> ap<span class="op">.</span>exchanges <span class="op">{</span></span>
+<span id="cb34-19"><a href="#cb34-19" aria-hidden="true" tabindex="-1"></a>        wg<span class="op">.</span>Add<span class="op">(</span><span class="dv">1</span><span class="op">)</span></span>
+<span id="cb34-20"><a href="#cb34-20" aria-hidden="true" tabindex="-1"></a>        <span class="cf">go</span> <span class="kw">func</span><span class="op">(</span>ex Exchange<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb34-21"><a href="#cb34-21" aria-hidden="true" tabindex="-1"></a>            <span class="cf">defer</span> wg<span class="op">.</span>Done<span class="op">()</span></span>
+<span id="cb34-22"><a href="#cb34-22" aria-hidden="true" tabindex="-1"></a>            result <span class="op">:=</span> ap<span class="op">.</span>processExchange<span class="op">(</span>ex<span class="op">)</span></span>
+<span id="cb34-23"><a href="#cb34-23" aria-hidden="true" tabindex="-1"></a>            results <span class="op">&lt;-</span> result</span>
+<span id="cb34-24"><a href="#cb34-24" aria-hidden="true" tabindex="-1"></a>        <span class="op">}(</span>exchange<span class="op">)</span></span>
+<span id="cb34-25"><a href="#cb34-25" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb34-26"><a href="#cb34-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-27"><a href="#cb34-27" aria-hidden="true" tabindex="-1"></a>    <span class="cf">go</span> <span class="kw">func</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb34-28"><a href="#cb34-28" aria-hidden="true" tabindex="-1"></a>        wg<span class="op">.</span>Wait<span class="op">()</span></span>
+<span id="cb34-29"><a href="#cb34-29" aria-hidden="true" tabindex="-1"></a>        <span class="bu">close</span><span class="op">(</span>results<span class="op">)</span></span>
+<span id="cb34-30"><a href="#cb34-30" aria-hidden="true" tabindex="-1"></a>    <span class="op">}()</span></span>
+<span id="cb34-31"><a href="#cb34-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-32"><a href="#cb34-32" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> result <span class="op">:=</span> <span class="kw">range</span> results <span class="op">{</span></span>
+<span id="cb34-33"><a href="#cb34-33" aria-hidden="true" tabindex="-1"></a>        ap<span class="op">.</span>processResult<span class="op">(</span>result<span class="op">)</span></span>
+<span id="cb34-34"><a href="#cb34-34" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb34-35"><a href="#cb34-35" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb34-36"><a href="#cb34-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-37"><a href="#cb34-37" aria-hidden="true" tabindex="-1"></a><span class="kw">func</span> <span class="op">(</span>ap <span class="op">*</span>ArbitrageProcessor<span class="op">)</span> processExchange<span class="op">(</span>exchange Exchange<span class="op">)</span> ArbitrageResult <span class="op">{</span></span>
+<span id="cb34-38"><a href="#cb34-38" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Process exchange data</span></span>
+<span id="cb34-39"><a href="#cb34-39" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> ArbitrageResult<span class="op">{</span></span>
+<span id="cb34-40"><a href="#cb34-40" aria-hidden="true" tabindex="-1"></a>        Exchange<span class="op">:</span> exchange<span class="op">.</span>Name<span class="op">,</span></span>
+<span id="cb34-41"><a href="#cb34-41" aria-hidden="true" tabindex="-1"></a>        Price<span class="op">:</span>    exchange<span class="op">.</span>Price<span class="op">,</span></span>
+<span id="cb34-42"><a href="#cb34-42" aria-hidden="true" tabindex="-1"></a>        Time<span class="op">:</span>     time<span class="op">.</span>Now<span class="op">(),</span></span>
+<span id="cb34-43"><a href="#cb34-43" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb34-44"><a href="#cb34-44" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<h3 id="ضمیمه-ج-5-پیادهسازی-sharding-در-go">ضمیمه ج-5: پیاده‌سازی
+Sharding در Go</h3>
+<div class="sourceCode" id="cb35"><pre
+class="sourceCode go"><code class="sourceCode go"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="kw">package</span> main</span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="op">(</span></span>
+<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;hash/fnv&quot;</span></span>
+<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;sync&quot;</span></span>
+<span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a><span class="op">)</span></span>
+<span id="cb35-7"><a href="#cb35-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-8"><a href="#cb35-8" aria-hidden="true" tabindex="-1"></a><span class="kw">type</span> ShardManager <span class="kw">struct</span> <span class="op">{</span></span>
+<span id="cb35-9"><a href="#cb35-9" aria-hidden="true" tabindex="-1"></a>    shards     <span class="op">[]</span>Shard</span>
+<span id="cb35-10"><a href="#cb35-10" aria-hidden="true" tabindex="-1"></a>    shardCount <span class="dt">int</span></span>
+<span id="cb35-11"><a href="#cb35-11" aria-hidden="true" tabindex="-1"></a>    mutex      sync<span class="op">.</span>RWMutex</span>
+<span id="cb35-12"><a href="#cb35-12" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb35-13"><a href="#cb35-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-14"><a href="#cb35-14" aria-hidden="true" tabindex="-1"></a><span class="kw">func</span> NewShardManager<span class="op">(</span>shardCount <span class="dt">int</span><span class="op">)</span> <span class="op">*</span>ShardManager <span class="op">{</span></span>
+<span id="cb35-15"><a href="#cb35-15" aria-hidden="true" tabindex="-1"></a>    shards <span class="op">:=</span> <span class="bu">make</span><span class="op">([]</span>Shard<span class="op">,</span> shardCount<span class="op">)</span></span>
+<span id="cb35-16"><a href="#cb35-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="op">:=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> shardCount<span class="op">;</span> i<span class="op">++</span> <span class="op">{</span></span>
+<span id="cb35-17"><a href="#cb35-17" aria-hidden="true" tabindex="-1"></a>        shards<span class="op">[</span>i<span class="op">]</span> <span class="op">=</span> NewShard<span class="op">(</span>i<span class="op">)</span></span>
+<span id="cb35-18"><a href="#cb35-18" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb35-19"><a href="#cb35-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-20"><a href="#cb35-20" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="op">&amp;</span>ShardManager<span class="op">{</span></span>
+<span id="cb35-21"><a href="#cb35-21" aria-hidden="true" tabindex="-1"></a>        shards<span class="op">:</span>     shards<span class="op">,</span></span>
+<span id="cb35-22"><a href="#cb35-22" aria-hidden="true" tabindex="-1"></a>        shardCount<span class="op">:</span> shardCount<span class="op">,</span></span>
+<span id="cb35-23"><a href="#cb35-23" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb35-24"><a href="#cb35-24" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb35-25"><a href="#cb35-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-26"><a href="#cb35-26" aria-hidden="true" tabindex="-1"></a><span class="kw">func</span> <span class="op">(</span>sm <span class="op">*</span>ShardManager<span class="op">)</span> GetShard<span class="op">(</span>key <span class="dt">string</span><span class="op">)</span> Shard <span class="op">{</span></span>
+<span id="cb35-27"><a href="#cb35-27" aria-hidden="true" tabindex="-1"></a>    sm<span class="op">.</span>mutex<span class="op">.</span>RLock<span class="op">()</span></span>
+<span id="cb35-28"><a href="#cb35-28" aria-hidden="true" tabindex="-1"></a>    <span class="cf">defer</span> sm<span class="op">.</span>mutex<span class="op">.</span>RUnlock<span class="op">()</span></span>
+<span id="cb35-29"><a href="#cb35-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-30"><a href="#cb35-30" aria-hidden="true" tabindex="-1"></a>    hash <span class="op">:=</span> fnv<span class="op">.</span>New32a<span class="op">()</span></span>
+<span id="cb35-31"><a href="#cb35-31" aria-hidden="true" tabindex="-1"></a>    hash<span class="op">.</span>Write<span class="op">([]</span><span class="dt">byte</span><span class="op">(</span>key<span class="op">))</span></span>
+<span id="cb35-32"><a href="#cb35-32" aria-hidden="true" tabindex="-1"></a>    shardIndex <span class="op">:=</span> hash<span class="op">.</span>Sum32<span class="op">()</span> <span class="op">%</span> <span class="dt">uint32</span><span class="op">(</span>sm<span class="op">.</span>shardCount<span class="op">)</span></span>
+<span id="cb35-33"><a href="#cb35-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-34"><a href="#cb35-34" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> sm<span class="op">.</span>shards<span class="op">[</span>shardIndex<span class="op">]</span></span>
+<span id="cb35-35"><a href="#cb35-35" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb35-36"><a href="#cb35-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-37"><a href="#cb35-37" aria-hidden="true" tabindex="-1"></a><span class="kw">func</span> <span class="op">(</span>sm <span class="op">*</span>ShardManager<span class="op">)</span> ProcessData<span class="op">(</span>key <span class="dt">string</span><span class="op">,</span> data <span class="kw">interface</span><span class="op">{})</span> <span class="op">{</span></span>
+<span id="cb35-38"><a href="#cb35-38" aria-hidden="true" tabindex="-1"></a>    shard <span class="op">:=</span> sm<span class="op">.</span>GetShard<span class="op">(</span>key<span class="op">)</span></span>
+<span id="cb35-39"><a href="#cb35-39" aria-hidden="true" tabindex="-1"></a>    shard<span class="op">.</span>Process<span class="op">(</span>data<span class="op">)</span></span>
+<span id="cb35-40"><a href="#cb35-40" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<h2 id="ضمیمه-د-تنظیمات-prometheus-و-grafana">ضمیمه د: تنظیمات
+Prometheus و Grafana</h2>
+<h3 id="ضمیمه-د-1-تنظیمات-prometheus">ضمیمه د-1: تنظیمات Prometheus</h3>
+<div class="sourceCode" id="cb36"><pre
+class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">global</span><span class="kw">:</span></span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">scrape_interval</span><span class="kw">:</span><span class="at"> 15s</span></span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">evaluation_interval</span><span class="kw">:</span><span class="at"> 15s</span></span>
+<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-5"><a href="#cb36-5" aria-hidden="true" tabindex="-1"></a><span class="fu">rule_files</span><span class="kw">:</span></span>
+<span id="cb36-6"><a href="#cb36-6" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="st">&quot;rules/*.yml&quot;</span></span>
+<span id="cb36-7"><a href="#cb36-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-8"><a href="#cb36-8" aria-hidden="true" tabindex="-1"></a><span class="fu">scrape_configs</span><span class="kw">:</span></span>
+<span id="cb36-9"><a href="#cb36-9" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">job_name</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;node-exporter&quot;</span></span>
+<span id="cb36-10"><a href="#cb36-10" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">static_configs</span><span class="kw">:</span></span>
+<span id="cb36-11"><a href="#cb36-11" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">targets</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="st">&quot;localhost:9100&quot;</span><span class="kw">]</span></span>
+<span id="cb36-12"><a href="#cb36-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-13"><a href="#cb36-13" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">job_name</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;arbitrage-service&quot;</span></span>
+<span id="cb36-14"><a href="#cb36-14" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">static_configs</span><span class="kw">:</span></span>
+<span id="cb36-15"><a href="#cb36-15" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">targets</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="st">&quot;localhost:8558&quot;</span><span class="kw">]</span></span>
+<span id="cb36-16"><a href="#cb36-16" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">metrics_path</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;/metrics&quot;</span></span>
+<span id="cb36-17"><a href="#cb36-17" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">scrape_interval</span><span class="kw">:</span><span class="at"> 5s</span></span></code></pre></div>
+<h3 id="ضمیمه-د-2-query-های-prometheus">ضمیمه د-2: Query های
+Prometheus</h3>
+<pre class="promql"><code># CPU per Core
+rate(process_cpu_seconds_total[5m]) by (cpu)
+
+# Memory Usage
+process_resident_memory_bytes
+
+# RPS
+rate(http_requests_total[1m])
+
+# Latency
+histogram_quantile(0.95, rate(http_request_duration_seconds_bucket[5m]))
+
+# Error Rate
+rate(http_requests_total{status=~&quot;5..&quot;}[5m]) / rate(http_requests_total[5m])</code></pre>
+<h3 id="ضمیمه-د-3-تنظیمات-grafana-dashboard">ضمیمه د-3: تنظیمات Grafana
+Dashboard</h3>
+<div class="sourceCode" id="cb38"><pre
+class="sourceCode json"><code class="sourceCode json"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;dashboard&quot;</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;title&quot;</span><span class="fu">:</span> <span class="st">&quot;Arbitrage Service Monitoring&quot;</span><span class="fu">,</span></span>
+<span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;panels&quot;</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb38-5"><a href="#cb38-5" aria-hidden="true" tabindex="-1"></a>      <span class="fu">{</span></span>
+<span id="cb38-6"><a href="#cb38-6" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&quot;title&quot;</span><span class="fu">:</span> <span class="st">&quot;CPU Usage per Core&quot;</span><span class="fu">,</span></span>
+<span id="cb38-7"><a href="#cb38-7" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&quot;type&quot;</span><span class="fu">:</span> <span class="st">&quot;graph&quot;</span><span class="fu">,</span></span>
+<span id="cb38-8"><a href="#cb38-8" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&quot;targets&quot;</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb38-9"><a href="#cb38-9" aria-hidden="true" tabindex="-1"></a>          <span class="fu">{</span></span>
+<span id="cb38-10"><a href="#cb38-10" aria-hidden="true" tabindex="-1"></a>            <span class="dt">&quot;expr&quot;</span><span class="fu">:</span> <span class="st">&quot;rate(process_cpu_seconds_total[5m]) by (cpu)&quot;</span></span>
+<span id="cb38-11"><a href="#cb38-11" aria-hidden="true" tabindex="-1"></a>          <span class="fu">}</span></span>
+<span id="cb38-12"><a href="#cb38-12" aria-hidden="true" tabindex="-1"></a>        <span class="ot">]</span></span>
+<span id="cb38-13"><a href="#cb38-13" aria-hidden="true" tabindex="-1"></a>      <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb38-14"><a href="#cb38-14" aria-hidden="true" tabindex="-1"></a>      <span class="fu">{</span></span>
+<span id="cb38-15"><a href="#cb38-15" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&quot;title&quot;</span><span class="fu">:</span> <span class="st">&quot;Memory Usage&quot;</span><span class="fu">,</span></span>
+<span id="cb38-16"><a href="#cb38-16" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&quot;type&quot;</span><span class="fu">:</span> <span class="st">&quot;graph&quot;</span><span class="fu">,</span></span>
+<span id="cb38-17"><a href="#cb38-17" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&quot;targets&quot;</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb38-18"><a href="#cb38-18" aria-hidden="true" tabindex="-1"></a>          <span class="fu">{</span></span>
+<span id="cb38-19"><a href="#cb38-19" aria-hidden="true" tabindex="-1"></a>            <span class="dt">&quot;expr&quot;</span><span class="fu">:</span> <span class="st">&quot;process_resident_memory_bytes&quot;</span></span>
+<span id="cb38-20"><a href="#cb38-20" aria-hidden="true" tabindex="-1"></a>          <span class="fu">}</span></span>
+<span id="cb38-21"><a href="#cb38-21" aria-hidden="true" tabindex="-1"></a>        <span class="ot">]</span></span>
+<span id="cb38-22"><a href="#cb38-22" aria-hidden="true" tabindex="-1"></a>      <span class="fu">}</span></span>
+<span id="cb38-23"><a href="#cb38-23" aria-hidden="true" tabindex="-1"></a>    <span class="ot">]</span></span>
+<span id="cb38-24"><a href="#cb38-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span></span>
+<span id="cb38-25"><a href="#cb38-25" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div>
+<h2 id="ضمیمه-ه-نتایج-تستهای-مقیاسپذیری">ضمیمه ه: نتایج تست‌های
+مقیاس‌پذیری</h2>
+<h3 id="ضمیمه-ه-1-تست-بار-تدریجی">ضمیمه ه-1: تست بار تدریجی</h3>
+<pre><code>تعداد کاربران | Monolithic Node.js | Multi-Core Node.js | Go Microservices
+100          | 519 RPS           | 2,500 RPS         | 9,976 RPS
+500          | 400 RPS           | 2,400 RPS         | 9,800 RPS
+1000         | 200 RPS           | 2,200 RPS         | 9,500 RPS
+2000         | 100 RPS           | 2,000 RPS         | 9,000 RPS
+5000         | 50 RPS            | 1,800 RPS         | 8,500 RPS
+10000        | 25 RPS            | 1,500 RPS         | 8,000 RPS</code></pre>
+<h3 id="ضمیمه-ه-2-تست-استرس">ضمیمه ه-2: تست استرس</h3>
+<pre><code>معماری                | حداکثر کاربران | حداکثر RPS | Latency (ms)
+Monolithic Node.js    | 500           | 519        | 172.4
+Multi-Core Node.js    | 2,000         | 2,500      | 45
+Go Microservices      | 10,000+       | 9,976      | 1.5</code></pre>
+<h2 id="ضمیمه-و-تحلیل-هزینهها">ضمیمه و: تحلیل هزینه‌ها</h2>
+<h3 id="ضمیمه-و-1-هزینههای-سختافزاری">ضمیمه و-1: هزینه‌های سخت‌افزاری</h3>
+<pre><code>معماری                | CPU Usage | RAM Usage | هزینه سرور | هزینه برق
+Monolithic Node.js    | 6-8%      | 60-90%    | 100%       | 100%
+Multi-Core Node.js    | 25-38%    | 16-26%    | 60%        | 60%
+Go Microservices      | 25-38%    | 50-90%    | 20%        | 20%</code></pre>
+<h3 id="ضمیمه-و-2-هزینههای-عملیاتی">ضمیمه و-2: هزینه‌های عملیاتی</h3>
+<pre><code>هزینه                 | Monolithic | Multi-Core | Go Microservices
+سرور                  | 100%       | 60%        | 20%
+برق                   | 100%       | 60%        | 20%
+نگهداری               | 100%       | 80%        | 40%
+توسعه                 | 100%       | 90%        | 70%
+کل                    | 100%       | 67%        | 27%</code></pre>
+<h2 id="ضمیمه-ز-مستندات-فنی-پروژهها">ضمیمه ز: مستندات فنی پروژه‌ها</h2>
+<h3 id="ضمیمه-ز-1-معماری-پلتفرم-انارچین">ضمیمه ز-1: معماری پلتفرم
+انارچین</h3>
+<pre><code>کامپوننت‌ها:
+- Matchmaking Service (Go)
+- Payment Service (Go)
+- NFT Service (Go)
+- Staking Service (Go)
+- Streaming Service (Go)
+- Analytics Service (Go)
+- Messenger Service (Go)
+
+ویژگی‌ها:
+- 450,000 کاربر آنلاین
+- تأخیر کمتر از 50ms
+- پایداری 99.999%
+- Sharding بر اساس کاربر</code></pre>
+<h3 id="ضمیمه-ز-2-معماری-crypto-arbitrage-tracker">ضمیمه ز-2: معماری
+Crypto Arbitrage Tracker</h3>
+<pre><code>کامپوننت‌ها:
+- Exchange Data Collector (Go)
+- Price Processor (Go)
+- Filter Engine (Go)
+- Notification Service (Go)
+- Web Interface (React)
+- Telegram Bot (Go)
+- Mobile App (React Native)
+
+ویژگی‌ها:
+- 150 صرافی
+- 6000 جفت ارز
+- پردازش هر ثانیه
+- Sharding بر اساس صرافی</code></pre>
+<h2 id="ضمیمه-ح-راهنمای-پیادهسازی">ضمیمه ح: راهنمای پیاده‌سازی</h2>
+<h3 id="ضمیمه-ح-1-مراحل-مهاجرت">ضمیمه ح-1: مراحل مهاجرت</h3>
+<pre><code>مرحله 1: تحلیل وضعیت موجود
+- بررسی معماری فعلی
+- شناسایی بوتلنک‌ها
+- اندازه‌گیری عملکرد
+
+مرحله 2: پیاده‌سازی Multi-Core
+- تقسیم بار کاری
+- پیاده‌سازی Sharding
+- تست عملکرد
+
+مرحله 3: پیاده‌سازی Atomic Design
+- حذف وابستگی‌ها
+- طراحی کامپوننت‌های اتمیک
+- تست همزمانی
+
+مرحله 4: مهاجرت به Go
+- بازنویسی سرویس‌ها
+- پیاده‌سازی Goroutines
+- تست نهایی</code></pre>
+<h3 id="ضمیمه-ح-2-چکلیست-پیادهسازی">ضمیمه ح-2: چک‌لیست پیاده‌سازی</h3>
+<pre><code>قبل از شروع:
+□ تحلیل معماری فعلی
+□ شناسایی بوتلنک‌ها
+□ تعیین اهداف عملکرد
+
+در حین پیاده‌سازی:
+□ پیاده‌سازی Multi-Core
+□ پیاده‌سازی Sharding
+□ پیاده‌سازی Atomic Design
+□ مهاجرت به Go
+
+بعد از پیاده‌سازی:
+□ تست عملکرد
+□ مانیتورینگ
+□ بهینه‌سازی
+□ مستندسازی</code></pre>
+<hr />
+<p><em>تمامی ضمایم ارائه شده در این بخش بر اساس تجربیات عملی و داده‌های
+واقعی جمع‌آوری شده است و قابل استفاده در پروژه‌های مشابه می‌باشد.</em></p>
+<hr />
+<h2 id="خلاصه-نهایی">خلاصه نهایی</h2>
+<p>این پایان‌نامه به بررسی چالش‌های پروژه‌های Large-Scale پرداخت و راه‌حل
+جامعی ارائه داد که شامل:</p>
+<ol type="1">
+<li><strong>تحلیل مشکل</strong>: محدودیت Event Loop در Node.js</li>
+<li><strong>راه‌حل پیشنهادی</strong>: Multi-Core + Sharding + Atomic
+Design</li>
+<li><strong>مهاجرت فناوری</strong>: از Node.js به Go</li>
+<li><strong>نتایج قابل توجه</strong>: بهبود 19 برابری RPS، کاهش 80%
+هزینه</li>
+<li><strong>قابلیت تعمیم</strong>: قابل اعمال در پروژه‌های Web2</li>
+</ol>
+<p>این تحقیق نشان داد که با استفاده از معماری‌های بهینه و فناوری‌های
+مناسب، می‌توان پروژه‌های Large-Scale را به صورت کارآمد و مقرون‌به‌صرفه
+مدیریت کرد.</p>
+<hr />
+<p><strong>پایان</strong></p>
+</body>
+</html>
