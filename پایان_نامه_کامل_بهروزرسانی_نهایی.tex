@@ -177,8 +177,8 @@ Large-Scale در اکوسیستم‌های Web2 و Web3 با تمرکز بر Gam
 \begin{itemize}
 \tightlist
 \item
-  \textbf{محدودیت Event Loop در Node.js}: استفاده از تنها یک هسته CPU
-  حتی در سیستم‌های چند هسته‌ای
+  \textbf{مشکل در اکثر نرم‌افزارهای موجود}: استفاده و اجرا تنها در یک
+  Single-Core پردازشی و برای مثال Node.js
 \item
   \textbf{مشکل مقیاس‌پذیری}: عدم توانایی سیستم‌های مونولیتیک در مدیریت بار
   کاری بالا
@@ -186,6 +186,18 @@ Large-Scale در اکوسیستم‌های Web2 و Web3 با تمرکز بر Gam
   \textbf{مصرف منابع ناکارآمد}: استفاده نادرست از منابع سخت‌افزاری موجود
 \item
   \textbf{وابستگی‌های پیچیده}: مشکلات Race Condition در معماری‌های سنتی
+\item
+  \textbf{Scalability Bottlenecks}: ناکارآمدی سیستم در هندل کردن تعداد
+  درخواست و کاربر بالا
+\item
+  \textbf{Performance Degradation}: کاهش عملکرد سیستم نرم‌افزاری در
+  مقیاس‌های بزرگ
+\item
+  \textbf{System Latency}: کندی سیستم در عملکرد بلندمدت
+\item
+  \textbf{System Resilience}: تاب‌آوری سیستم‌ها در شرایط مختلف
+\item
+  \textbf{Uptime Reduction}: کاهش Uptime سیستم
 \end{itemize}
 
 \subsubsection{1.1.2 چالش‌های
@@ -244,7 +256,7 @@ Large-Scale در اکوسیستم‌های Web2 و Web3 با تمرکز بر Gam
 اصلی}\label{ux647ux62fux641-ux627ux635ux644ux6cc}
 
 ارائه راه‌حل جامع برای پیاده‌سازی و مدیریت پروژه‌های نرم‌افزاری مقیاس‌پذیر
-Large-Scale در اکوسیستم‌های Web2 و Web3 با تمرکز بر GameFi
+Large-Scale در اکوسیستم‌های Web2 و Web3
 
 \subsubsection{1.3.2 اهداف
 فرعی}\label{ux627ux647ux62fux627ux641-ux641ux631ux639ux6cc}
@@ -262,6 +274,9 @@ Large-Scale در اکوسیستم‌های Web2 و Web3 با تمرکز بر Gam
   \textbf{مهاجرت از Node.js به Go برای بهینه‌سازی عملکرد}
 \item
   \textbf{تعمیم راه‌حل‌ها به پروژه‌های Web2 ایران}
+\item
+  \textbf{استفاده از ساختارهای Clean Code و OOP برای توسعه بهتر
+  نرم‌افزار}
 \end{enumerate}
 
 \subsection{1.4 سوالات
@@ -270,8 +285,9 @@ Large-Scale در اکوسیستم‌های Web2 و Web3 با تمرکز بر Gam
 \subsubsection{1.4.1 سوال
 اصلی}\label{ux633ux648ux627ux644-ux627ux635ux644ux6cc}
 
-چگونه می‌توان پروژه‌های نرم‌افزاری Large-Scale را با استفاده از معماری
-Multi-Core + Sharding + Atomic Design بهینه‌سازی کرد؟
+چگونه می‌توانیم سیستمی داشته باشیم که \textbf{Uptime} و
+\textbf{Stability} 99.9\% داشته باشد و با کمترین \textbf{Response Time}
+و \textbf{Development Velocity} بسیار بالا هم داشته باشد؟
 
 \subsubsection{1.4.2 سوالات
 فرعی}\label{ux633ux648ux627ux644ux627ux62a-ux641ux631ux639ux6cc}
@@ -289,6 +305,11 @@ Multi-Core + Sharding + Atomic Design بهینه‌سازی کرد؟
   مهاجرت از Node.js به Go چه مزایای عملکردی دارد؟
 \item
   چگونه می‌توان این راه‌حل‌ها را به پروژه‌های Web2 تعمیم داد؟
+\item
+  آیا می‌شود با ساختار \textbf{Monolithic} به خواسته یک سیستم
+  \textbf{Large-Scale} و \textbf{Scalable} رسید؟
+\item
+  شکل \textbf{Software Architectures} چقدر در خروجی نرم‌افزار تأثیر دارد؟
 \end{enumerate}
 
 \subsection{1.5 فرضیات
@@ -297,9 +318,9 @@ Multi-Core + Sharding + Atomic Design بهینه‌سازی کرد؟
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \item
-  \textbf{فرضیه اصلی}: استفاده از معماری Multi-Core + Sharding + Atomic
-  Design منجر به بهبود قابل توجه عملکرد و مقیاس‌پذیری پروژه‌های
-  Large-Scale می‌شود.
+  \textbf{فرضیه اصلی}: استفاده از معماری \textbf{Microservices +
+  Multi-Core + Sharding + Atomic Design} منجر به بهبود قابل توجه عملکرد
+  و مقیاس‌پذیری پروژه‌های Large-Scale می‌شود.
 \item
   \textbf{فرضیات فرعی}:
 
@@ -313,7 +334,15 @@ Multi-Core + Sharding + Atomic Design بهینه‌سازی کرد؟
   \item
     Atomic Design وابستگی‌های بین کامپوننت‌ها را حذف می‌کند
   \item
-    Go نسبت به Node.js عملکرد بهتری در پردازش همزمان دارد
+    استفاده از زبان‌هایی که از قابلیت Multi-Core پشتیبانی کنند و مشکل
+    Garbage Collector حل کنند مانند Go می‌توانند خروجی بهتری نسبت به
+    زبان‌هایی که Single-Core کار می‌کنند و مدیریت RAM ندارند ارائه دهند
+  \item
+    انتخاب زبان مناسب برای توسعه یک نرم‌افزار می‌تواند خروجی نرم‌افزار
+    بهتری به ما بدهد
+  \item
+    استفاده از معماری‌های Microservices می‌تواند توسعه ماژولار پروژه را
+    سرعت ببخشد و پایداری سیستم را افزایش دهد
   \end{itemize}
 \end{enumerate}
 
@@ -328,7 +357,8 @@ Multi-Core + Sharding + Atomic Design بهینه‌سازی کرد؟
 \item
   تست‌ها بر روی سرور Hetzner CX41 (16 هسته، 32GB RAM) انجام شده
 \item
-  تمرکز بر روی پروژه‌های Web3 و GameFi
+  تمرکز بر روی پروژه‌های \textbf{High-Volume Data Processing} و
+  \textbf{High-User Load} و \textbf{High-Pressure Systems}
 \item
   استفاده از پلتفرم Prometheus برای مانیتورینگ
 \end{itemize}
@@ -364,6 +394,27 @@ Multi-Core + Sharding + Atomic Design بهینه‌سازی کرد؟
   \textbf{Atomic Design}: طراحی کامپوننت‌های بدون وابستگی خارجی
 \item
   \textbf{Microservices}: معماری مبتنی بر سرویس‌های مستقل
+\item
+  \textbf{Scalability Bottlenecks}: گلوگاه‌های مقیاس‌پذیری
+\item
+  \textbf{Performance Degradation}: کاهش عملکرد سیستم نرم‌افزاری در
+  مقیاس‌های بزرگ
+\item
+  \textbf{System Latency}: کندی سیستم در عملکرد بلندمدت
+\item
+  \textbf{System Resilience}: تاب‌آوری سیستم‌ها در شرایط مختلف
+\item
+  \textbf{Uptime}: زمان فعالیت سیستم
+\item
+  \textbf{Response Time}: زمان پاسخ‌دهی سیستم
+\item
+  \textbf{Development Velocity}: سرعت توسعه نرم‌افزار
+\item
+  \textbf{High-Volume Data Processing}: پردازش داده‌های با حجم بالا
+\item
+  \textbf{High-User Load}: بار کاربری بالا
+\item
+  \textbf{High-Pressure Systems}: سیستم‌های تحت فشار
 \end{itemize}
 
 \subsubsection{1.7.2 واژگان
@@ -914,8 +965,12 @@ Observability}\label{ux645ux627ux646ux6ccux62aux648ux631ux6ccux646ux6af-ux648-ob
 \subsection{3.1 مقدمه}\label{ux645ux642ux62fux645ux647-1}
 
 این فصل به تشریح روش‌شناسی تحقیق و نحوه پیاده‌سازی راه‌حل‌های پیشنهادی برای
-مدیریت پروژه‌های Large-Scale می‌پردازد. روش تحقیق بر اساس تجربیات عملی در
-دو پروژه کلیدی انجام شده است.
+مدیریت پروژه‌های Large-Scale می‌پردازد. روش تحقیق بر اساس تجربیات عملی
+حدود یک دهه در توسعه بیش از ۱۰۰ نرم‌افزار متنوع داخلی و خارجی و دو پروژه
+Large-Scale و همچنین بررسی میدانی و استفاده از تجربیات توسعه‌دهندگان
+ایرانی و خارجی می‌باشد و با تمرکز بر روی دو پروژه Large-Scale که توسط خود
+بنده توسعه داده شده و طی این دو سال مهاجرت‌های تکنولوژیکی این پروژه‌ها و
+داده‌های آن مستند نیز شده است.
 
 \subsection{3.2 نوع
 تحقیق}\label{ux646ux648ux639-ux62aux62dux642ux6ccux642}
@@ -931,7 +986,8 @@ Observability}\label{ux645ux627ux646ux6ccux62aux648ux631ux6ccux646ux6af-ux648-ob
 \item
   پلتفرم GameFi انارچین (450,000 کاربر)
 \item
-  Crypto Arbitrage Tracker (150 صرافی، 6000 جفت ارز)
+  Crypto Arbitrage Tracker (150 صرافی، 6000 جفت ارز، بررسی و سورت‌بندی و
+  محاسبه در کمتر از چند میلی‌ثانیه)
 \end{itemize}
 
 \subsubsection{3.2.2 روش تحقیق
@@ -949,11 +1005,17 @@ Observability}\label{ux645ux627ux646ux6ccux62aux648ux631ux6ccux646ux6af-ux648-ob
 \begin{itemize}
 \tightlist
 \item
-  \textbf{پروژه انارچین}: 450,000 کاربر آنلاین
+  \textbf{پروژه انارچین}: 450,000 کاربر آنلاین (در پیک تایم آنلاین بودن
+  همزمان بیش از 100,000 کاربر همزمان آنلاین)
 \item
-  \textbf{Crypto Arbitrage Tracker}: 150 صرافی و 6000 جفت ارز
+  \textbf{Crypto Arbitrage Tracker}: 150 صرافی و 6000 جفت ارز و محاسبه و
+  ارسال بیش از 1 میلیون محاسبه در کمتر از 1 ثانیه و ارسال به بیش از 1000
+  کاربر در لحظه
 \item
   \textbf{سیستم‌های Web2}: سامانه‌های اداری دولتی ایران
+\item
+  \textbf{پروژه‌های Large-Scale خارج از ایران}: تغییر معماری و توسعه برای
+  چندین پروژه لارج اسکیل خارج از ایران
 \end{itemize}
 
 \subsubsection{3.3.2
@@ -1083,6 +1145,12 @@ Observability}\label{ux645ux627ux646ux6ccux62aux648ux631ux6ccux646ux6af-ux648-ob
   \textbf{Node Exporter}: متریک‌های سیستم
 \item
   \textbf{cAdvisor}: متریک‌های Container
+\item
+  \textbf{Elasticsearch}: تحلیل لاگ‌ها و جستجوی داده‌ها
+\item
+  \textbf{Filebeat}: ارسال لاگ‌ها به Elasticsearch
+\item
+  \textbf{Kibana}: Visualization لاگ‌ها و داده‌های Elasticsearch
 \end{itemize}
 
 \subsubsection{3.5.3 ابزارهای
@@ -1096,6 +1164,9 @@ Observability}\label{ux645ux627ux646ux6ccux62aux648ux631ux6ccux646ux6af-ux648-ob
   \textbf{JMeter}: Performance Testing
 \item
   \textbf{K6}: Modern Load Testing
+\item
+  \textbf{تست در محیط واقعی}: تست با کاربران واقعی شرکت در پروژه‌های
+  Production
 \end{itemize}
 
 \subsection{3.6 روش جمع‌آوری
@@ -1116,6 +1187,10 @@ Observability}\label{ux645ux627ux646ux6ccux62aux648ux631ux6ccux646ux6af-ux648-ob
   \textbf{Grafana Dashboards}: تصاویر واقعی عملکرد
 \item
   \textbf{Load Test Results}: نتایج تست‌های بار
+\item
+  \textbf{Elasticsearch}: مانیتورینگ لاگ‌ها و تحلیل داده‌های سیستم
+\item
+  \textbf{Filebeat}: ارسال لاگ‌ها به Elasticsearch
 \end{itemize}
 
 \paragraph{متریک‌های
@@ -1291,6 +1366,17 @@ Goroutines:}\label{ux67eux6ccux627ux62fux647ux633ux627ux632ux6cc-goroutines}
 \subsubsection{3.8.1 تست‌های
 عملکرد}\label{ux62aux633ux62aux647ux627ux6cc-ux639ux645ux644ux6a9ux631ux62f}
 
+\paragraph{بازه زمانی
+تحقیق:}\label{ux628ux627ux632ux647-ux632ux645ux627ux646ux6cc-ux62aux62dux642ux6ccux642}
+
+\begin{verbatim}
+مدت زمان تحقیق: 2 سال (1402-1404)
+- مرحله 1: تحلیل و طراحی (6 ماه)
+- مرحله 2: پیاده‌سازی Multi-Core (8 ماه)
+- مرحله 3: مهاجرت به Go (10 ماه)
+- تست‌های مداوم: در طول 2 سال
+\end{verbatim}
+
 \paragraph{Load Testing با
 Artillery:}\label{load-testing-ux628ux627-artillery}
 
@@ -1342,46 +1428,95 @@ Go Microservices & 9,976 & 1.5ms & 25-38\% (16 cores) & 16-26\% \\
 \subsection{3.9 روش تحلیل
 داده‌ها}\label{ux631ux648ux634-ux62aux62dux644ux6ccux644-ux62fux627ux62fux647ux647ux627}
 
-\subsubsection{3.9.1 تحلیل
-کمی}\label{ux62aux62dux644ux6ccux644-ux6a9ux645ux6cc}
+\subsubsection{3.9.1 تحلیل عملکردی (Performance
+Analysis)}\label{ux62aux62dux644ux6ccux644-ux639ux645ux644ux6a9ux631ux62fux6cc-performance-analysis}
 
-\paragraph{آمار
-توصیفی:}\label{ux622ux645ux627ux631-ux62aux648ux635ux6ccux641ux6cc}
+\paragraph{تحلیل متریک‌های
+Prometheus:}\label{ux62aux62dux644ux6ccux644-ux645ux62aux631ux6ccux6a9ux647ux627ux6cc-prometheus}
 
 \begin{itemize}
 \tightlist
 \item
-  میانگین، میانه، انحراف معیار
+  \textbf{CPU Utilization}: مقایسه استفاده از هسته‌های مختلف
 \item
-  توزیع داده‌ها
+  \textbf{Memory Usage}: تحلیل الگوهای مصرف حافظه
 \item
-  همبستگی بین متغیرها
+  \textbf{RPS (Requests Per Second)}: اندازه‌گیری توان عملیاتی
+\item
+  \textbf{Latency}: تحلیل زمان پاسخ‌دهی سیستم
+\item
+  \textbf{Error Rate}: محاسبه نرخ خطا
 \end{itemize}
 
-\paragraph{آمار
-استنباطی:}\label{ux622ux645ux627ux631-ux627ux633ux62aux646ux628ux627ux637ux6cc}
+\paragraph{تحلیل لاگ‌های
+Elasticsearch:}\label{ux62aux62dux644ux6ccux644-ux644ux627ux6afux647ux627ux6cc-elasticsearch}
 
 \begin{itemize}
 \tightlist
 \item
-  تست t برای مقایسه میانگین‌ها
+  \textbf{Log Pattern Analysis}: شناسایی الگوهای خطا
 \item
-  تحلیل واریانس (ANOVA)
+  \textbf{Performance Bottleneck Detection}: تشخیص گلوگاه‌های عملکرد
 \item
-  رگرسیون خطی
+  \textbf{Real-time Monitoring}: تحلیل داده‌های بلادرنگ
 \end{itemize}
 
-\subsubsection{3.9.2 تحلیل
-کیفی}\label{ux62aux62dux644ux6ccux644-ux6a9ux6ccux641ux6cc}
+\subsubsection{3.9.2 تحلیل مقایسه‌ای
+معماری‌ها}\label{ux62aux62dux644ux6ccux644-ux645ux642ux627ux6ccux633ux647ux627ux6cc-ux645ux639ux645ux627ux631ux6ccux647ux627}
+
+\paragraph{مقایسه
+عملکردی:}\label{ux645ux642ux627ux6ccux633ux647-ux639ux645ux644ux6a9ux631ux62fux6cc-1}
 
 \begin{itemize}
 \tightlist
 \item
-  \textbf{تحلیل محتوا}: بررسی کدها و معماری
+  \textbf{Monolithic Node.js vs Multi-Core Node.js}: بهبود 4.8 برابری
+  RPS
 \item
-  \textbf{تحلیل مقایسه‌ای}: مقایسه معماری‌های مختلف
+  \textbf{Multi-Core Node.js vs Go Microservices}: بهبود 4 برابری RPS
 \item
-  \textbf{تحلیل موردی}: بررسی پروژه‌های خاص
+  \textbf{مقایسه مصرف منابع}: CPU، RAM، Latency
+\end{itemize}
+
+\paragraph{تحلیل
+مقیاس‌پذیری:}\label{ux62aux62dux644ux6ccux644-ux645ux642ux6ccux627ux633ux67eux630ux6ccux631ux6cc}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Load Testing Results}: نتایج تست‌های بار
+\item
+  \textbf{Scalability Patterns}: الگوهای مقیاس‌پذیری
+\item
+  \textbf{Resource Efficiency}: کارایی منابع
+\end{itemize}
+
+\subsubsection{3.9.3 تحلیل
+تجربی}\label{ux62aux62dux644ux6ccux644-ux62aux62cux631ux628ux6cc}
+
+\paragraph{تست‌های A/B:}\label{ux62aux633ux62aux647ux627ux6cc-ab}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{مقایسه همزمان}: تست معماری‌های مختلف در شرایط یکسان
+\item
+  \textbf{تست‌های تدریجی}: افزایش تدریجی بار کاری
+\item
+  \textbf{تست‌های استرس}: حداکثر ظرفیت سیستم
+\end{itemize}
+
+\paragraph{تحلیل داده‌های
+واقعی:}\label{ux62aux62dux644ux6ccux644-ux62fux627ux62fux647ux647ux627ux6cc-ux648ux627ux642ux639ux6cc}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Production Metrics}: داده‌های واقعی از پروژه‌های Production
+\item
+  \textbf{User Behavior Analysis}: تحلیل رفتار کاربران
+\item
+  \textbf{System Performance Trends}: روندهای عملکرد سیستم
 \end{itemize}
 
 \subsection{3.10 اعتبار و پایایی
@@ -1638,6 +1773,45 @@ RAM Usage & 16-26\% & ÷2.3-3.5 \\
 \end{longtable}
 }
 
+\subsubsection{4.3.4 پیچیدگی فنی و چالش‌های
+Multi-Core}\label{ux67eux6ccux686ux6ccux62fux6afux6cc-ux641ux646ux6cc-ux648-ux686ux627ux644ux634ux647ux627ux6cc-multi-core}
+
+\paragraph{چالش‌های
+پیش‌آمده:}\label{ux686ux627ux644ux634ux647ux627ux6cc-ux67eux6ccux634ux622ux645ux62fux647}
+
+\begin{verbatim}
+مشکل اصلی: بهم‌ریختگی محاسباتی و داده‌ای
+- در Single-Core: پردازش‌ها به ترتیب و منظم انجام می‌شوند
+- در Multi-Core: چندین کار همزمان (خواندن/نوشتن دیتابیس، محاسبات لحظه‌ای)
+- چندین Instance از نرم‌افزار در حال اجرا
+- مدیریت همزمان درخواست‌ها در چندین هسته
+\end{verbatim}
+
+\paragraph{نیاز به Atomic
+Design:}\label{ux646ux6ccux627ux632-ux628ux647-atomic-design}
+
+\begin{verbatim}
+دلایل ضروری:
+- همزمانی چندین درخواست در چندین هسته
+- دسترسی همزمان به یک رکورد دیتابیس
+- نیاز به نظم و ترتیب در پردازش‌ها
+- جلوگیری از Race Conditions
+- مدیریت State مشترک بین هسته‌ها
+\end{verbatim}
+
+\paragraph{افزایش پیچیدگی
+فنی:}\label{ux627ux641ux632ux627ux6ccux634-ux67eux6ccux686ux6ccux62fux6afux6cc-ux641ux646ux6cc}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{قبل}: Single-Core ساده و خطی
+\item
+  \textbf{بعد}: Multi-Core پیچیده با همزمانی
+\item
+  \textbf{نتیجه}: افزایش سرعت پردازش + افزایش پیچیدگی فنی
+\end{itemize}
+
 \subsection{4.4 تحلیل عملکرد معماری Go
 Microservices}\label{ux62aux62dux644ux6ccux644-ux639ux645ux644ux6a9ux631ux62f-ux645ux639ux645ux627ux631ux6cc-go-microservices}
 
@@ -1649,11 +1823,11 @@ Core:}\label{ux62aux648ux632ux6ccux639-cpu-per-core-2}
 \begin{itemize}
 \tightlist
 \item
-  \textbf{همه 16 هسته}: 55-95\% هر کدام
+  \textbf{همه 4 هسته}: 40-60\% هر کدام
 \item
   \textbf{توزیع}: متعادل و کارآمد
 \item
-  \textbf{CPU کلی}: 25-38\% از کل ظرفیت
+  \textbf{CPU کلی}: 40-60\% از کل ظرفیت
 \end{itemize}
 
 \paragraph{تحلیل:}\label{ux62aux62dux644ux6ccux644-4}
@@ -1674,9 +1848,9 @@ Core:}\label{ux62aux648ux632ux6ccux639-cpu-per-core-2}
 \begin{itemize}
 \tightlist
 \item
-  \textbf{محدوده}: 50-90\% از 32GB RAM
+  \textbf{محدوده}: 2GB از 6GB RAM (33\%)
 \item
-  \textbf{نوسان}: متوسط و کنترل‌شده
+  \textbf{نوسان}: کم و کنترل‌شده
 \item
   \textbf{الگو}: منظم و قابل پیش‌بینی
 \end{itemize}
@@ -1688,6 +1862,7 @@ Core:}\label{ux62aux648ux632ux6ccux639-cpu-per-core-2}
 - Garbage Collection بهینه
 - کاهش Memory Leaks
 - مدیریت خودکار حافظه
+- مصرف بهینه منابع
 \end{verbatim}
 
 \subsubsection{4.4.3 عملکرد
@@ -1704,10 +1879,67 @@ Core:}\label{ux62aux648ux632ux6ccux639-cpu-per-core-2}
 RPS & 9,976 & ×19.2 \\
 Latency & 1.5ms & ÷114.9 \\
 Error Rate & 0\% & ÷∞ \\
-CPU Utilization & 25-38\% & ×4-6 \\
-RAM Usage & 50-90\% & ÷1.1-1.8 \\
+CPU Utilization & 40-60\% & ×6-10 \\
+RAM Usage & 33\% & ÷2.7-3.6 \\
 \end{longtable}
 }
+
+\subsubsection{4.4.4 کاهش پیچیدگی فنی با Go
+Microservices}\label{ux6a9ux627ux647ux634-ux67eux6ccux686ux6ccux62fux6afux6cc-ux641ux646ux6cc-ux628ux627-go-microservices}
+
+\paragraph{مزایای Go:}\label{ux645ux632ux627ux6ccux627ux6cc-go}
+
+\begin{verbatim}
+کاهش پیچیدگی فنی:
+- Goroutines: مدیریت خودکار همزمانی
+- Garbage Collector: مدیریت خودکار حافظه
+- Built-in Concurrency: پشتیبانی ذاتی از همزمانی
+- Channel-based Communication: ارتباط امن بین Goroutines
+\end{verbatim}
+
+\paragraph{مقایسه
+پیچیدگی:}\label{ux645ux642ux627ux6ccux633ux647-ux67eux6ccux686ux6ccux62fux6afux6cc}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Node.js Multi-Core}: پیچیدگی بالا در مدیریت همزمانی
+\item
+  \textbf{Go Microservices}: پیچیدگی متوسط با ابزارهای زبان
+\item
+  \textbf{نتیجه}: کاهش پیچیدگی فنی + بهبود عملکرد
+\end{itemize}
+
+\subsubsection{4.4.5 چالش‌های
+Microservices}\label{ux686ux627ux644ux634ux647ux627ux6cc-microservices}
+
+\paragraph{پیچیدگی‌های
+جدید:}\label{ux67eux6ccux686ux6ccux62fux6afux6ccux647ux627ux6cc-ux62cux62fux6ccux62f}
+
+\begin{verbatim}
+چالش‌های Microservices:
+- مدیریت چندین سرویس مستقل
+- Communication بین سرویس‌ها
+- Data Consistency
+- Service Discovery
+- Load Balancing
+- Monitoring و Logging
+\end{verbatim}
+
+\paragraph{مزایای
+کلی:}\label{ux645ux632ux627ux6ccux627ux6cc-ux6a9ux644ux6cc}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Scalability}: مقیاس‌پذیری بالا
+\item
+  \textbf{Fault Isolation}: جداسازی خطاها
+\item
+  \textbf{Technology Diversity}: تنوع تکنولوژی
+\item
+  \textbf{Team Independence}: استقلال تیم‌ها
+\end{itemize}
 
 \subsection{4.5 مقایسه تطبیقی
 معماری‌ها}\label{ux645ux642ux627ux6ccux633ux647-ux62aux637ux628ux6ccux642ux6cc-ux645ux639ux645ux627ux631ux6ccux647ux627}
@@ -1857,7 +2089,33 @@ Design:}\label{ux628ux639ux62f-ux627ux632-atomic-design}
 \end{Highlighting}
 \end{Shaded}
 
-\subsubsection{4.7.2 مزایای Atomic
+\subsubsection{4.7.2 ضرورت Atomic Design در
+Multi-Core}\label{ux636ux631ux648ux631ux62a-atomic-design-ux62fux631-multi-core}
+
+\paragraph{دلیل اصلی نیاز به Atomic
+Design:}\label{ux62fux644ux6ccux644-ux627ux635ux644ux6cc-ux646ux6ccux627ux632-ux628ux647-atomic-design}
+
+\begin{verbatim}
+مشکل: بهم‌ریختگی محاسباتی و داده‌ای در Multi-Core
+- در Single-Core: پردازش‌ها به ترتیب و منظم انجام می‌شوند
+- در Multi-Core: چندین کار همزمان (خواندن/نوشتن دیتابیس، محاسبات لحظه‌ای)
+- چندین Instance از نرم‌افزار در حال اجرا
+- مدیریت همزمان درخواست‌ها در چندین هسته
+\end{verbatim}
+
+\paragraph{چالش‌های
+همزمانی:}\label{ux686ux627ux644ux634ux647ux627ux6cc-ux647ux645ux632ux645ux627ux646ux6cc}
+
+\begin{verbatim}
+مشکلات Multi-Core:
+- همزمانی چندین درخواست در چندین هسته
+- دسترسی همزمان به یک رکورد دیتابیس
+- نیاز به نظم و ترتیب در پردازش‌ها
+- جلوگیری از Race Conditions
+- مدیریت State مشترک بین هسته‌ها
+\end{verbatim}
+
+\subsubsection{4.7.3 مزایای Atomic
 Design}\label{ux645ux632ux627ux6ccux627ux6cc-atomic-design}
 
 \begin{itemize}
@@ -1868,10 +2126,14 @@ Design}\label{ux645ux632ux627ux6ccux627ux6cc-atomic-design}
   \textbf{قابلیت تست}: تست مستقل هر کامپوننت
 \item
   \textbf{مقیاس‌پذیری}: اجرای موازی بدون تداخل
+\item
+  \textbf{مدیریت همزمانی}: کنترل دسترسی به منابع مشترک
+\item
+  \textbf{پایداری داده‌ها}: جلوگیری از تداخل در محاسبات
 \end{itemize}
 
 \subsection{4.8 تحلیل
-مقیاس‌پذیری}\label{ux62aux62dux644ux6ccux644-ux645ux642ux6ccux627ux633ux67eux630ux6ccux631ux6cc}
+مقیاس‌پذیری}\label{ux62aux62dux644ux6ccux644-ux645ux642ux6ccux627ux633ux67eux630ux6ccux631ux6cc-1}
 
 \subsubsection{4.8.1 تست بار
 تدریجی}\label{ux62aux633ux62a-ux628ux627ux631-ux62aux62fux631ux6ccux62cux6cc}
@@ -2019,6 +2281,82 @@ Go Microservices & 99.999\% & 5.26 minutes \\
 \end{longtable}
 }
 
+\subsubsection{4.10.3 اهمیت مانیتورینگ دقیق در
+پایداری}\label{ux627ux647ux645ux6ccux62a-ux645ux627ux646ux6ccux62aux648ux631ux6ccux646ux6af-ux62fux642ux6ccux642-ux62fux631-ux67eux627ux6ccux62fux627ux631ux6cc}
+
+\paragraph{نقش مانیتورینگ در پایداری
+سیستم:}\label{ux646ux642ux634-ux645ux627ux646ux6ccux62aux648ux631ux6ccux646ux6af-ux62fux631-ux67eux627ux6ccux62fux627ux631ux6cc-ux633ux6ccux633ux62aux645}
+
+\textbf{پایداری سیستم به مانیتورینگ دقیق وابسته است} و ابزارهای مختلفی
+برای این منظور استفاده می‌شود:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \textbf{Elasticsearch}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    تحلیل لاگ‌های سیستم در زمان واقعی
+  \item
+    شناسایی الگوهای خطا و مشکلات
+  \item
+    جستجوی سریع در میلیون‌ها رکورد لاگ
+  \end{itemize}
+\item
+  \textbf{Grafana}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    نمایش بصری متریک‌های سیستم
+  \item
+    تشخیص سریع مشکلات عملکرد
+  \item
+    Alerting برای مشکلات بحرانی
+  \end{itemize}
+\item
+  \textbf{Prometheus}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    جمع‌آوری متریک‌های سیستم
+  \item
+    مانیتورینگ CPU، RAM، RPS، Latency
+  \item
+    تشخیص زودهنگام مشکلات
+  \end{itemize}
+\item
+  \textbf{Filebeat}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    ارسال لاگ‌ها به Elasticsearch
+  \item
+    جمع‌آوری لاگ‌های مختلف سیستم
+  \item
+    Real-time Log Streaming
+  \end{itemize}
+\end{enumerate}
+
+\paragraph{مزایای مانیتورینگ
+جامع:}\label{ux645ux632ux627ux6ccux627ux6cc-ux645ux627ux646ux6ccux62aux648ux631ux6ccux646ux6af-ux62cux627ux645ux639}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{تشخیص زودهنگام مشکلات}: قبل از تأثیر بر کاربران
+\item
+  \textbf{تحلیل ریشه‌ای خطاها}: با استفاده از Elasticsearch
+\item
+  \textbf{بهینه‌سازی مداوم}: بر اساس داده‌های واقعی
+\item
+  \textbf{پیش‌بینی مشکلات}: با تحلیل الگوهای تاریخی
+\end{itemize}
+
 \subsection{4.11 تحلیل تعمیم‌پذیری به
 Web2}\label{ux62aux62dux644ux6ccux644-ux62aux639ux645ux6ccux645ux67eux630ux6ccux631ux6cc-ux628ux647-web2}
 
@@ -2061,47 +2399,78 @@ Sharding استانی:
 \end{itemize}
 
 \subsection{4.12 تحلیل
-آماری}\label{ux62aux62dux644ux6ccux644-ux622ux645ux627ux631ux6cc}
+عملکردی}\label{ux62aux62dux644ux6ccux644-ux639ux645ux644ux6a9ux631ux62fux6cc}
 
-\subsubsection{4.12.1 آمار
-توصیفی}\label{ux622ux645ux627ux631-ux62aux648ux635ux6ccux641ux6cc-1}
+\subsubsection{4.12.1 تحلیل متریک‌های
+عملکرد}\label{ux62aux62dux644ux6ccux644-ux645ux62aux631ux6ccux6a9ux647ux627ux6cc-ux639ux645ux644ux6a9ux631ux62f}
 
-\paragraph{RPS:}\label{rps}
-
-\begin{itemize}
-\tightlist
-\item
-  \textbf{میانگین Monolithic}: 519
-\item
-  \textbf{میانگین Multi-Core}: 2,500
-\item
-  \textbf{میانگین Go}: 9,976
-\item
-  \textbf{انحراف معیار}: 4,729
-\end{itemize}
-
-\paragraph{Latency:}\label{latency}
+\paragraph{مقایسه RPS:}\label{ux645ux642ux627ux6ccux633ux647-rps}
 
 \begin{itemize}
 \tightlist
 \item
-  \textbf{میانگین Monolithic}: 172.4ms
+  \textbf{Monolithic Node.js}: 519 RPS
 \item
-  \textbf{میانگین Multi-Core}: 45ms
+  \textbf{Multi-Core Node.js}: 2,500 RPS (بهبود 4.8 برابری)
 \item
-  \textbf{میانگین Go}: 1.5ms
-\item
-  \textbf{انحراف معیار}: 85.5ms
+  \textbf{Go Microservices}: 9,976 RPS (بهبود 19.2 برابری)
 \end{itemize}
 
-\subsubsection{4.12.2 تحلیل واریانس
-(ANOVA)}\label{ux62aux62dux644ux6ccux644-ux648ux627ux631ux6ccux627ux646ux633-anova}
+\paragraph{مقایسه
+Latency:}\label{ux645ux642ux627ux6ccux633ux647-latency}
 
-\begin{verbatim}
-F-value: 156.7
-p-value: < 0.001
-نتیجه: تفاوت معنادار بین معماری‌ها
-\end{verbatim}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Monolithic Node.js}: 172.4ms
+\item
+  \textbf{Multi-Core Node.js}: 45ms (بهبود 3.8 برابری)
+\item
+  \textbf{Go Microservices}: 1.5ms (بهبود 114.9 برابری)
+\end{itemize}
+
+\subsubsection{4.12.2 تحلیل الگوهای مصرف
+منابع}\label{ux62aux62dux644ux6ccux644-ux627ux644ux6afux648ux647ux627ux6cc-ux645ux635ux631ux641-ux645ux646ux627ux628ux639}
+
+\paragraph{CPU Utilization:}\label{cpu-utilization}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Monolithic}: 6-8\% (فقط 1 هسته)
+\item
+  \textbf{Multi-Core}: 25-38\% (16 هسته)
+\item
+  \textbf{Go Microservices}: 25-38\% (16 هسته)
+\end{itemize}
+
+\paragraph{Memory Usage:}\label{memory-usage}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Monolithic}: 60-90\% (نوسان شدید)
+\item
+  \textbf{Multi-Core}: 16-26\% (پایدار)
+\item
+  \textbf{Go Microservices}: 50-90\% (کنترل‌شده)
+\end{itemize}
+
+\subsubsection{4.12.3 تحلیل
+مقیاس‌پذیری}\label{ux62aux62dux644ux6ccux644-ux645ux642ux6ccux627ux633ux67eux630ux6ccux631ux6cc-2}
+
+\paragraph{حداکثر
+ظرفیت:}\label{ux62dux62fux627ux6a9ux62bux631-ux638ux631ux641ux6ccux62a-1}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Monolithic}: 500 کاربر همزمان
+\item
+  \textbf{Multi-Core}: 2,000 کاربر همزمان
+\item
+  \textbf{Go Microservices}: 10,000+ کاربر همزمان
+\end{itemize}
 
 \subsection{4.13 خلاصه
 یافته‌ها}\label{ux62eux644ux627ux635ux647-ux6ccux627ux641ux62aux647ux647ux627}
@@ -2738,119 +3107,139 @@ Design} بهترین راه‌حل برای پروژه‌های Large-Scale اس
 \subsection{منابع
 فارسی}\label{ux645ux646ux627ux628ux639-ux641ux627ux631ux633ux6cc}
 
-\subsubsection{کتاب‌ها}\label{ux6a9ux62aux627ux628ux647ux627}
+\subsubsection{منابع آنلاین و
+وب‌سایت‌ها}\label{ux645ux646ux627ux628ux639-ux622ux646ux644ux627ux6ccux646-ux648-ux648ux628ux633ux627ux6ccux62aux647ux627}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \item
-  احمدی، علی (1400). \emph{معماری نرم‌افزارهای توزیع‌شده}. تهران: انتشارات
-  دانشگاه تهران.
+  GoCasts (2023). ``آموزش Go و Microservices''. \emph{gocasts.ir}.
+  https://gocasts.ir/
 \item
-  رضایی، محمد (1399). \emph{مدیریت پروژه‌های نرم‌افزاری بزرگ}. اصفهان:
-  انتشارات دانشگاه اصفهان.
+  CodeNight (2023). ``سمینارها و دوره‌های برنامه‌نویسی''.
+  \emph{codenight.ir}. https://codenight.ir/
 \item
-  کریمی، فاطمه (1401). \emph{مقیاس‌پذیری در سیستم‌های وب}. مشهد: انتشارات
-  دانشگاه فردوسی.
+  توسینسو (2023). ``برند برتر آموزش فناوری اطلاعات در ایران''.
+  \emph{tosinso.com}. https://tosinso.com/
+\item
+  انجمن برنامه‌نویسان ایران (2023). ``مباحث Microservices و معماری
+  نرم‌افزار''. \emph{aparat.com}.
+\item
+  کانال‌های آموزشی یوتیوب (2023). ``آموزش Node.js و Go''.
+  \emph{youtube.com}.
 \end{enumerate}
 
-\subsubsection{مقالات}\label{ux645ux642ux627ux644ux627ux62a}
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{3}
-\item
-  احمدی، علی و رضایی، محمد (1400). ``بررسی چالش‌های مقیاس‌پذیری در
-  پروژه‌های Web3''. \emph{مجله مهندسی نرم‌افزار ایران}، 15(3)، 45-62.
-\item
-  کریمی، فاطمه (1401). ``مقایسه عملکرد Node.js و Go در سیستم‌های
-  بلادرنگ''. \emph{کنفرانس ملی فناوری اطلاعات}، تهران، 123-135.
-\end{enumerate}
-
-\subsection{منابع
-انگلیسی}\label{ux645ux646ux627ux628ux639-ux627ux646ux6afux644ux6ccux633ux6cc}
-
-\subsubsection{کتاب‌ها}\label{ux6a9ux62aux627ux628ux647ux627-1}
+\subsubsection{کانال‌های یوتیوب
+آموزشی}\label{ux6a9ux627ux646ux627ux644ux647ux627ux6cc-ux6ccux648ux62aux6ccux648ux628-ux622ux645ux648ux632ux634ux6cc}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \setcounter{enumi}{5}
 \item
-  Richardson, Chris (2018). \emph{Microservices Patterns: With examples
-  in Java}. Manning Publications.
+  Anton Putra (2023). ``DevOps و فناوری‌های مرتبط''. \emph{YouTube}.
+  https://www.youtube.com/@AntonPutra/videos
 \item
-  Newman, Sam (2021). \emph{Building Microservices: Designing
-  fine-grained systems}. O'Reilly Media.
+  WebDevCody (2023). ``آموزش توسعه وب و Microservices''. \emph{YouTube}.
+  https://www.youtube.com/@WebDevCody
 \item
-  Burns, Brendan \& Beda, Joe (2019). \emph{Kubernetes: Up and Running}.
-  O'Reilly Media.
-\item
-  Donovan, Alan A. A. \& Kernighan, Brian W. (2016). \emph{The Go
-  Programming Language}. Addison-Wesley Professional.
-\item
-  Richardson, Chris (2019). \emph{Microservices.io: A pattern language
-  for microservices}. microservices.io.
+  TomDoesTech (2023). ``آموزش تکنولوژی‌های مدرن''. \emph{YouTube}.
+  https://www.youtube.com/@TomDoesTech
 \end{enumerate}
 
-\subsubsection{مقالات
-علمی}\label{ux645ux642ux627ux644ux627ux62a-ux639ux644ux645ux6cc}
+\subsubsection{مقالات و
+کنفرانس‌ها}\label{ux645ux642ux627ux644ux627ux62a-ux648-ux6a9ux646ux641ux631ux627ux646ux633ux647ux627}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{10}
+\setcounter{enumi}{8}
+\item
+  کنفرانس ملی فناوری اطلاعات (1402). ``معماری‌های مقیاس‌پذیر''. تهران:
+  دانشگاه تهران.
+\item
+  همایش برنامه‌نویسان ایران (1402). ``Microservices در عمل''. تهران: مرکز
+  همایش‌های بین‌المللی.
+\item
+  همایش دوآپس شیراز (1402). ``ارتقای دانش و تبادل تجربیات در حوزه
+  DevOps''. شیراز: devops.shirazcloud.ir. https://devops.shirazcloud.ir/
+\end{enumerate}
+
+\subsection{منابع
+انگلیسی}\label{ux645ux646ux627ux628ux639-ux627ux646ux6afux644ux6ccux633ux6cc}
+
+\subsubsection{منابع اصلی و
+معتبر}\label{ux645ux646ux627ux628ux639-ux627ux635ux644ux6cc-ux648-ux645ux639ux62aux628ux631}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{11}
+\item
+  Richardson, Chris (2023). ``Microservices Patterns''.
+  \emph{microservices.io}. https://microservices.io/
+\item
+  Go Team (2023). ``The Go Programming Language Documentation''.
+  \emph{go.dev}. https://go.dev/doc/
+\item
+  Microsoft (2023). ``Azure DevOps Documentation''.
+  \emph{learn.microsoft.com}.
+  https://learn.microsoft.com/en-us/azure/devops/
+\item
+  GitHub (2023). ``GitHub Trending Repositories''.
+  \emph{github.com/trending}. https://github.com/trending
+\item
+  Node.js Foundation (2023). ``Node.js Documentation''.
+  \emph{nodejs.org}. https://nodejs.org/en/docs/
+\end{enumerate}
+
+\subsubsection{مقالات و
+وبلاگ‌ها}\label{ux645ux642ux627ux644ux627ux62a-ux648-ux648ux628ux644ux627ux6afux647ux627}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{16}
 \item
   Fowler, Martin (2014). ``Microservices: a definition of this new
   architectural term''. \emph{Martin Fowler's Blog}.
+  https://martinfowler.com/articles/microservices.html
 \item
-  Newman, Sam (2015). ``Microservices: Decomposing Applications for
-  Deployability and Scalability''. \emph{IEEE Software}, 32(1), 116-119.
+  Richardson, Chris (2023). ``Microservices enable fast flow''.
+  \emph{microservices.io}. https://microservices.io/
 \item
-  Pahl, Claus \& Brogi, Antonio \& Soldani, Jacopo \& Jamshidi, Pooyan
-  (2018). ``Cloud container technologies: a state-of-the-art review''.
-  \emph{IEEE Transactions on Cloud Computing}, 7(3), 677-692.
+  Go Team (2023). ``Effective Go''. \emph{go.dev}.
+  https://go.dev/doc/effective\_go.html
 \item
-  Dragoni, Nicola \& Giallorenzo, Saverio \& Lafuente, Alberto Larrea \&
-  Mazzara, Manuel \& Montesi, Fabrizio \& Mustafin, Ruslan \& Safina,
-  Larisa (2017). ``Microservices: yesterday, today, and tomorrow''.
-  \emph{Present and Ulterior Software Engineering}, 195-216.
+  Microsoft (2023). ``Azure DevOps and GitHub integration''.
+  \emph{learn.microsoft.com}.
+  https://learn.microsoft.com/en-us/azure/devops/
 \end{enumerate}
 
-\subsubsection{منابع
-فنی}\label{ux645ux646ux627ux628ux639-ux641ux646ux6cc}
+\subsubsection{منابع فنی و
+مستندات}\label{ux645ux646ux627ux628ux639-ux641ux646ux6cc-ux648-ux645ux633ux62aux646ux62fux627ux62a}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{14}
+\setcounter{enumi}{20}
 \item
   Node.js Foundation (2023). ``Node.js Event Loop''. \emph{Node.js
   Documentation}.
   https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick/
 \item
-  Go Team (2023). ``Effective Go''. \emph{Go Documentation}.
-  https://golang.org/doc/effective\_go.html
+  Go Team (2023). ``Go Concurrency Patterns''. \emph{go.dev}.
+  https://go.dev/blog/pipelines
 \item
   Prometheus Team (2023). ``Prometheus Documentation''.
   \emph{Prometheus.io}. https://prometheus.io/docs/
 \item
   Grafana Labs (2023). ``Grafana Documentation''. \emph{Grafana.com}.
   https://grafana.com/docs/
-\end{enumerate}
-
-\subsubsection{استانداردها و
-الگوها}\label{ux627ux633ux62aux627ux646ux62fux627ux631ux62fux647ux627-ux648-ux627ux644ux6afux648ux647ux627}
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{18}
 \item
-  Richardson, Chris (2023). ``Microservices Patterns''.
-  \emph{microservices.io}. https://microservices.io/
+  Elastic (2023). ``Elasticsearch Documentation''. \emph{Elastic.co}.
+  https://www.elastic.co/guide/
 \item
-  Brad Frost (2016). ``Atomic Design''. \emph{Atomic Design
-  Methodology}. https://atomicdesign.bradfrost.com/
+  Docker Inc.~(2023). ``Docker Documentation''. \emph{Docker.com}.
+  https://docs.docker.com/
 \item
-  Martin Fowler (2014). ``Microservices: a definition of this new
-  architectural term''. \emph{Martin Fowler's Blog}.
-  https://martinfowler.com/articles/microservices.html
+  Kubernetes Community (2023). ``Kubernetes Documentation''.
+  \emph{Kubernetes.io}. https://kubernetes.io/docs/
 \end{enumerate}
 
 \subsubsection{منابع Web3 و
@@ -2858,33 +3247,13 @@ GameFi}\label{ux645ux646ux627ux628ux639-web3-ux648-gamefi}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{21}
+\setcounter{enumi}{27}
 \item
   Buterin, Vitalik (2014). ``A Next-Generation Smart Contract and
   Decentralized Application Platform''. \emph{Ethereum White Paper}.
 \item
   Nakamoto, Satoshi (2008). ``Bitcoin: A Peer-to-Peer Electronic Cash
   System''. \emph{Bitcoin White Paper}.
-\item
-  GameFi Alliance (2023). ``GameFi Industry Report 2023''. \emph{GameFi
-  Alliance}.
-\end{enumerate}
-
-\subsubsection{منابع مانیتورینگ و
-Observability}\label{ux645ux646ux627ux628ux639-ux645ux627ux646ux6ccux62aux648ux631ux6ccux646ux6af-ux648-observability}
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{24}
-\item
-  Google (2023). ``SRE Book: Site Reliability Engineering''.
-  \emph{Google Cloud Platform}.
-\item
-  Charity, James \& Burns, Brendan (2020). ``Observability Engineering:
-  Achieving Production Excellence''. O'Reilly Media.
-\item
-  Prometheus Team (2023). ``Prometheus: Up and Running''.
-  \emph{Prometheus.io}.
 \end{enumerate}
 
 \subsubsection{منابع Load
@@ -2892,7 +3261,7 @@ Testing}\label{ux645ux646ux627ux628ux639-load-testing}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{27}
+\setcounter{enumi}{29}
 \item
   Artillery Team (2023). ``Artillery Documentation''.
   \emph{Artillery.io}. https://artillery.io/docs/
@@ -2904,80 +3273,16 @@ Testing}\label{ux645ux646ux627ux628ux639-load-testing}
   https://k6.io/docs/
 \end{enumerate}
 
-\subsubsection{منابع Kubernetes و
-Containerization}\label{ux645ux646ux627ux628ux639-kubernetes-ux648-containerization}
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{30}
-\item
-  Kubernetes Community (2023). ``Kubernetes Documentation''.
-  \emph{Kubernetes.io}.
-\item
-  Docker Inc.~(2023). ``Docker Documentation''. \emph{Docker.com}.
-\item
-  Red Hat (2023). ``OpenShift Documentation''. \emph{Red Hat OpenShift}.
-\end{enumerate}
-
-\subsubsection{منابع Go و
-Concurrency}\label{ux645ux646ux627ux628ux639-go-ux648-concurrency}
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{33}
-\item
-  Go Team (2023). ``Go Concurrency Patterns''. \emph{Go Blog}.
-  https://blog.golang.org/pipelines
-\item
-  Cox, Russ (2023). ``The Go Memory Model''. \emph{Go Documentation}.
-\item
-  Pike, Rob (2012). ``Concurrency is not Parallelism''. \emph{Go Blog}.
-\end{enumerate}
-
-\subsubsection{منابع Node.js و
-JavaScript}\label{ux645ux646ux627ux628ux639-node.js-ux648-javascript}
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{36}
-\item
-  Node.js Foundation (2023). ``Node.js Best Practices''. \emph{Node.js
-  Documentation}.
-\item
-  JavaScript MDN (2023). ``JavaScript Documentation''. \emph{Mozilla
-  Developer Network}.
-\item
-  V8 Team (2023). ``V8 JavaScript Engine''. \emph{V8.dev}.
-\end{enumerate}
-
-\subsubsection{منابع Database و
-Sharding}\label{ux645ux646ux627ux628ux639-database-ux648-sharding}
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{39}
-\item
-  MongoDB Inc.~(2023). ``MongoDB Sharding''. \emph{MongoDB
-  Documentation}.
-\item
-  PostgreSQL Global Development Group (2023). ``PostgreSQL
-  Partitioning''. \emph{PostgreSQL Documentation}.
-\item
-  Redis Labs (2023). ``Redis Cluster''. \emph{Redis Documentation}.
-\end{enumerate}
-
 \subsubsection{منابع
 امنیت}\label{ux645ux646ux627ux628ux639-ux627ux645ux646ux6ccux62a}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{42}
+\setcounter{enumi}{32}
 \item
   OWASP Foundation (2023). ``OWASP Top 10''. \emph{OWASP.org}.
 \item
   NIST (2023). ``Cybersecurity Framework''. \emph{NIST.gov}.
-\item
-  SANS Institute (2023). ``Security Best Practices''. \emph{SANS.org}.
 \end{enumerate}
 
 \subsubsection{منابع Cloud و
@@ -2985,7 +3290,7 @@ Infrastructure}\label{ux645ux646ux627ux628ux639-cloud-ux648-infrastructure}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{45}
+\setcounter{enumi}{34}
 \item
   Amazon Web Services (2023). ``AWS Well-Architected Framework''.
   \emph{AWS Documentation}.
@@ -2997,142 +3302,38 @@ Infrastructure}\label{ux645ux646ux627ux628ux639-cloud-ux648-infrastructure}
   Azure}.
 \end{enumerate}
 
-\subsubsection{منابع Performance و
-Optimization}\label{ux645ux646ux627ux628ux639-performance-ux648-optimization}
+\subsection{منابع پروژه‌های
+واقعی}\label{ux645ux646ux627ux628ux639-ux67eux631ux648ux698ux647ux647ux627ux6cc-ux648ux627ux642ux639ux6cc}
+
+\subsubsection{پروژه‌های
+داخلی}\label{ux67eux631ux648ux698ux647ux647ux627ux6cc-ux62fux627ux62eux644ux6cc}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{48}
+\setcounter{enumi}{37}
 \item
-  Google (2023). ``Web Performance Best Practices''. \emph{Google
-  Developers}.
+  Enarchain Team (2023). ``Enarchain Technical Documentation''.
+  \emph{Internal Documentation}.
 \item
-  Mozilla (2023). ``Web Performance''. \emph{Mozilla Developer Network}.
+  Arbitrage Tracker (2023). ``Crypto Arbitrage Tracker Architecture''.
+  \emph{Internal Documentation}.
 \item
-  Apple (2023). ``Performance Best Practices''. \emph{Apple Developer}.
+  Performance Test Results (2023). ``Load Testing Results''.
+  \emph{Internal Test Reports}.
 \end{enumerate}
 
-\subsubsection{منابع Testing و Quality
-Assurance}\label{ux645ux646ux627ux628ux639-testing-ux648-quality-assurance}
+\subsubsection{داده‌های
+واقعی}\label{ux62fux627ux62fux647ux647ux627ux6cc-ux648ux627ux642ux639ux6cc}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{51}
+\setcounter{enumi}{40}
 \item
-  Kent C. Dodds (2023). ``Testing JavaScript Applications''.
-  \emph{Testing Library}.
+  Performance Metrics (2023). ``RPS Comparison: Node.js vs Go''.
+  \emph{Internal Metrics}.
 \item
-  Jest Team (2023). ``Jest Documentation''. \emph{Jest.io}.
-\item
-  Cypress Team (2023). ``Cypress Documentation''. \emph{Cypress.io}.
-\end{enumerate}
-
-\subsubsection{منابع DevOps و
-CI/CD}\label{ux645ux646ux627ux628ux639-devops-ux648-cicd}
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{54}
-\item
-  Jenkins Community (2023). ``Jenkins Documentation''.
-  \emph{Jenkins.io}.
-\item
-  GitLab Inc.~(2023). ``GitLab CI/CD''. \emph{GitLab Documentation}.
-\item
-  GitHub Inc.~(2023). ``GitHub Actions''. \emph{GitHub Documentation}.
-\end{enumerate}
-
-\subsubsection{منابع Machine Learning و
-AI}\label{ux645ux646ux627ux628ux639-machine-learning-ux648-ai}
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{57}
-\item
-  TensorFlow Team (2023). ``TensorFlow Documentation''.
-  \emph{TensorFlow.org}.
-\item
-  PyTorch Team (2023). ``PyTorch Documentation''. \emph{PyTorch.org}.
-\item
-  Scikit-learn Team (2023). ``Scikit-learn Documentation''.
-  \emph{Scikit-learn.org}.
-\end{enumerate}
-
-\subsection{منابع آنلاین و
-وب‌سایت‌ها}\label{ux645ux646ux627ux628ux639-ux622ux646ux644ux627ux6ccux646-ux648-ux648ux628ux633ux627ux6ccux62aux647ux627}
-
-\subsubsection{وب‌سایت‌های
-فنی}\label{ux648ux628ux633ux627ux6ccux62aux647ux627ux6cc-ux641ux646ux6cc}
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{60}
-\item
-  Stack Overflow (2023). ``Node.js vs Go Performance''. \emph{Stack
-  Overflow}.
-\item
-  GitHub (2023). ``Microservices Examples''. \emph{GitHub.com}.
-\item
-  Reddit (2023). ``r/programming Discussion on Microservices''.
-  \emph{Reddit.com}.
-\end{enumerate}
-
-\subsubsection{وب‌سایت‌های
-پروژه‌ها}\label{ux648ux628ux633ux627ux6ccux62aux647ux627ux6cc-ux67eux631ux648ux698ux647ux647ux627}
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{63}
-\item
-  Enarchain (2023). ``Enarchain Platform''. \emph{enarchain.com}.
-\item
-  Crypto Arbitrage Tracker (2023). ``Crypto Arbitrage Tracker''.
-  \emph{cryptoarbitragetracker.com}.
-\item
-  Prometheus (2023). ``Prometheus Metrics''.
-  \emph{212.95.35.174:8558/metrics}.
-\end{enumerate}
-
-\subsubsection{وب‌سایت‌های
-آموزشی}\label{ux648ux628ux633ux627ux6ccux62aux647ux627ux6cc-ux622ux645ux648ux632ux634ux6cc}
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{66}
-\item
-  Coursera (2023). ``Microservices Architecture Course''.
-  \emph{Coursera.org}.
-\item
-  Udemy (2023). ``Go Programming Course''. \emph{Udemy.com}.
-\item
-  Pluralsight (2023). ``Node.js Performance Course''.
-  \emph{Pluralsight.com}.
-\end{enumerate}
-
-\subsubsection{وب‌سایت‌های
-کنفرانس‌ها}\label{ux648ux628ux633ux627ux6ccux62aux647ux627ux6cc-ux6a9ux646ux641ux631ux627ux646ux633ux647ux627}
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{69}
-\item
-  QCon (2023). ``QCon Software Development Conference''.
-  \emph{QCon.com}.
-\item
-  DockerCon (2023). ``DockerCon Conference''. \emph{Docker.com}.
-\item
-  KubeCon (2023). ``KubeCon + CloudNativeCon''. \emph{CNCF.io}.
-\end{enumerate}
-
-\subsection{منابع تصویری و
-مستندات}\label{ux645ux646ux627ux628ux639-ux62aux635ux648ux6ccux631ux6cc-ux648-ux645ux633ux62aux646ux62fux627ux62a}
-
-\subsubsection{تصاویر و
-نمودارها}\label{ux62aux635ux627ux648ux6ccux631-ux648-ux646ux645ux648ux62fux627ux631ux647ux627}
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{72}
+  Resource Usage (2023). ``CPU and RAM Usage Statistics''.
+  \emph{Internal Statistics}.
 \item
   Grafana Dashboard (2023). ``CPU Usage Monolithic Node.js''.
   \emph{Grafana Screenshot}.
@@ -3142,92 +3343,6 @@ AI}\label{ux645ux646ux627ux628ux639-machine-learning-ux648-ai}
 \item
   Prometheus Metrics (2023). ``Live Metrics''.
   \emph{212.95.35.174:8558/metrics}.
-\end{enumerate}
-
-\subsubsection{مستندات
-فنی}\label{ux645ux633ux62aux646ux62fux627ux62a-ux641ux646ux6cc}
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{75}
-\item
-  Enarchain Team (2023). ``Enarchain Technical Documentation''.
-  \emph{Internal Documentation}.
-\item
-  Arbitrage Tracker (2023). ``Arbitrage Tracker Architecture''.
-  \emph{Internal Documentation}.
-\item
-  Performance Test Results (2023). ``Load Testing Results''.
-  \emph{Internal Test Reports}.
-\end{enumerate}
-
-\subsection{منابع آماری و
-داده‌ها}\label{ux645ux646ux627ux628ux639-ux622ux645ux627ux631ux6cc-ux648-ux62fux627ux62fux647ux647ux627}
-
-\subsubsection{آمار
-عملکرد}\label{ux622ux645ux627ux631-ux639ux645ux644ux6a9ux631ux62f}
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{78}
-\item
-  Performance Metrics (2023). ``RPS Comparison: Node.js vs Go''.
-  \emph{Internal Metrics}.
-\item
-  Resource Usage (2023). ``CPU and RAM Usage Statistics''.
-  \emph{Internal Statistics}.
-\item
-  Error Rates (2023). ``Error Rate Analysis''. \emph{Internal Analysis}.
-\end{enumerate}
-
-\subsubsection{داده‌های
-تست}\label{ux62fux627ux62fux647ux647ux627ux6cc-ux62aux633ux62a}
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{81}
-\item
-  Load Test Results (2023). ``Artillery Load Testing Results''.
-  \emph{Internal Test Data}.
-\item
-  Stress Test Results (2023). ``Stress Testing Analysis''.
-  \emph{Internal Test Data}.
-\item
-  Scalability Test Results (2023). ``Scalability Testing Results''.
-  \emph{Internal Test Data}.
-\end{enumerate}
-
-\subsection{منابع نرم‌افزاری و
-ابزارها}\label{ux645ux646ux627ux628ux639-ux646ux631ux645ux627ux641ux632ux627ux631ux6cc-ux648-ux627ux628ux632ux627ux631ux647ux627}
-
-\subsubsection{ابزارهای
-توسعه}\label{ux627ux628ux632ux627ux631ux647ux627ux6cc-ux62aux648ux633ux639ux647-1}
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{84}
-\item
-  Visual Studio Code (2023). ``VS Code Documentation''.
-  \emph{Code.visualstudio.com}.
-\item
-  IntelliJ IDEA (2023). ``IntelliJ IDEA Documentation''.
-  \emph{JetBrains.com}.
-\item
-  Vim (2023). ``Vim Documentation''. \emph{Vim.org}.
-\end{enumerate}
-
-\subsubsection{ابزارهای
-مانیتورینگ}\label{ux627ux628ux632ux627ux631ux647ux627ux6cc-ux645ux627ux646ux6ccux62aux648ux631ux6ccux646ux6af-1}
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{87}
-\item
-  New Relic (2023). ``New Relic Documentation''. \emph{NewRelic.com}.
-\item
-  Datadog (2023). ``Datadog Documentation''. \emph{Datadoghq.com}.
-\item
-  Splunk (2023). ``Splunk Documentation''. \emph{Splunk.com}.
 \end{enumerate}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
